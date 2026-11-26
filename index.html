@@ -6,34 +6,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071321">
 <meta name="referrer" content="no-referrer">
-<meta name="robots" content="noindex,nofollow">
 
-<title>EAH SPORT | Personal Coaching</title>
+<title>EAH SPORT | Personal Coaching Experience</title>
 
 <style>
-:root {
-  --bg:#071321;
-  --panel:#102238;
-  --panel2:#152d47;
-  --blue:#087cf0;
-  --light:#72bbff;
+
+:root{
+  --bg:#07111e;
+  --panel:#101f32;
+  --panel2:#162b43;
+  --blue:#087ff5;
+  --light:#78bfff;
   --white:#ffffff;
-  --muted:#9eb4cc;
-  --border:#29435f;
+  --muted:#9db2c9;
+  --border:#263e58;
   --green:#39d99a;
-  --orange:#ffb75e;
-  --red:#ff8585;
+  --orange:#ffb45b;
+  --red:#ff7777;
 }
 
-* {
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html {
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 
-body {
+body{
   margin:0;
   background:var(--bg);
   color:white;
@@ -41,676 +37,734 @@ body {
   line-height:1.6;
 }
 
-button,input,select {
-  font:inherit;
-}
+button,input,select{font:inherit}
 
-button,a {
+button,a,input,select{
   -webkit-tap-highlight-color:transparent;
 }
 
-button {
-  cursor:pointer;
+button{cursor:pointer}
+
+button:disabled{opacity:.5;cursor:wait}
+
+a{color:var(--light);text-decoration:none}
+
+h1,h2,h3,p{margin-top:0}
+
+h1{
+  font-size:clamp(38px,6vw,76px);
+  line-height:1.08;
+  letter-spacing:-2px;
+  margin-bottom:22px;
 }
 
-button:disabled {
-  opacity:.5;
-  cursor:wait;
+h2{
+  font-size:clamp(26px,4vw,40px);
+  line-height:1.2;
+  letter-spacing:-.8px;
+  margin-bottom:12px;
 }
 
-h1,h2,h3,p {
-  margin-top:0;
-}
+h3{font-size:21px;margin-bottom:8px}
 
-h1 {
-  font-size:clamp(30px,5vw,48px);
-  line-height:1.15;
-  margin-bottom:15px;
-}
-
-h2 {
-  font-size:25px;
-  margin-bottom:10px;
-}
-
-h3 {
-  font-size:20px;
-  margin-bottom:8px;
-}
-
-a {
-  color:var(--light);
-}
-
-header {
+header{
   position:sticky;
   top:0;
-  z-index:30;
-  background:rgba(7,19,33,.97);
+  z-index:50;
+  background:rgba(7,17,30,.96);
+  backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(18px);
 }
 
-.header-inner {
-  max-width:1250px;
+.header-inner{
+  max-width:1450px;
   margin:auto;
-  padding:15px 24px;
+  padding:16px 25px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:15px;
+  gap:20px;
 }
 
-.brand {
+.brand{
   display:flex;
   align-items:center;
   gap:13px;
+  color:white;
+  flex-shrink:0;
 }
 
-.brand img {
-  width:55px;
-  height:55px;
+.brand img{
+  width:58px;
+  height:58px;
   object-fit:contain;
 }
 
-.brand-title {
-  font-size:26px;
+.brand-title{
+  font-size:29px;
   font-weight:900;
   letter-spacing:3px;
   line-height:1.2;
 }
 
-.brand-title span {
-  color:var(--blue);
-}
+.brand-title span{color:var(--blue)}
 
-.brand-subtitle {
+.brand-subtitle{
   font-size:9px;
-  letter-spacing:1.5px;
+  letter-spacing:1.6px;
   color:var(--muted);
 }
 
-.status {
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.header-nav a{
+  color:#d0deec;
+  font-size:13px;
+  font-weight:700;
+}
+
+.header-nav a:hover{color:var(--light)}
+
+.status{
   font-size:11px;
   color:var(--green);
+  white-space:nowrap;
 }
 
-main {
-  max-width:1250px;
-  min-height:78vh;
+main{
+  max-width:1450px;
   margin:auto;
-  padding:28px 22px 55px;
+  padding:24px 25px 70px;
+  min-height:80vh;
 }
 
-.hero {
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      #175eb1,
-      transparent 60%
-    ),
-    linear-gradient(
-      135deg,
-      #173354,
-      #0a1728
-    );
-  border:1px solid #315b88;
-  border-radius:25px;
-  padding:35px;
-  margin-bottom:24px;
-}
-
-.hero::after {
-  content:"EAH";
-  position:absolute;
-  font-size:200px;
-  font-weight:900;
-  right:-18px;
-  bottom:-85px;
-  opacity:.035;
-  pointer-events:none;
-}
-
-.eyebrow {
+.eyebrow{
   font-size:11px;
+  letter-spacing:2.4px;
   font-weight:800;
-  letter-spacing:2px;
   color:var(--light);
   text-transform:uppercase;
 }
 
-.muted {
-  color:var(--muted);
-}
+.muted{color:var(--muted)}
 
-.small {
-  font-size:12px;
-}
+.small{font-size:12px}
 
-.panel {
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:19px;
-  padding:25px;
-  margin-bottom:20px;
-}
-
-.btn {
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  padding:13px 20px;
-  background:linear-gradient(
-    135deg,
-    #168efc,
-    #075fc2
-  );
-  color:white;
-  border:0;
-  border-radius:11px;
-  font-size:14px;
-  font-weight:700;
-  text-decoration:none;
-  transition:.2s;
-}
-
-.btn:hover {
-  filter:brightness(1.12);
-}
-
-.btn-secondary {
-  background:#1b3855;
-  border:1px solid #31516f;
-}
-
-.full {
-  width:100%;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(min(100%,265px),1fr)
-    );
-  gap:20px;
-}
-
-.profile-head {
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:510px;
   display:flex;
   align-items:center;
-  gap:20px;
-  margin:20px 0;
+  padding:65px;
+  border:1px solid var(--border);
+  border-radius:26px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,15,28,.99) 0%,
+      rgba(5,15,28,.93) 32%,
+      rgba(5,15,28,.45) 75%,
+      rgba(5,15,28,.25) 100%
+    ),
+    url('images/bandeau-sport.webp') center/cover,
+    linear-gradient(135deg,#122a45,#15579a);
 }
 
-.avatar {
-  width:95px;
-  height:95px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid var(--light);
-  background:#1d4268;
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
 }
 
-.avatar-placeholder {
-  width:95px;
-  height:95px;
-  flex-shrink:0;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#1d4268;
-  border:3px solid var(--light);
-  font-size:32px;
-  font-weight:bold;
+.hero h1 span{color:var(--light)}
+
+.hero p{
+  max-width:570px;
+  font-size:17px;
+  color:#bdcde0;
 }
 
-.profile-head h1 {
-  margin:0;
+.hero .eyebrow{margin-bottom:20px}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
 }
 
-.coach-message {
-  background:rgba(255,255,255,.07);
-  border-left:3px solid var(--light);
-  padding:18px;
-  border-radius:0 12px 12px 0;
-  margin:25px 0;
-  white-space:pre-wrap;
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:14px 23px;
+  border:1px solid transparent;
+  border-radius:10px;
+  background:linear-gradient(135deg,#1995ff,#0865d2);
+  color:white;
+  font-size:13px;
+  font-weight:800;
+  transition:.2s;
+  text-decoration:none;
 }
 
-.stats {
+.btn:hover{
+  filter:brightness(1.15);
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  background:#142a42;
+  border-color:#385470;
+}
+
+.full{width:100%}
+
+.features{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  position:relative;
-  z-index:1;
+  gap:18px;
+  margin:22px 0 55px;
 }
 
-.stat {
-  padding:18px;
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:15px;
-}
-
-.stat span {
-  color:#b6d0eb;
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:1px;
-}
-
-.stat strong {
-  display:block;
-  font-size:clamp(19px,4vw,30px);
-}
-
-nav {
+.feature{
   display:flex;
-  gap:10px;
-  overflow-x:auto;
-  margin:25px 0;
-}
-
-.nav-btn {
-  flex:1;
-  min-width:max-content;
-  padding:15px 20px;
-  border:1px solid var(--border);
-  border-radius:12px;
+  align-items:center;
+  gap:18px;
+  padding:25px;
   background:var(--panel);
-  color:var(--muted);
-  font-weight:bold;
+  border:1px solid var(--border);
+  border-radius:17px;
 }
 
-.nav-btn.active {
-  background:var(--blue);
-  color:white;
-  border-color:var(--blue);
+.feature-icon{
+  width:50px;
+  height:50px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  background:#153a60;
+  border-radius:13px;
+  color:var(--light);
 }
 
-.section-heading {
+.feature-icon svg{
+  width:27px;
+  height:27px;
+}
+
+.feature strong{
+  display:block;
+  font-size:19px;
+}
+
+.feature small{color:var(--muted)}
+
+.section-heading{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:12px;
-  margin:25px 0 20px;
+  gap:15px;
+  margin:25px 0;
 }
 
-.section-heading h2 {
-  margin:0;
+.section-heading h2{margin:7px 0}
+
+.search-bar{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:13px;
+  margin-bottom:20px;
 }
 
-.exercise-card {
+input,select{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #35516e;
+  background:#0b1a2a;
+  color:white;
+  outline:none;
+}
+
+input:focus,select:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px #087ff522;
+}
+
+input::placeholder{color:#829ab3}
+
+.filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.filter-btn{
+  padding:9px 17px;
+  background:#112338;
+  color:#b7cbe0;
+  border:1px solid var(--border);
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.filter-btn.active{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:white;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+
+.exercise-card{
+  display:flex;
+  flex-direction:column;
   background:var(--panel);
   border:1px solid var(--border);
-  overflow:hidden;
   border-radius:19px;
-  transition:.25s;
+  overflow:hidden;
+  transition:transform .25s,border-color .25s;
 }
 
-.exercise-card:hover {
-  transform:translateY(-3px);
-  border-color:#4a8ccb;
+.exercise-card:hover{
+  transform:translateY(-5px);
+  border-color:#4d93d4;
 }
 
-.exercise-image-button {
+.exercise-image-button{
   position:relative;
   display:block;
   width:100%;
   padding:0;
   border:0;
-  background:#122d4b;
-  color:white;
-  cursor:pointer;
+  background:#142d49;
   overflow:hidden;
-  text-align:left;
+  color:white;
 }
 
-.exercise-image-button img {
-  display:block;
+.exercise-photo{
   width:100%;
   aspect-ratio:4/3;
   object-fit:cover;
-  transition:transform .35s;
-}
-
-.exercise-image-button:hover img {
-  transform:scale(1.05);
-}
-
-.exercise-photo {
   display:block;
+  transition:transform .4s;
+}
+
+.exercise-image-button:hover img{
+  transform:scale(1.06);
+}
+
+.photo-placeholder{
   width:100%;
   aspect-ratio:4/3;
-  object-fit:cover;
-  border-radius:12px;
-}
-
-.play-overlay {
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(
-    transparent,
-    rgba(0,0,0,.25)
-  );
-}
-
-.play-circle {
-  width:59px;
-  height:59px;
-  border-radius:50%;
-  background:rgba(0,0,0,.65);
-  border:2px solid rgba(255,255,255,.9);
   display:grid;
   place-items:center;
-  color:white;
-  font-size:23px;
-  padding-left:4px;
-  backdrop-filter:blur(4px);
-}
-
-.photo-label {
-  position:absolute;
-  bottom:12px;
-  left:12px;
-  background:rgba(0,0,0,.7);
-  color:white;
-  border-radius:6px;
-  font-size:10px;
-  font-weight:bold;
-  letter-spacing:1px;
-  padding:6px 10px;
-}
-
-.photo-placeholder {
-  display:grid;
-  place-items:center;
-  aspect-ratio:4/3;
-  background:
-    linear-gradient(
-      135deg,
-      #214d7b,
-      #0c1b30
-    );
+  background:linear-gradient(135deg,#1a416a,#0b1a2c);
   color:#72bbff;
 }
 
-.photo-placeholder svg {
-  width:85px;
-  height:85px;
+.photo-placeholder svg{
+  width:75px;
+  height:75px;
 }
 
-.exercise-body {
-  padding:20px;
+.play-overlay{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(transparent,rgba(0,0,0,.3));
 }
 
-.exercise-description {
+.play-circle{
+  display:grid;
+  place-items:center;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:rgba(4,13,24,.65);
+  border:2px solid #ffffffcc;
+  font-size:22px;
+  padding-left:4px;
+  backdrop-filter:blur(5px);
+  transition:.2s;
+}
+
+.exercise-image-button:hover .play-circle{
+  background:var(--blue);
+  transform:scale(1.1);
+}
+
+.photo-label{
+  position:absolute;
+  bottom:13px;
+  left:13px;
+  background:rgba(0,0,0,.75);
+  padding:6px 10px;
+  border-radius:5px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.exercise-body{
+  padding:22px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.exercise-body h3{margin-top:8px}
+
+.exercise-description{
   color:var(--muted);
   font-size:13px;
   display:-webkit-box;
   -webkit-line-clamp:2;
   -webkit-box-orient:vertical;
   overflow:hidden;
-  min-height:40px;
+  min-height:42px;
 }
 
-.muscles {
+.exercise-body .btn{margin-top:auto}
+
+.muscles{
   display:flex;
   flex-wrap:wrap;
   gap:6px;
-  margin:10px 0 16px;
+  margin:10px 0 15px;
 }
 
-.muscle {
-  background:#173f67;
-  color:#a1d4ff;
-  padding:5px 9px;
+.muscle{
+  background:#173c60;
+  color:#a5d4ff;
+  padding:5px 10px;
   border-radius:6px;
   font-size:11px;
 }
 
-.search-bar {
+.panel{
+  padding:25px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:19px;
+  margin-bottom:20px;
+}
+
+.coaching-banner{
+  margin-top:55px;
+  padding:45px;
   display:grid;
-  grid-template-columns:2fr 1fr;
+  grid-template-columns:1.5fr 1fr;
+  align-items:center;
+  gap:30px;
+  background:linear-gradient(135deg,#15385e,#102033);
+  border:1px solid #31577d;
+  border-radius:25px;
+}
+
+.nfc-card{
+  width:100%;
+  max-width:330px;
+  aspect-ratio:1.586;
+  margin:auto;
+  padding:24px;
+  border-radius:17px;
+  border:1px solid #5684b5;
+  background:
+    radial-gradient(circle at 100% 0%,#287ac8,transparent 65%),
+    linear-gradient(135deg,#081a32,#153c65);
+  box-shadow:0 20px 40px #0006;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.nfc-card-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.nfc-card img{width:48px;height:48px;object-fit:contain}
+
+.nfc-card-title{
+  font-size:28px;
+  letter-spacing:3px;
+  font-weight:900;
+}
+
+.nfc-card-title span{color:var(--light)}
+
+.nfc-symbol{
+  font-size:24px;
+  color:var(--light);
+}
+
+.nfc-card small{
+  font-size:9px;
+  letter-spacing:2px;
+  color:#bed8f1;
+}
+
+.profile-hero{
+  padding:35px;
+  border-radius:23px;
+  border:1px solid #315b88;
+  background:linear-gradient(135deg,#17395e,#0b1a2c);
+  margin-bottom:25px;
+}
+
+.profile-head{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin:20px 0;
+}
+
+.profile-head h1{
+  font-size:clamp(27px,5vw,45px);
+  letter-spacing:-1px;
+  margin:0;
+}
+
+.avatar{
+  width:95px;
+  height:95px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--light);
+  background:#1c4269;
+}
+
+.avatar-placeholder{
+  width:95px;
+  height:95px;
+  border-radius:50%;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  font-weight:bold;
+  background:#1c4269;
+  border:3px solid var(--light);
+}
+
+.coach-message{
+  white-space:pre-wrap;
+  border-left:3px solid var(--light);
+  background:#ffffff0b;
+  padding:18px;
+  border-radius:0 10px 10px 0;
+  margin:20px 0;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
   gap:12px;
+}
+
+.stat{
+  background:#ffffff0c;
+  border:1px solid #ffffff18;
+  padding:17px;
+  border-radius:12px;
+}
+
+.stat span{
+  color:#bad0e7;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+.stat strong{
+  display:block;
+  font-size:clamp(20px,4vw,30px);
+}
+
+.member-nav{
+  display:flex;
+  gap:10px;
+  margin:25px 0;
+  overflow-x:auto;
+}
+
+.nav-btn{
+  flex:1;
+  min-width:max-content;
+  padding:14px 18px;
+  background:var(--panel);
+  color:var(--muted);
+  border:1px solid var(--border);
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.nav-btn.active{
+  background:var(--blue);
+  color:white;
+  border-color:var(--blue);
+}
+
+.session-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
   margin-bottom:22px;
 }
 
-input,select {
-  width:100%;
-  background:#081827;
-  color:white;
-  border:1px solid #35536f;
+.session-header{
+  padding:25px;
+  background:linear-gradient(135deg,#1a426d,#102238);
+}
+
+.session-content{padding:16px}
+
+.session-exercise{
+  background:#0b1b2d;
+  border:1px solid var(--border);
+  border-radius:12px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+
+.session-exercise summary{
+  padding:16px;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  cursor:pointer;
+  list-style:none;
+}
+
+.session-exercise summary::-webkit-details-marker{
+  display:none;
+}
+
+.exercise-number{
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  background:#1a3e65;
+  color:var(--light);
   border-radius:10px;
-  padding:14px;
-  outline:none;
-}
-
-input:focus,select:focus {
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px #087cf022;
-}
-
-label {
-  display:block;
-  font-size:13px;
-  color:#c9dbec;
+  flex-shrink:0;
   font-weight:bold;
-  margin-bottom:7px;
 }
 
-.field {
-  margin-bottom:18px;
+.summary-info{flex:1}
+
+.summary-info strong{display:block}
+
+.summary-info small{color:var(--muted)}
+
+.details-body{
+  padding:20px;
+  border-top:1px solid var(--border);
 }
 
-.form-grid {
+.details-body .exercise-image-button{
+  max-width:500px;
+  border-radius:12px;
+}
+
+.table-wrap{
+  overflow-x:auto;
+  margin:15px 0;
+}
+
+table{
+  width:100%;
+  min-width:280px;
+  border-collapse:collapse;
+}
+
+td,th{
+  padding:12px 10px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+}
+
+th{
+  background:#1b4067;
+  color:#b7dfff;
+  font-size:11px;
+  text-transform:uppercase;
+}
+
+td{font-size:14px}
+
+tr:nth-child(even) td{background:#132b43}
+
+.form-card{
+  max-width:720px;
+  margin:25px auto;
+}
+
+.form-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:0 16px;
 }
 
-.form-card {
-  max-width:700px;
-  margin:20px auto;
+.field{margin-bottom:18px}
+
+label{
+  display:block;
+  margin-bottom:7px;
+  color:#c9dbec;
+  font-size:13px;
+  font-weight:bold;
 }
 
-.activation-heading {
+.activation-heading{
   text-align:center;
   margin-bottom:25px;
 }
 
-.activation-heading img {
-  width:90px;
-  margin-bottom:10px;
+.activation-heading img{
+  width:85px;
+  margin-bottom:15px;
 }
 
-.consent {
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  font-size:12px;
-  font-weight:normal;
-  color:var(--muted);
-}
-
-.consent input {
-  width:auto;
-  margin-top:5px;
-}
-
-.photo-preview {
+.photo-preview{
   display:none;
   width:110px;
   height:110px;
-  object-fit:cover;
   border-radius:50%;
+  object-fit:cover;
   border:3px solid var(--blue);
   margin:0 auto 20px;
 }
 
-.session-card {
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:20px;
-  overflow:hidden;
-  margin-bottom:24px;
-}
-
-.session-header {
-  padding:25px;
-  background:
-    linear-gradient(
-      135deg,
-      #1a426d,
-      #102238
-    );
-  border-bottom:1px solid var(--border);
-}
-
-.session-meta {
+.consent{
   display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  font-size:12px;
-  color:#bed3e8;
-}
-
-.session-content {
-  padding:16px;
-}
-
-.session-exercise {
-  background:#0b1b2e;
-  border:1px solid var(--border);
-  border-radius:13px;
-  margin-bottom:12px;
-  overflow:hidden;
-}
-
-.session-exercise:last-child {
-  margin-bottom:0;
-}
-
-.session-exercise summary {
-  display:flex;
-  align-items:center;
-  gap:13px;
-  cursor:pointer;
-  padding:15px;
-  list-style:none;
-}
-
-.session-exercise summary::-webkit-details-marker {
-  display:none;
-}
-
-.exercise-number {
-  display:grid;
-  place-items:center;
-  width:40px;
-  height:40px;
-  border-radius:11px;
-  color:#8acaff;
-  background:#1a3e65;
-  font-weight:bold;
-  flex-shrink:0;
-}
-
-.summary-info {
-  flex:1;
-}
-
-.summary-info strong {
-  display:block;
-}
-
-.summary-info small {
+  gap:10px;
+  align-items:flex-start;
+  font-weight:normal;
   color:var(--muted);
 }
 
-.chevron {
-  color:var(--light);
-  font-size:23px;
-}
+.consent input{width:auto;margin-top:5px}
 
-details[open] .chevron {
-  transform:rotate(180deg);
-}
-
-.details-body {
-  padding:20px;
-  border-top:1px solid var(--border);
-}
-
-.table-wrap {
-  overflow-x:auto;
-  margin:15px 0;
-}
-
-table {
-  width:100%;
-  border-collapse:collapse;
-  min-width:280px;
-}
-
-th {
-  background:#1b4067;
-  font-size:11px;
-  letter-spacing:.5px;
-  color:#b7dfff;
-  text-transform:uppercase;
-}
-
-td,th {
-  padding:13px 10px;
-  text-align:center;
-  border-bottom:1px solid var(--border);
-}
-
-td {
-  font-size:14px;
-}
-
-tr:nth-child(even) td {
-  background:#132b43;
-}
-
-.set-number {
-  color:var(--light);
-  font-weight:bold;
-}
-
-.video-frame {
-  width:100%;
-  aspect-ratio:16/9;
-  border:0;
-  background:black;
-  border-radius:12px;
-  margin:12px 0;
-}
-
-.video-preview {
-  background:#071321;
-  text-align:center;
-  padding:25px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  margin:12px 0;
-}
-
-.video-link {
-  margin:8px 0;
-}
-
-.profile-line {
+.profile-line{
   display:flex;
   justify-content:space-between;
   gap:15px;
@@ -719,81 +773,80 @@ tr:nth-child(even) td {
   overflow-wrap:anywhere;
 }
 
-.profile-line span {
-  color:var(--muted);
-}
+.profile-line span{color:var(--muted)}
 
-.profile-line strong {
-  text-align:right;
-}
+.profile-line strong{text-align:right}
 
-.empty {
-  padding:40px 20px;
+.empty{
+  padding:35px 20px;
   border:1px dashed #365876;
-  border-radius:17px;
-  text-align:center;
+  border-radius:14px;
   color:var(--muted);
+  text-align:center;
 }
 
-.empty h3 {
-  color:white;
-}
-
-.error {
+.error{
   color:var(--red);
-  white-space:pre-wrap;
   overflow-wrap:anywhere;
 }
 
-.loading {
-  padding:85px 20px;
+.notice{
+  padding:13px 16px;
+  background:#122a43;
+  border:1px solid #294968;
+  border-radius:10px;
+  color:#a9c6e1;
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+.loading{
+  padding:90px 20px;
   text-align:center;
 }
 
-.spinner {
-  width:45px;
-  height:45px;
-  border:4px solid #234360;
+.spinner{
+  width:42px;
+  height:42px;
+  border:4px solid #24415e;
   border-top-color:var(--blue);
   border-radius:50%;
   margin:0 auto 20px;
   animation:spin .8s linear infinite;
 }
 
-@keyframes spin {
-  to {
-    transform:rotate(360deg);
-  }
+@keyframes spin{
+  to{transform:rotate(360deg)}
 }
 
-.modal {
+.modal{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.84);
   z-index:100;
+  padding:25px;
+  background:#000c;
   backdrop-filter:blur(8px);
-  padding:20px;
   overflow-y:auto;
 }
 
-.modal.open {
+.modal.open{
   display:flex;
   justify-content:center;
   align-items:flex-start;
 }
 
-.modal-inner {
+.modal-inner{
   width:100%;
-  max-width:800px;
+  max-width:850px;
   margin:auto;
+  padding:28px;
   background:var(--panel);
   border:1px solid #375a7c;
   border-radius:22px;
-  padding:25px;
 }
 
-.modal-top {
+.modal-top{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -801,11 +854,14 @@ tr:nth-child(even) td {
   margin-bottom:20px;
 }
 
-.modal-top h2 {
-  margin:0;
+.modal-top h2{margin:6px 0}
+
+.modal-inner .exercise-photo{
+  max-height:450px;
+  border-radius:12px;
 }
 
-.close {
+.close{
   width:40px;
   height:40px;
   flex-shrink:0;
@@ -813,116 +869,174 @@ tr:nth-child(even) td {
   background:#1b3653;
   color:white;
   border-radius:10px;
-  font-size:24px;
+  font-size:25px;
 }
 
-.modal-description {
-  white-space:pre-wrap;
-  color:#cfdeee;
+.video-frame{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  border-radius:12px;
+  background:#03080e;
+  margin:15px 0;
 }
 
-footer {
-  text-align:center;
+.video-preview{
   padding:35px 20px;
-  color:var(--muted);
+  text-align:center;
+  background:#081421;
+  border:1px solid var(--border);
+  border-radius:12px;
+  margin:15px 0;
+}
+
+footer{
+  padding:45px 20px;
+  text-align:center;
   border-top:1px solid var(--border);
+  color:var(--muted);
   font-size:12px;
 }
 
-footer strong {
+footer img{width:65px;margin-bottom:10px}
+
+footer strong{
   color:white;
+  font-size:20px;
   letter-spacing:3px;
-  font-size:16px;
 }
 
-@media(max-width:600px) {
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin:20px 0;
+}
 
-  main {
-    padding:16px 12px 35px;
+[hidden]{display:none!important}
+
+@media(max-width:1000px){
+
+  .header-nav{gap:12px}
+
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  .hero{padding:45px;min-height:440px}
+
+  .feature{padding:18px;gap:12px}
+
+  .feature strong{font-size:16px}
+
+}
+
+@media(max-width:700px){
+
+  main{padding:14px 12px 40px}
+
+  .header-inner{padding:12px;flex-wrap:wrap;gap:10px}
+
+  .brand img{width:43px;height:43px}
+
+  .brand-title{font-size:22px}
+
+  .brand-subtitle{font-size:7px}
+
+  .header-nav{
+    width:100%;
+    justify-content:space-between;
+    overflow-x:auto;
+    padding:5px 0;
   }
 
-  .header-inner {
-    padding:12px;
+  .header-nav a{font-size:11px;white-space:nowrap}
+
+  .status{font-size:9px}
+
+  .hero{
+    min-height:430px;
+    padding:27px;
+    border-radius:18px;
+    background:
+      linear-gradient(90deg,#071321ed,#07132177),
+      url('images/bandeau-sport.webp') center/cover,
+      linear-gradient(135deg,#122a45,#15579a);
   }
 
-  .brand img {
-    width:43px;
-    height:43px;
-  }
+  .hero p{font-size:14px}
 
-  .brand-title {
-    font-size:20px;
-  }
+  .hero-buttons{flex-direction:column}
 
-  .brand-subtitle {
-    font-size:7px;
-    letter-spacing:.7px;
-  }
+  .features{gap:7px;margin-bottom:35px}
 
-  .status {
-    font-size:9px;
-  }
-
-  .hero {
-    padding:22px;
-    border-radius:19px;
-  }
-
-  .profile-head {
-    gap:13px;
-  }
-
-  .avatar,
-  .avatar-placeholder {
-    width:68px;
-    height:68px;
-  }
-
-  .stats {
+  .feature{
+    flex-direction:column;
+    text-align:center;
+    padding:12px 5px;
     gap:7px;
   }
 
-  .stat {
-    padding:12px 8px;
-  }
+  .feature-icon{width:38px;height:38px}
 
-  .panel {
-    padding:18px;
-  }
+  .feature-icon svg{width:21px;height:21px}
 
-  .form-grid,
-  .search-bar {
+  .feature strong{font-size:13px}
+
+  .feature small{font-size:10px}
+
+  .grid{gap:12px}
+
+  .exercise-body{padding:13px}
+
+  .exercise-body h3{font-size:17px}
+
+  .exercise-body .eyebrow{font-size:8px}
+
+  .exercise-description{font-size:11px}
+
+  .exercise-body .btn{padding:10px 5px;font-size:11px}
+
+  .muscle{font-size:9px;padding:4px 6px}
+
+  .play-circle{width:43px;height:43px;font-size:17px}
+
+  .photo-label{font-size:7px;left:7px;bottom:7px}
+
+  .search-bar{grid-template-columns:1fr}
+
+  .coaching-banner{
     grid-template-columns:1fr;
+    padding:25px;
+    margin-top:35px;
   }
 
-  .nav-btn {
-    padding:13px;
-    font-size:12px;
-  }
+  .section-heading{align-items:flex-start}
 
-  .session-content {
-    padding:10px;
-  }
+  .section-heading .btn{padding:10px;font-size:11px}
 
-  .session-header {
-    padding:20px;
-  }
+  .profile-hero{padding:20px}
 
-  .details-body {
-    padding:12px;
-  }
+  .avatar,.avatar-placeholder{width:68px;height:68px}
 
-  .modal {
-    padding:12px;
-  }
+  .profile-head{gap:13px}
 
-  .modal-inner {
-    padding:17px;
-  }
+  .stat{padding:12px 8px}
 
-  h2 {
-    font-size:22px;
-  }
+  .stats{gap:7px}
+
+  .form-grid{grid-template-columns:1fr}
+
+  .panel{padding:18px}
+
+  .modal{padding:10px}
+
+  .modal-inner{padding:17px}
+
+  .nav-btn{font-size:12px;padding:12px}
+
+  .session-content{padding:10px}
+
+  .details-body{padding:12px}
 
 }
 
@@ -934,135 +1048,260 @@ footer strong {
 <header>
   <div class="header-inner">
 
-    <div class="brand">
-
-      <img
-        src="logo.png"
-        alt="EAH Conformité"
-        onerror="this.hidden=true"
-      >
-
+    <a class="brand" href="#accueil">
+      <img src="logo.png" alt="EAH Conformité"
+        onerror="this.hidden=true">
       <div>
         <div class="brand-title">
           EAH <span>SPORT</span>
         </div>
-
         <div class="brand-subtitle">
           PERSONAL COACHING EXPERIENCE
         </div>
       </div>
-
-    </div>
+    </a>
 
     <div class="status" id="connection">
-      ● Connexion
+      ● EAH SPORT
     </div>
+
+    <nav class="header-nav" id="headerNav">
+      <a href="#accueil">Accueil</a>
+      <a href="#exercices">Exercices</a>
+      <a href="#coaching">Coaching</a>
+      <a href="#coaching">Espace membre</a>
+    </nav>
 
   </div>
 </header>
 
 <main id="app">
-
   <div class="loading">
     <div class="spinner"></div>
-    Chargement de votre espace sportif…
+    Chargement de EAH SPORT…
   </div>
-
 </main>
 
 <footer>
-  <strong>EAH SPORT</strong>
 
-  <p>Votre progression. Votre programme.</p>
+  <img src="logo.png" alt="EAH"
+    onerror="this.hidden=true">
 
-  <small>
-    Une solution connectée EAH Conformité
-  </small>
+  <div><strong>EAH SPORT</strong></div>
+
+  <p>Votre progression. Votre programme. Votre coach.</p>
+
+  <div class="footer-links">
+    <a href="mailto:goin.eah@gmail.com">Contact</a>
+    <a href="tel:+33633959785">06 33 95 97 85</a>
+  </div>
+
+  <p>Powered by EAH Conformité</p>
+
+  <small>© 2026 EAH SPORT — Tous droits réservés.</small>
+
 </footer>
 
-<div
-  class="modal"
-  id="modal"
+<div class="modal" id="modal"
   role="dialog"
   aria-modal="true"
-  aria-label="Détails de l'exercice"
->
-  <div
-    class="modal-inner"
-    id="modalContent"
-  ></div>
+  aria-label="Fiche exercice">
+
+  <div class="modal-inner" id="modalContent"></div>
+
 </div>
 
 <script>
 
 /************************************************************
  * 1. CONFIGURATION
- * Ton lien Apps Script est déjà intégré.
  ************************************************************/
 
 const API =
-  'https://script.google.com/macros/s/AKfycbzRqNkdk5gvHbIPtdRAGwxMfmMGX3yoCv4FnPUGPJA5qYVZAyUHUV8ODEiBIBD9AhQD/exec';
+'https://script.google.com/macros/s/AKfycbzRqNkdk5gvHbIPtdRAGwxMfmMGX3yoCv4FnPUGPJA5qYVZAyUHUV8ODEiBIBD9AhQD/exec';
+
+const SITE =
+'https://eahconform.github.io/EAH-SPORT/';
 
 const CONFIG = {
-
-  NAME:'EAH SPORT',
-
-  SHEET_ID:
-    '1psuHRrKQaFlleYeG8CdhUot6szMS5G9-76bpDIbYlKo',
-
   PHOTO_DIMENSION:600,
-
   MAX_PHOTO_SIZE:700000
-
 };
 
+const app = document.getElementById('app');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalContent');
+const connection = document.getElementById('connection');
+const headerNav = document.getElementById('headerNav');
 
-/************************************************************
- * 2. VARIABLES
- ************************************************************/
-
-const app =
-  document.getElementById('app');
-
-const modal =
-  document.getElementById('modal');
-
-const modalContent =
-  document.getElementById('modalContent');
-
-const connection =
-  document.getElementById('connection');
-
-const params =
-  new URLSearchParams(window.location.search);
+const params = new URLSearchParams(location.search);
 
 const token =
   params.get('token') ||
   params.get('t') ||
   '';
 
+if(token){
+  const meta=document.createElement('meta');
+  meta.name='robots';
+  meta.content='noindex,nofollow';
+  document.head.appendChild(meta);
+}
+
 let state = null;
-
+let exercises = [];
 let currentTab = 'sessions';
-
-let compressedPhoto = '';
-
-let photoTask = Promise.resolve('');
-
+let currentFilter = 'Tous';
+let publicSynced = false;
+let publicLoading = false;
 let requestPending = false;
-
+let compressedPhoto = '';
+let photoTask = Promise.resolve('');
 let previousFocus = null;
 
 
 /************************************************************
- * 3. SECURITE ET NORMALISATION
+ * 2. BIBLIOTHEQUE PUBLIQUE DE SECOURS
+ *
+ * Les photos sont chargees depuis GitHub.
+ * Les videos peuvent etre renseignees ici provisoirement.
+ * Les donnees Google Sheets sont prioritaires si accessibles.
  ************************************************************/
 
-function esc(value) {
+const DEFAULT_EXERCISES = [
+
+  {
+    nom:'Squat',
+    categorie:'Jambes',
+    groupes:'Quadriceps, Fessiers, Abdominaux',
+    photo:'images/squat.webp',
+    video:'',
+    description:
+      'Placez les pieds dans une position stable. Fléchissez les genoux et les hanches en contrôlant la descente. Maintenez le tronc stable puis remontez en poussant sur les pieds.'
+  },
+
+  {
+    nom:'Développé couché',
+    categorie:'Pectoraux',
+    groupes:'Pectoraux, Triceps, Épaules',
+    photo:'images/developpe-couche.webp',
+    video:'',
+    description:
+      'Allongez-vous sur le banc, les pieds stables au sol. Descendez la barre de manière contrôlée vers la poitrine puis repoussez-la. Utilisez des sécurités ou une assistance adaptée.'
+  },
+
+  {
+    nom:'Tirage vertical',
+    categorie:'Dos',
+    groupes:'Grand dorsal, Biceps',
+    photo:'images/tirage-vertical.webp',
+    video:'',
+    description:
+      'Installez-vous sur la machine. Tirez la barre vers le haut de la poitrine en dirigeant les coudes vers le bas. Revenez lentement à la position initiale.'
+  },
+
+  {
+    nom:'Soulevé de terre',
+    categorie:'Dos',
+    groupes:'Fessiers, Ischio-jambiers, Dos',
+    photo:'images/souleve-de-terre.webp',
+    video:'',
+    description:
+      'Placez la barre près des pieds. Fléchissez les hanches et les genoux, stabilisez le tronc et soulevez la charge en la maintenant proche du corps. Contrôlez la descente.'
+  },
+
+  {
+    nom:'Gainage',
+    categorie:'Abdominaux',
+    groupes:'Abdominaux, Transverse',
+    photo:'images/gainage.webp',
+    video:'',
+    description:
+      'Prenez appui sur les avant-bras et les pieds. Maintenez le corps aligné, contractez les abdominaux et respirez normalement pendant toute la durée de l’exercice.'
+  },
+
+  {
+    nom:'Fentes',
+    categorie:'Jambes',
+    groupes:'Quadriceps, Fessiers',
+    photo:'images/fentes.webp',
+    video:'',
+    description:
+      'Effectuez un pas vers l’avant. Fléchissez les jambes en conservant votre équilibre et un tronc stable. Revenez à la position initiale puis alternez les jambes.'
+  },
+
+  {
+    nom:'Curl biceps',
+    categorie:'Bras',
+    groupes:'Biceps, Avant-bras',
+    photo:'images/curl-biceps.webp',
+    video:'',
+    description:
+      'Maintenez les coudes près du corps. Fléchissez les avant-bras pour soulever la charge sans balancer le buste. Contrôlez le retour.'
+  },
+
+  {
+    nom:'Extension triceps',
+    categorie:'Bras',
+    groupes:'Triceps',
+    photo:'images/extension-triceps.webp',
+    video:'',
+    description:
+      'Gardez les coudes stables. Réalisez une extension des avant-bras en contractant les triceps puis revenez progressivement à la position initiale.'
+  },
+
+  {
+    nom:'Développé militaire',
+    categorie:'Épaules',
+    groupes:'Deltoïdes, Triceps',
+    photo:'images/developpe-militaire.webp',
+    video:'',
+    description:
+      'Stabilisez le tronc et poussez la charge au-dessus de la tête dans une amplitude confortable. Redescendez lentement sans cambrer excessivement le dos.'
+  },
+
+  {
+    nom:'Presse à cuisses',
+    categorie:'Jambes',
+    groupes:'Quadriceps, Fessiers',
+    photo:'images/presse-cuisses.webp',
+    video:'',
+    description:
+      'Installez-vous sur la presse et placez les pieds sur la plateforme. Fléchissez les jambes dans une amplitude maîtrisée puis repoussez la charge sans verrouillage brutal des genoux.'
+  },
+
+  {
+    nom:'Hip thrust',
+    categorie:'Jambes',
+    groupes:'Fessiers, Ischio-jambiers',
+    photo:'images/hip-thrust.webp',
+    video:'',
+    description:
+      'Placez le haut du dos sur un banc stable. Réalisez une extension des hanches en contractant les fessiers. Évitez de compenser par une extension excessive du bas du dos.'
+  },
+
+  {
+    nom:'Rowing',
+    categorie:'Dos',
+    groupes:'Grand dorsal, Trapèzes, Biceps',
+    photo:'images/rowing.webp',
+    video:'',
+    description:
+      'Maintenez le tronc stable et tirez la charge vers le buste en dirigeant les coudes vers l’arrière. Contrôlez la phase de retour.'
+  }
+
+];
+
+
+/************************************************************
+ * 3. OUTILS ET SECURITE
+ ************************************************************/
+
+function esc(value){
 
   return String(value ?? '').replace(
     /[&<>"']/g,
-    c => ({
+    c=>({
       '&':'&amp;',
       '<':'&lt;',
       '>':'&gt;',
@@ -1073,7 +1312,7 @@ function esc(value) {
 
 }
 
-function normalize(value) {
+function normalize(value){
 
   return String(value ?? '')
     .normalize('NFD')
@@ -1083,52 +1322,17 @@ function normalize(value) {
 
 }
 
-function safeUrl(value) {
+function first(object,keys,fallback=''){
 
-  try {
+  for(const key of keys){
 
-    const u = new URL(
-      String(value || '')
-    );
-
-    return u.protocol === 'https:'
-      ? u.href
-      : '';
-
-  } catch {
-
-    return '';
-
-  }
-
-}
-
-function isActive(value) {
-
-  return [
-    'true',
-    '1',
-    'oui',
-    'actif',
-    'active',
-    'activee'
-  ].includes(normalize(value));
-
-}
-
-function first(object,keys,fallback = '') {
-
-  for (const key of keys) {
-
-    if (
+    if(
       object &&
-      object[key] !== undefined &&
-      object[key] !== null &&
-      object[key] !== ''
-    ) {
-
+      object[key]!==undefined &&
+      object[key]!==null &&
+      object[key]!==''
+    ){
       return object[key];
-
     }
 
   }
@@ -1137,48 +1341,50 @@ function first(object,keys,fallback = '') {
 
 }
 
-function safeAvatar(value) {
+function safeUrl(value){
 
-  const v = String(value || '');
+  try{
 
-  if (
-    /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/
-      .test(v)
-  ) {
+    const u=new URL(String(value||''));
 
-    return v;
+    return u.protocol==='https:' ? u.href : '';
+
+  }catch{
+
+    return '';
 
   }
 
-  return safeUrl(v);
+}
+
+function isActive(value){
+
+  return [
+    'true','1','oui','actif','active','activee'
+  ].includes(normalize(value));
 
 }
 
-function imageUrl(value) {
+function imageUrl(value){
 
-  const url = safeUrl(value);
+  const url=safeUrl(value);
 
-  if (url) {
+  if(url){
 
-    const u = new URL(url);
+    const u=new URL(url);
 
-    if (u.hostname === 'drive.google.com') {
+    if(u.hostname==='drive.google.com'){
 
-      const match = u.pathname.match(
-        /\/file\/d\/([\w-]+)/
-      );
+      const match=u.pathname.match(/\/file\/d\/([\w-]+)/);
 
-      const id = match
+      const id=match
         ? match[1]
         : u.searchParams.get('id');
 
-      if (id && /^[\w-]+$/.test(id)) {
+      if(id && /^[\w-]+$/.test(id)){
 
-        return (
-          'https://drive.google.com/thumbnail?id=' +
-          encodeURIComponent(id) +
-          '&sz=w1200'
-        );
+        return 'https://drive.google.com/thumbnail?id='+
+          encodeURIComponent(id)+'&sz=w1200';
 
       }
 
@@ -1188,17 +1394,11 @@ function imageUrl(value) {
 
   }
 
-  const relative = String(value || '');
+  const relative=String(value||'');
 
-  if (
-    /^images\/[a-zA-Z0-9_.-]+\.(webp|jpg|jpeg|png)$/i
-      .test(relative)
-  ) {
+  if(/^images\/[a-zA-Z0-9_.-]+\.(webp|jpg|jpeg|png)$/i.test(relative)){
 
-    return new URL(
-      relative,
-      window.location.href
-    ).href;
+    return new URL(relative,SITE).href;
 
   }
 
@@ -1206,12 +1406,167 @@ function imageUrl(value) {
 
 }
 
+function safeAvatar(value){
+
+  const v=String(value||'');
+
+  if(/^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(v)){
+    return v;
+  }
+
+  return imageUrl(v);
+
+}
+
+function setStatus(message,color){
+
+  connection.textContent='● '+message;
+  connection.style.color=color||'var(--green)';
+
+}
+
+function splitMuscles(value){
+
+  return String(value||'')
+    .split(/[,;·\n]/)
+    .map(v=>v.trim())
+    .filter(Boolean);
+
+}
+
+function muscleTags(value){
+
+  return `
+    <div class="muscles">
+      ${splitMuscles(value).map(v=>`
+        <span class="muscle">${esc(v)}</span>
+      `).join('')}
+    </div>
+  `;
+
+}
+
+function loading(message){
+
+  app.innerHTML=`
+    <div class="loading">
+      <div class="spinner"></div>
+      ${esc(message)}
+    </div>
+  `;
+
+}
+
+function showError(message){
+
+  setStatus('Accès indisponible','var(--red)');
+
+  app.innerHTML=`
+    <section class="panel form-card" style="text-align:center">
+      <div class="eyebrow">EAH SPORT</div>
+      <h2 style="margin-top:15px">Votre espace sportif</h2>
+      <p class="error">${esc(message)}</p>
+      <button class="btn" id="retryBtn">Réessayer</button>
+      <a class="btn btn-secondary" href="${SITE}">
+        Accueil public
+      </a>
+    </section>
+  `;
+
+  document.getElementById('retryBtn').onclick=init;
+
+}
+
 
 /************************************************************
- * 4. ADAPTATION DES DONNEES APPS SCRIPT
+ * 4. ICONES
  ************************************************************/
 
-function normalizeProfile(p) {
+const ICONS={
+
+  dumbbell:`
+    <svg viewBox="0 0 64 64" fill="none"
+      stroke="currentColor" stroke-width="4"
+      stroke-linecap="round">
+      <path d="M15 32H49"/>
+      <rect x="7" y="20" width="8" height="24" rx="2"/>
+      <rect x="49" y="20" width="8" height="24" rx="2"/>
+      <path d="M3 26V38M61 26V38"/>
+    </svg>
+  `,
+
+  play:`
+    <svg viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="1.7">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M10 8L16 12L10 16Z"/>
+    </svg>
+  `,
+
+  nfc:`
+    <svg viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="1.7"
+      stroke-linecap="round">
+      <rect x="3" y="2" width="10" height="20" rx="2"/>
+      <path d="M16 8Q21 12 16 16"/>
+      <path d="M19 5Q27 12 19 19"/>
+      <path d="M7 18H9"/>
+    </svg>
+  `
+
+};
+
+
+/************************************************************
+ * 5. NORMALISATION DES DONNEES GOOGLE SHEETS
+ ************************************************************/
+
+function normalizeExercise(e){
+
+  const nom=first(e,[
+    'nom','NOM','exercice','EXERCICE',
+    'name','NOM_EXERCICE'
+  ]);
+
+  const fallback=DEFAULT_EXERCISES.find(
+    x=>normalize(x.nom)===normalize(nom)
+  )||{};
+
+  const groupes=first(e,[
+    'groupes','GROUPES','muscles',
+    'GROUPES_MUSCULAIRES'
+  ],fallback.groupes||'');
+
+  return {
+
+    nom,
+
+    groupes,
+
+    categorie:first(e,[
+      'categorie','CATEGORIE','category'
+    ],fallback.categorie||'Autres'),
+
+    description:first(e,[
+      'description','DESCRIPTION'
+    ],fallback.description||''),
+
+    photo:first(e,[
+      'photo','PHOTO','image','IMAGE',
+      'photoUrl','URL_PHOTO','PHOTO_URL',
+      'URL_IMAGE'
+    ],fallback.photo||''),
+
+    video:first(e,[
+      'video','VIDEO','videoUrl',
+      'URL_VIDEO','VIDEO_URL'
+    ])
+
+  };
+
+}
+
+function normalizeProfile(p){
 
   return {
 
@@ -1219,9 +1574,7 @@ function normalizeProfile(p) {
 
     nom:first(p,['nom','NOM','lastName']),
 
-    prenom:first(
-      p,['prenom','PRENOM','firstName']
-    ),
+    prenom:first(p,['prenom','PRENOM','firstName']),
 
     poids:first(p,['poids','POIDS','weight']),
 
@@ -1233,307 +1586,148 @@ function normalizeProfile(p) {
 
     email:first(p,['email','EMAIL','mail','MAIL']),
 
-    photo:first(
-      p,['photo','PHOTO','photoUrl','PHOTO_URL']
-    ),
+    photo:first(p,[
+      'photo','PHOTO','photoUrl','PHOTO_URL'
+    ]),
 
-    message:first(
-      p,
-      [
-        'message',
-        'MESSAGE',
-        'messageCoach',
-        'MESSAGE_COACH'
-      ]
-    )
+    message:first(p,[
+      'message','MESSAGE','messageCoach','MESSAGE_COACH'
+    ])
 
   };
 
 }
 
-function normalizeExercise(e) {
+function normalizeSession(s){
 
   return {
 
-    nom:first(
-      e,
-      [
-        'nom',
-        'NOM',
-        'exercice',
-        'EXERCICE',
-        'name'
-      ]
-    ),
+    nom:first(s,[
+      'nom','seance','SEANCE','session','NOM_SEANCE'
+    ]),
 
-    groupes:first(
-      e,
-      [
-        'groupes',
-        'GROUPES',
-        'muscles',
-        'GROUPES_MUSCULAIRES'
-      ]
-    ),
+    exercice:first(s,['exercice','EXERCICE','exercise']),
 
-    description:first(
-      e,
-      ['description','DESCRIPTION']
-    ),
+    groupes:first(s,['groupes','GROUPES','muscles']),
 
-    photo:first(
-      e,
-      [
-        'photo',
-        'PHOTO',
-        'image',
-        'photoUrl',
-        'URL_PHOTO',
-        'IMAGE'
-      ]
-    ),
+    video:first(s,['video','VIDEO','videoUrl','URL_VIDEO']),
 
-    video:first(
-      e,
-      [
-        'video',
-        'VIDEO',
-        'videoUrl',
-        'URL_VIDEO'
-      ]
-    )
+    photo:first(s,['photo','PHOTO','image','URL_PHOTO']),
+
+    description:first(s,['description','DESCRIPTION']),
+
+    series:first(s,['series','SERIES','sets']),
+
+    reps:first(s,[
+      'reps','REPS','repetitions','REPETITIONS'
+    ]),
+
+    charges:first(s,[
+      'charges','CHARGES','charge','CHARGE','poids','POIDS'
+    ]),
+
+    repos:first(s,[
+      'repos','REPOS','recuperation','RECUPERATION','rest'
+    ]),
+
+    notes:first(s,[
+      'notes','NOTES','consignes','CONSIGNES'
+    ])
 
   };
 
 }
 
-function normalizeSession(s) {
+function normalizeExerciseList(list){
 
-  return {
+  if(!Array.isArray(list))return [];
 
-    nom:first(
-      s,
-      [
-        'nom',
-        'seance',
-        'SEANCE',
-        'session',
-        'NOM_SEANCE'
-      ]
-    ),
+  return list.filter(e=>{
 
-    exercice:first(
-      s,
-      ['exercice','EXERCICE','exercise']
-    ),
+    const active=first(e,[
+      'active','ACTIVE','actif','ACTIF'
+    ],null);
 
-    groupes:first(
-      s,
-      ['groupes','GROUPES','muscles']
-    ),
+    return active===null||isActive(active);
 
-    video:first(
-      s,
-      ['video','VIDEO','videoUrl']
-    ),
-
-    photo:first(
-      s,
-      ['photo','PHOTO','image']
-    ),
-
-    description:first(
-      s,
-      ['description','DESCRIPTION']
-    ),
-
-    series:first(
-      s,
-      ['series','SERIES','sets']
-    ),
-
-    reps:first(
-      s,
-      [
-        'reps',
-        'REPS',
-        'repetitions',
-        'REPETITIONS'
-      ]
-    ),
-
-    charges:first(
-      s,
-      [
-        'charges',
-        'CHARGES',
-        'charge',
-        'poids',
-        'POIDS',
-        'CHARGE'
-      ]
-    ),
-
-    repos:first(
-      s,
-      [
-        'repos',
-        'REPOS',
-        'recuperation',
-        'RECUPERATION',
-        'rest'
-      ]
-    ),
-
-    notes:first(
-      s,
-      ['notes','NOTES','consignes','CONSIGNES']
-    )
-
-  };
+  }).map(normalizeExercise).filter(e=>e.nom);
 
 }
 
-function normalizeResponse(result) {
+function normalizeResponse(result){
 
-  const payload =
+  const payload=
     result.data &&
-    typeof result.data === 'object' &&
+    typeof result.data==='object' &&
     !Array.isArray(result.data)
 
     ? {...result,...result.data}
 
     : result;
 
-  const profile =
+  const profile=
     payload.profil ||
     payload.profile ||
     payload.user ||
     payload.utilisateur ||
     null;
 
-  const statusValue = normalize(
+  const rawStatus=normalize(first(
+    payload,
+    ['status','statut','STATUS','STATUT'],
+    profile
+      ? first(profile,['status','statut','STATUS','STATUT'])
+      : ''
+  ));
 
-    first(
-      payload,
-      ['status','statut','STATUS','STATUT'],
+  let status=rawStatus.toUpperCase();
 
-      profile
-        ? first(
-            profile,
-            ['status','statut','STATUS','STATUT']
-          )
-        : ''
-    )
-
-  );
-
-  let status = statusValue.toUpperCase();
-
-  if (
-    [
-      'active',
-      'actif',
-      'activee',
-      'activated'
-    ].includes(statusValue)
-  ) {
-
-    status = 'ACTIF';
-
+  if([
+    'active','actif','activee','activated'
+  ].includes(rawStatus)){
+    status='ACTIF';
   }
 
-  if (
-    [
-      'disponible',
-      'available',
-      'libre',
-      'inactive',
-      'non active'
-    ].includes(statusValue)
-  ) {
-
-    status = 'DISPONIBLE';
-
+  if([
+    'disponible','available','libre','inactive','non active'
+  ].includes(rawStatus)){
+    status='DISPONIBLE';
   }
 
-  if (
-    [
-      'desactive',
-      'desactivee',
-      'disabled',
-      'bloque'
-    ].includes(statusValue)
-  ) {
-
-    status = 'DESACTIVE';
-
+  if([
+    'desactive','desactivee','disabled','bloque'
+  ].includes(rawStatus)){
+    status='DESACTIVE';
   }
 
-  const exerciseList =
-    payload.exercises ||
-    payload.exercices ||
-    [];
-
-  const sessionList =
-    payload.sessions ||
-    payload.seances ||
-    [];
+  const sessionList=payload.sessions||payload.seances||[];
 
   return {
 
-    ...payload,
-
     status,
 
-    id:first(
-      payload,
-      ['id','ID','identifiant']
-    ),
+    id:first(payload,['id','ID','identifiant']),
 
     coach:first(payload,['coach','COACH']),
 
-    profil:profile
-      ? normalizeProfile(profile)
-      : null,
+    profil:profile?normalizeProfile(profile):null,
 
-    exercises:Array.isArray(exerciseList)
-
-      ? exerciseList
-          .filter(e => {
-
-            const active = first(
-              e,
-              ['active','ACTIVE','actif','ACTIF'],
-              null
-            );
-
-            return active === null ||
-              isActive(active);
-
-          })
-          .map(normalizeExercise)
-          .filter(e => e.nom)
-
-      : [],
+    exercises:normalizeExerciseList(
+      payload.exercises||payload.exercices||[]
+    ),
 
     sessions:Array.isArray(sessionList)
 
-      ? sessionList
-          .filter(s => {
+      ? sessionList.filter(s=>{
 
-            const active = first(
-              s,
-              ['active','ACTIVE','actif','ACTIF'],
-              null
-            );
+          const active=first(s,[
+            'active','ACTIVE','actif','ACTIF'
+          ],null);
 
-            return active === null ||
-              isActive(active);
+          return active===null||isActive(active);
 
-          })
-          .map(normalizeSession)
-          .filter(s => s.nom && s.exercice)
+        }).map(normalizeSession)
+          .filter(s=>s.nom&&s.exercice)
 
       : []
 
@@ -1543,49 +1737,23 @@ function normalizeResponse(result) {
 
 
 /************************************************************
- * 5. COMMUNICATION AVEC TON APPS SCRIPT
+ * 6. COMMUNICATION APPS SCRIPT
  ************************************************************/
 
-async function callAPI(action,data = {}) {
+async function requestJSON(url,options={},timeout=45000){
 
-  if (!token) {
+  const controller=new AbortController();
 
-    throw new Error(
-      'Aucune carte NFC détectée.'
-    );
-
-  }
-
-  if (!/^[A-Za-z0-9_-]{20,160}$/.test(token)) {
-
-    throw new Error(
-      'Le lien de votre carte est invalide.'
-    );
-
-  }
-
-  const controller = new AbortController();
-
-  const timer = setTimeout(
-    () => controller.abort(),
-    45000
+  const timer=setTimeout(
+    ()=>controller.abort(),
+    timeout
   );
 
-  try {
+  try{
 
-    const response = await fetch(API,{
+    const response=await fetch(url,{
 
-      method:'POST',
-
-      headers:{
-        'Content-Type':'text/plain;charset=UTF-8'
-      },
-
-      body:JSON.stringify({
-        action:action,
-        token:token,
-        data:data
-      }),
+      ...options,
 
       redirect:'follow',
 
@@ -1597,68 +1765,43 @@ async function callAPI(action,data = {}) {
 
     });
 
-    if (!response.ok) {
+    if(!response.ok){
 
-      throw new Error(
-        'Erreur serveur : ' + response.status
-      );
+      throw new Error('Erreur serveur : '+response.status);
 
     }
 
-    const raw = await response.text();
+    const raw=await response.text();
 
     let result;
 
-    try {
+    try{
 
-      result = JSON.parse(raw);
+      result=JSON.parse(raw);
 
-    } catch {
+    }catch{
 
-      throw new Error(
-        'Réponse Apps Script invalide. ' +
-        'Vérifiez le déploiement de votre application Web.'
-      );
+      throw new Error('Réponse Apps Script non valide.');
 
     }
 
-    if (!result || result.ok === false ||
-        result.success === false) {
+    if(
+      !result ||
+      result.ok===false ||
+      result.success===false
+    ){
 
       throw new Error(
-
         result?.error ||
         result?.message ||
-        'Accès impossible.'
-
+        'Requête refusée.'
       );
 
     }
 
-    return normalizeResponse(result);
+    return result;
 
-  } catch(error) {
-
-    if (error.name === 'AbortError') {
-
-      throw new Error(
-        'Le serveur met trop de temps à répondre.'
-      );
-
-    }
-
-    if (error instanceof TypeError) {
-
-      throw new Error(
-        'Connexion impossible au serveur EAH SPORT. ' +
-        'Vérifiez la connexion et les autorisations Apps Script.'
-      );
-
-    }
-
-    throw error;
-
-  } finally {
+  }finally{
 
     clearTimeout(timer);
 
@@ -1666,714 +1809,370 @@ async function callAPI(action,data = {}) {
 
 }
 
+async function callAPI(action,data={}){
 
-/************************************************************
- * 6. CHARGEMENT ET ERREURS
- ************************************************************/
+  if(!/^[A-Za-z0-9_-]{20,160}$/.test(token)){
 
-function loading(message) {
-
-  app.innerHTML = `
-
-    <div class="loading">
-
-      <div class="spinner"></div>
-
-      <p>${esc(message)}</p>
-
-    </div>
-
-  `;
-
-}
-
-function setStatus(message,color) {
-
-  connection.textContent = '● ' + message;
-
-  connection.style.color = color || 'var(--green)';
-
-}
-
-function showError(message) {
-
-  setStatus(
-    'Accès indisponible',
-    'var(--red)'
-  );
-
-  app.innerHTML = `
-
-    <div class="panel"
-      style="max-width:650px;margin:40px auto;text-align:center">
-
-      <div class="eyebrow">EAH SPORT</div>
-
-      <h2 style="margin-top:20px">
-        Accès à votre espace
-      </h2>
-
-      <p class="error">
-        ${esc(message)}
-      </p>
-
-      <button class="btn" id="retryBtn">
-        Réessayer
-      </button>
-
-    </div>
-
-  `;
-
-  document.getElementById('retryBtn')
-    .onclick = init;
-
-}
-
-
-/************************************************************
- * 7. ACCUEIL SANS CARTE NFC
- ************************************************************/
-
-function showWelcome() {
-
-  setStatus('Coaching connecté');
-
-  app.innerHTML = `
-
-    <section class="hero">
-
-      <div class="eyebrow">
-        PERSONAL COACHING EXPERIENCE
-      </div>
-
-      <h1 style="margin-top:20px">
-        Votre entraînement.<br>
-        Votre progression.
-      </h1>
-
-      <p class="muted">
-        Votre coach, vos séances et vos tutoriels
-        accessibles depuis votre carte connectée.
-      </p>
-
-    </section>
-
-    <section class="panel"
-      style="text-align:center;padding:35px">
-
-      <div class="eyebrow">
-        ESPACE MEMBRE
-      </div>
-
-      <div style="font-size:45px;color:#72bbff">
-        ◉ )))
-      </div>
-
-      <h2>Votre carte EAH SPORT</h2>
-
-      <p class="muted">
-        Approchez votre carte NFC de votre smartphone
-        pour accéder directement à votre profil sportif.
-      </p>
-
-      <p class="small muted">
-        Lors du premier scan, votre formulaire
-        d'activation s'ouvrira automatiquement.
-      </p>
-
-    </section>
-
-    <div class="grid">
-
-      <article class="panel">
-
-        <div class="eyebrow">01 · PROGRAMMES</div>
-
-        <h3>Coaching personnalisé</h3>
-
-        <p class="muted">
-          Retrouvez vos séances individuelles,
-          préparées par votre coach.
-        </p>
-
-      </article>
-
-      <article class="panel">
-
-        <div class="eyebrow">02 · TUTORIELS</div>
-
-        <h3>Bibliothèque sportive</h3>
-
-        <p class="muted">
-          Consultez les exercices, les photos,
-          les vidéos et leurs consignes techniques.
-        </p>
-
-      </article>
-
-      <article class="panel">
-
-        <div class="eyebrow">03 · PROFIL</div>
-
-        <h3>Votre espace personnel</h3>
-
-        <p class="muted">
-          Vos informations et les messages
-          de votre coach au même endroit.
-        </p>
-
-      </article>
-
-    </div>
-
-  `;
-
-}
-
-
-/************************************************************
- * 8. COMPRESSION PHOTO
- ************************************************************/
-
-async function compressImage(file) {
-
-  if (!file) return '';
-
-  if (!/^image\/(jpeg|png|webp)$/.test(file.type)) {
-
-    throw new Error(
-      'Choisissez une photo JPG, PNG ou WEBP.'
-    );
+    throw new Error('Lien NFC invalide.');
 
   }
 
-  if (file.size > 15000000) {
+  const result=await requestJSON(API,{
 
-    throw new Error(
-      'La photo est trop volumineuse.'
-    );
+    method:'POST',
 
-  }
+    headers:{
+      'Content-Type':'text/plain;charset=UTF-8'
+    },
 
-  const url = URL.createObjectURL(file);
+    body:JSON.stringify({
 
-  try {
+      action,
 
-    const img = await new Promise(
-      (resolve,reject) => {
+      token,
 
-        const i = new Image();
-
-        i.onload = () => resolve(i);
-
-        i.onerror = () =>
-          reject(new Error('Photo illisible.'));
-
-        i.src = url;
-
-      }
-    );
-
-    const ratio = Math.min(
-      1,
-      CONFIG.PHOTO_DIMENSION /
-        Math.max(img.width,img.height)
-    );
-
-    const canvas =
-      document.createElement('canvas');
-
-    canvas.width =
-      Math.max(1,Math.round(img.width * ratio));
-
-    canvas.height =
-      Math.max(1,Math.round(img.height * ratio));
-
-    const ctx = canvas.getContext('2d');
-
-    ctx.fillStyle = '#ffffff';
-
-    ctx.fillRect(
-      0,0,canvas.width,canvas.height
-    );
-
-    ctx.drawImage(
-      img,0,0,canvas.width,canvas.height
-    );
-
-    let quality = .85;
-
-    let result = canvas.toDataURL(
-      'image/jpeg',quality
-    );
-
-    while (
-      result.length * .75 >
-        CONFIG.MAX_PHOTO_SIZE &&
-      quality > .3
-    ) {
-
-      quality -= .1;
-
-      result = canvas.toDataURL(
-        'image/jpeg',quality
-      );
-
-    }
-
-    if (
-      result.length * .75 >
-        CONFIG.MAX_PHOTO_SIZE
-    ) {
-
-      throw new Error(
-        'Impossible de compresser cette photo.'
-      );
-
-    }
-
-    return result;
-
-  } finally {
-
-    URL.revokeObjectURL(url);
-
-  }
-
-}
-
-
-/************************************************************
- * 9. ACTIVATION NFC
- ************************************************************/
-
-function showActivation() {
-
-  setStatus(
-    'Carte disponible',
-    'var(--orange)'
-  );
-
-  compressedPhoto = '';
-
-  photoTask = Promise.resolve('');
-
-  app.innerHTML = `
-
-    <section class="panel form-card">
-
-      <div class="activation-heading">
-
-        <img
-          src="logo.png"
-          alt="EAH"
-          onerror="this.hidden=true"
-        >
-
-        <div class="eyebrow">
-          ACTIVATION NFC
-        </div>
-
-        <h2 style="margin-top:12px">
-          Bienvenue chez EAH SPORT
-        </h2>
-
-        <p class="muted">
-          Créez votre profil sportif personnel.
-        </p>
-
-        <span class="muscle">
-          CARTE ${esc(state.id || 'EAH SPORT')}
-        </span>
-
-      </div>
-
-      <form id="activationForm">
-
-        <img
-          id="photoPreview"
-          class="photo-preview"
-          alt="Aperçu de la photo"
-        >
-
-        <div class="field">
-
-          <label for="photo">
-            Photo de profil (facultative)
-          </label>
-
-          <input
-            type="file"
-            id="photo"
-            accept="image/jpeg,image/png,image/webp"
-          >
-
-          <p class="small muted" id="photoStatus">
-            Compression automatique de votre photo.
-          </p>
-
-        </div>
-
-        <div class="form-grid">
-
-          <div class="field">
-
-            <label for="nom">Nom</label>
-
-            <input
-              id="nom"
-              name="nom"
-              required
-              maxlength="80"
-              autocomplete="family-name"
-              placeholder="Dupont"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label for="prenom">Prénom</label>
-
-            <input
-              id="prenom"
-              name="prenom"
-              required
-              maxlength="80"
-              autocomplete="given-name"
-              placeholder="Alexandre"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label for="poids">Poids (kg)</label>
-
-            <input
-              id="poids"
-              name="poids"
-              type="number"
-              min="1"
-              max="499"
-              step="0.1"
-              required
-              placeholder="75"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label for="age">Âge</label>
-
-            <input
-              id="age"
-              name="age"
-              type="number"
-              min="18"
-              max="120"
-              required
-              placeholder="28"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label for="taille">Taille (cm)</label>
-
-            <input
-              id="taille"
-              name="taille"
-              type="number"
-              min="51"
-              max="259"
-              step="0.1"
-              required
-              placeholder="175"
-            >
-
-          </div>
-
-          <div class="field">
-
-            <label for="coach">Votre coach</label>
-
-            <input
-              id="coach"
-              name="coach"
-              value="${esc(state.coach)}"
-              maxlength="100"
-              required
-              placeholder="Nom du coach"
-            >
-
-          </div>
-
-        </div>
-
-        <div class="field">
-
-          <label for="email">Adresse email</label>
-
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            maxlength="200"
-            autocomplete="email"
-            placeholder="vous@exemple.fr"
-          >
-
-        </div>
-
-        <label class="consent">
-
-          <input
-            type="checkbox"
-            name="consent"
-            required
-          >
-
-          <span>
-            J'accepte l'enregistrement de mes
-            informations pour mon suivi sportif.
-            Je comprends que toute personne
-            disposant de mon lien NFC pourra
-            accéder à mon profil.
-          </span>
-
-        </label>
-
-        <button
-          id="activateBtn"
-          class="btn full"
-          type="submit"
-          style="margin-top:20px"
-        >
-          Activer ma carte EAH SPORT
-        </button>
-
-        <p
-          class="error"
-          id="formError"
-          role="alert"
-          style="margin-top:15px"
-        ></p>
-
-      </form>
-
-    </section>
-
-  `;
-
-  const photoInput =
-    document.getElementById('photo');
-
-  const preview =
-    document.getElementById('photoPreview');
-
-  const photoStatus =
-    document.getElementById('photoStatus');
-
-  let photoVersion = 0;
-
-  photoInput.onchange = () => {
-
-    const version = ++photoVersion;
-
-    compressedPhoto = '';
-
-    preview.style.display = 'none';
-
-    photoStatus.textContent =
-      'Préparation de votre photo…';
-
-    photoTask = compressImage(
-      photoInput.files[0]
-    )
-
-    .then(result => {
-
-      if (version !== photoVersion) return '';
-
-      compressedPhoto = result;
-
-      if (result) {
-
-        preview.src = result;
-
-        preview.style.display = 'block';
-
-        photoStatus.textContent =
-          'Photo prête à être enregistrée.';
-
-      } else {
-
-        photoStatus.textContent =
-          'Aucune photo sélectionnée.';
-
-      }
-
-      return result;
+      data
 
     })
 
-    .catch(error => {
+  });
 
-      if (version === photoVersion) {
-
-        photoStatus.textContent = error.message;
-
-        photoInput.value = '';
-
-        compressedPhoto = '';
-
-      }
-
-      return '';
-
-    });
-
-  };
-
-  document.getElementById('activationForm')
-    .onsubmit = async event => {
-
-      event.preventDefault();
-
-      if (requestPending) return;
-
-      requestPending = true;
-
-      const form = event.target;
-
-      const button =
-        document.getElementById('activateBtn');
-
-      const errorBox =
-        document.getElementById('formError');
-
-      button.disabled = true;
-
-      photoInput.disabled = true;
-
-      button.textContent =
-        'Activation en cours…';
-
-      errorBox.textContent = '';
-
-      try {
-
-        await photoTask;
-
-        const data = Object.fromEntries(
-          new FormData(form)
-        );
-
-        data.consent =
-          form.elements.consent.checked;
-
-        data.photo = compressedPhoto;
-
-        await callAPI('activate',data);
-
-        state = await callAPI('read');
-
-        if (state.status !== 'ACTIF') {
-
-          throw new Error(
-            'Activation non confirmée. ' +
-            'Vérifiez votre profil avec votre coach.'
-          );
-
-        }
-
-        currentTab = 'sessions';
-
-        showDashboard();
-
-      } catch(error) {
-
-        errorBox.textContent = error.message;
-
-        button.disabled = false;
-
-        photoInput.disabled = false;
-
-        button.textContent =
-          'Activer ma carte EAH SPORT';
-
-      } finally {
-
-        requestPending = false;
-
-      }
-
-    };
+  return normalizeResponse(result);
 
 }
 
 
 /************************************************************
- * 10. PHOTOS DES EXERCICES
+ * 7. RECUPERATION PUBLIQUE DES EXERCICES
+ *
+ * Aucun token individuel n'est utilise.
+ * Aucun profil ni aucune seance ne sont demandes.
  ************************************************************/
 
-function placeholderPhoto() {
+function extractPublicExercises(result){
+
+  const payload=result.data||result;
+
+  const list=Array.isArray(payload)
+
+    ? payload
+
+    : payload.exercises||payload.exercices;
+
+  if(!Array.isArray(list)){
+
+    throw new Error('Bibliothèque publique indisponible.');
+
+  }
+
+  return normalizeExerciseList(list);
+
+}
+
+async function loadPublicExercises(){
+
+  if(publicLoading)return;
+
+  publicLoading=true;
+
+  publicSynced=false;
+
+  const syncButton=document.getElementById('publicRefresh');
+
+  if(syncButton)syncButton.disabled=true;
+
+  try{
+
+    let result;
+
+    try{
+
+      result=await requestJSON(
+        API+'?action=exercises',
+        {method:'GET'},
+        12000
+      );
+
+      exercises=extractPublicExercises(result);
+
+    }catch{
+
+      result=await requestJSON(API,{
+
+        method:'POST',
+
+        headers:{
+          'Content-Type':'text/plain;charset=UTF-8'
+        },
+
+        body:JSON.stringify({
+          action:'exercises'
+        })
+
+      },12000);
+
+      exercises=extractPublicExercises(result);
+
+    }
+
+    publicSynced=true;
+
+  }catch{
+
+    exercises=DEFAULT_EXERCISES.map(e=>({...e}));
+
+    publicSynced=false;
+
+  }finally{
+
+    publicLoading=false;
+
+    if(syncButton)syncButton.disabled=false;
+
+    if(document.getElementById('exerciseList')){
+
+      updateLibraryFilters();
+
+      renderExerciseList();
+
+      updatePublicNotice();
+
+    }
+
+    const counter=document.getElementById('exerciseCount');
+
+    if(counter)counter.textContent=exercises.length;
+
+  }
+
+}
+
+function updatePublicNotice(){
+
+  const notice=document.getElementById('publicNotice');
+
+  if(!notice)return;
+
+  if(publicLoading){
+
+    notice.hidden=false;
+
+    notice.textContent=
+      'Synchronisation de la bibliothèque sportive…';
+
+  }else if(publicSynced){
+
+    notice.hidden=true;
+
+  }else{
+
+    notice.hidden=false;
+
+    notice.textContent=
+      'Bibliothèque de découverte. Les tutoriels du coach seront disponibles lorsque la synchronisation publique sera activée.';
+
+  }
+
+}
+
+
+/************************************************************
+ * 8. PAGE D'ACCUEIL PUBLIQUE PREMIUM
+ ************************************************************/
+
+function showPublicHome(){
+
+  setStatus('Coaching connecté');
+
+  exercises=DEFAULT_EXERCISES.map(e=>({...e}));
+
+  currentFilter='Tous';
+
+  headerNav.innerHTML=`
+    <a href="#accueil">Accueil</a>
+    <a href="#exercices">Exercices</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#coaching">Espace membre</a>
+  `;
+
+  app.innerHTML=`
+
+    <section class="hero" id="accueil">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          PERSONAL COACHING EXPERIENCE
+        </div>
+
+        <h1>
+          Votre entraînement.<br>
+          <span>Votre progression.</span>
+        </h1>
+
+        <p>
+          Découvrez notre bibliothèque d'exercices,
+          améliorez votre technique et bénéficiez
+          d'un accompagnement sportif personnalisé.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a class="btn" href="#exercices">
+            Découvrir les exercices →
+          </a>
+
+          <a class="btn btn-secondary" href="#coaching">
+            Mon espace coaching
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          ${ICONS.dumbbell}
+        </div>
+
+        <div>
+          <strong>
+            <span id="exerciseCount">${exercises.length}</span>
+            exercices
+          </strong>
+          <small>Bibliothèque sportive</small>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          ${ICONS.play}
+        </div>
+
+        <div>
+          <strong>Tutoriels</strong>
+          <small>Apprentissage technique</small>
+        </div>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon">
+          ${ICONS.nfc}
+        </div>
+
+        <div>
+          <strong>Coaching NFC</strong>
+          <small>Programmes personnels</small>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="exercices">
+
+      <div id="publicLibrary"></div>
+
+    </section>
+
+    <section class="coaching-banner" id="coaching">
+
+      <div>
+
+        <div class="eyebrow">
+          VOTRE COACH À PORTÉE DE MAIN
+        </div>
+
+        <h2 style="margin-top:15px">
+          Votre programme.<br>
+          Votre carte connectée.
+        </h2>
+
+        <p class="muted">
+
+          Accédez à vos séances individuelles,
+          aux consignes de votre coach et à votre
+          profil sportif en approchant votre carte
+          EAH SPORT de votre smartphone.
+
+        </p>
+
+        <button class="btn" id="memberHelp">
+          Accéder à mon espace personnel
+        </button>
+
+        <p class="small muted" style="margin-top:15px">
+
+          La bibliothèque d'exercices est accessible
+          librement, sans carte NFC.
+
+        </p>
+
+      </div>
+
+      <div class="nfc-card">
+
+        <div class="nfc-card-top">
+
+          <img src="logo.png" alt="EAH"
+            onerror="this.hidden=true">
+
+          <span class="nfc-symbol">NFC )))</span>
+
+        </div>
+
+        <div class="nfc-card-title">
+          EAH <span>SPORT</span>
+        </div>
+
+        <small>PERSONAL COACHING EXPERIENCE</small>
+
+      </div>
+
+    </section>
+
+  `;
+
+  showLibrary(
+    document.getElementById('publicLibrary'),
+    true
+  );
+
+  document.getElementById('memberHelp').onclick=showMemberHelp;
+
+  loadPublicExercises();
+
+}
+
+
+/************************************************************
+ * 9. PHOTOS ET BIBLIOTHEQUE
+ ************************************************************/
+
+function placeholderPhoto(){
 
   return `
-
     <div class="photo-placeholder">
-
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="4"
-        stroke-linecap="round"
-        aria-hidden="true"
-      >
-
-        <path d="M15 32H49"/>
-
-        <rect
-          x="7"
-          y="20"
-          width="8"
-          height="24"
-          rx="2"
-        />
-
-        <rect
-          x="49"
-          y="20"
-          width="8"
-          height="24"
-          rx="2"
-        />
-
-        <path d="M3 26V38M61 26V38"/>
-
-      </svg>
-
+      ${ICONS.dumbbell}
     </div>
-
   `;
 
 }
 
-function exerciseImage(value,name) {
+function exerciseImage(value,name){
 
-  const image = imageUrl(value);
+  const image=imageUrl(value);
 
-  if (!image) {
-
-    return placeholderPhoto();
-
-  }
+  if(!image)return placeholderPhoto();
 
   return `
 
@@ -2394,35 +2193,30 @@ function exerciseImage(value,name) {
 
 }
 
-function clickableExercisePhoto(exercise,index) {
+function clickablePhoto(e,index){
 
   return `
 
     <button
-      type="button"
       class="exercise-image-button"
+      type="button"
       data-open-exercise="${index}"
-      aria-label="Découvrir ${esc(exercise.nom)}"
+      aria-label="Découvrir ${esc(e.nom)}"
     >
 
-      ${exerciseImage(
-        exercise.photo,
-        exercise.nom
-      )}
+      ${exerciseImage(e.photo,e.nom)}
 
       <div class="play-overlay">
 
         <span class="play-circle">
-          ▶
+          ${e.video?'▶':'+'}
         </span>
 
       </div>
 
       <span class="photo-label">
 
-        ${exercise.video
-          ? 'TUTORIEL VIDÉO'
-          : 'FICHE EXERCICE'}
+        ${e.video?'TUTORIEL VIDÉO':'FICHE TECHNIQUE'}
 
       </span>
 
@@ -2432,67 +2226,263 @@ function clickableExercisePhoto(exercise,index) {
 
 }
 
+function showLibrary(container,isPublic){
 
-/************************************************************
- * 11. GROUPES MUSCULAIRES
- ************************************************************/
+  currentFilter='Tous';
 
-function splitMuscles(value) {
+  container.innerHTML=`
 
-  return String(value || '')
-    .split(/[,;·\n]/)
-    .map(v => v.trim())
-    .filter(Boolean);
+    <div class="section-heading">
 
-}
+      <div>
 
-function muscleTags(value) {
+        <div class="eyebrow">
+          EAH SPORT TRAINING
+        </div>
 
-  return `
+        <h2>Bibliothèque d'exercices</h2>
 
-    <div class="muscles">
+        <p class="muted">
 
-      ${splitMuscles(value)
-        .map(v => `
+          Découvrez les mouvements et leurs
+          tutoriels vidéo.
 
-          <span class="muscle">
-            ${esc(v)}
-          </span>
+        </p>
 
-        `).join('')}
+      </div>
+
+      <button class="btn btn-secondary" id="publicRefresh">
+        ↻ Actualiser
+      </button>
 
     </div>
 
+    ${isPublic?`
+      <div class="notice" id="publicNotice" hidden></div>
+    `:''}
+
+    <div class="search-bar">
+
+      <input
+        id="exerciseSearch"
+        placeholder="Rechercher un exercice…"
+        aria-label="Rechercher un exercice"
+      >
+
+      <select
+        id="muscleFilter"
+        aria-label="Groupe musculaire"
+      >
+
+        <option value="">
+          Tous les groupes musculaires
+        </option>
+
+      </select>
+
+    </div>
+
+    <div class="filters" id="categoryFilters"></div>
+
+    <p class="small muted" id="resultCount"></p>
+
+    <div class="grid" id="exerciseList"></div>
+
   `;
+
+  document.getElementById('exerciseSearch').oninput=
+    renderExerciseList;
+
+  document.getElementById('muscleFilter').onchange=
+    renderExerciseList;
+
+  document.getElementById('publicRefresh').onclick=
+    isPublic?loadPublicExercises:refreshData;
+
+  updateLibraryFilters();
+
+  renderExerciseList();
+
+  if(isPublic)updatePublicNotice();
+
+}
+
+function updateLibraryFilters(){
+
+  const select=document.getElementById('muscleFilter');
+
+  const filters=document.getElementById('categoryFilters');
+
+  if(!select||!filters)return;
+
+  const selected=select.value;
+
+  const muscles=[...new Set(
+    exercises.flatMap(e=>splitMuscles(e.groupes))
+  )].sort((a,b)=>a.localeCompare(b,'fr'));
+
+  select.innerHTML=`
+
+    <option value="">
+      Tous les groupes musculaires
+    </option>
+
+    ${muscles.map(m=>`
+
+      <option value="${esc(m)}">
+        ${esc(m)}
+      </option>
+
+    `).join('')}
+
+  `;
+
+  if(muscles.includes(selected))select.value=selected;
+
+  const categories=[
+    'Tous',
+    ...new Set(exercises.map(e=>e.categorie).filter(Boolean))
+  ];
+
+  if(!categories.includes(currentFilter))currentFilter='Tous';
+
+  filters.innerHTML=categories.map(c=>`
+
+    <button
+      class="filter-btn ${c===currentFilter?'active':''}"
+      data-category="${esc(c)}"
+    >
+      ${esc(c)}
+    </button>
+
+  `).join('');
+
+  filters.querySelectorAll('[data-category]').forEach(btn=>{
+
+    btn.onclick=()=>{
+
+      currentFilter=btn.dataset.category;
+
+      filters.querySelectorAll('button').forEach(b=>{
+
+        b.classList.toggle(
+          'active',
+          b.dataset.category===currentFilter
+        );
+
+      });
+
+      renderExerciseList();
+
+    };
+
+  });
+
+}
+
+function renderExerciseList(){
+
+  const container=document.getElementById('exerciseList');
+
+  if(!container)return;
+
+  const q=normalize(
+    document.getElementById('exerciseSearch')?.value
+  );
+
+  const muscle=normalize(
+    document.getElementById('muscleFilter')?.value
+  );
+
+  const list=exercises.map((e,index)=>({...e,index}))
+
+    .filter(e=>{
+
+      const text=normalize(
+        e.nom+' '+e.groupes+' '+e.description
+      );
+
+      const groups=splitMuscles(e.groupes).map(normalize);
+
+      return text.includes(q) &&
+
+        (!muscle||groups.includes(muscle)) &&
+
+        (currentFilter==='Tous'||
+          e.categorie===currentFilter);
+
+    });
+
+  document.getElementById('resultCount').textContent=
+    list.length+' exercice(s) disponible(s)';
+
+  container.innerHTML=list.length
+
+    ? list.map(e=>`
+
+      <article class="exercise-card">
+
+        ${clickablePhoto(e,e.index)}
+
+        <div class="exercise-body">
+
+          <div class="eyebrow">
+            ${esc(e.categorie)} · EAH SPORT
+          </div>
+
+          <h3>${esc(e.nom)}</h3>
+
+          ${muscleTags(e.groupes)}
+
+          <p class="exercise-description">
+            ${esc(e.description)}
+          </p>
+
+          <button
+            class="btn full"
+            data-open-exercise="${e.index}"
+          >
+            ${e.video?'▶':'+'} Voir les détails
+          </button>
+
+        </div>
+
+      </article>
+
+    `).join('')
+
+    : `
+      <div class="empty">
+        Aucun exercice ne correspond à votre recherche.
+      </div>
+    `;
 
 }
 
 
 /************************************************************
- * 12. LECTEUR VIDEO
- *
- * YouTube
- * YouTube Shorts
- * Google Drive
- * Vimeo
- * MP4 / WEBM
- * Instagram et autres liens
+ * 10. LECTEUR VIDEO MULTIPLATEFORME
  ************************************************************/
 
-function videoHTML(value) {
+function videoHTML(value){
 
-  const link = safeUrl(value);
+  const link=safeUrl(value);
 
-  if (!link) {
+  if(!link){
 
     return `
 
-      <div class="empty">
+      <div class="video-preview">
+
+        <div style="font-size:40px;color:#72bbff">
+          ▶
+        </div>
 
         <h3>Tutoriel bientôt disponible</h3>
 
-        <p>
-          Votre coach pourra ajouter une vidéo.
+        <p class="small muted">
+          La vidéo sera affichée lorsque son lien
+          sera disponible.
         </p>
 
       </div>
@@ -2501,134 +2491,102 @@ function videoHTML(value) {
 
   }
 
-  const u = new URL(link);
+  const u=new URL(link);
 
-  const host =
-    u.hostname.toLowerCase();
+  const host=u.hostname.toLowerCase();
 
-  let embed = '';
+  let embed='';
+  let id='';
+  let platform='la vidéo';
 
-  let id = '';
+  if(host==='youtu.be'){
 
-  let platform = 'la vidéo';
-
-
-  // YOUTUBE
-
-  if (host === 'youtu.be') {
-
-    id = u.pathname.split('/')[1] || '';
+    id=u.pathname.split('/')[1]||'';
 
   }
 
-  if ([
+  if([
     'youtube.com',
     'www.youtube.com',
     'm.youtube.com',
     'www.youtube-nocookie.com'
-  ].includes(host)) {
+  ].includes(host)){
 
-    id = u.searchParams.get('v') || '';
+    id=u.searchParams.get('v')||'';
 
-    if (!id) {
+    if(!id){
 
-      const match = u.pathname.match(
+      const match=u.pathname.match(
         /^\/(?:shorts|embed|live)\/([\w-]+)/
       );
 
-      if (match) id = match[1];
+      if(match)id=match[1];
 
     }
 
   }
 
-  if (/^[A-Za-z0-9_-]{11}$/.test(id)) {
+  if(/^[A-Za-z0-9_-]{11}$/.test(id)){
 
-    platform = 'YouTube';
+    platform='YouTube';
 
-    embed =
-      'https://www.youtube-nocookie.com/embed/' +
-      id;
+    embed='https://www.youtube-nocookie.com/embed/'+id;
 
   }
 
+  if(host==='drive.google.com'){
 
-  // GOOGLE DRIVE
+    platform='Google Drive';
 
-  if (host === 'drive.google.com') {
+    const match=u.pathname.match(/\/file\/d\/([\w-]+)/);
 
-    platform = 'Google Drive';
-
-    const match = u.pathname.match(
-      /\/file\/d\/([\w-]+)/
-    );
-
-    const driveId = match
-
+    const driveId=match
       ? match[1]
-
       : u.searchParams.get('id');
 
-    if (
-      driveId &&
-      /^[\w-]+$/.test(driveId)
-    ) {
+    if(driveId&&/^[\w-]+$/.test(driveId)){
 
-      embed =
-        'https://drive.google.com/file/d/' +
-        driveId +
-        '/preview';
+      embed='https://drive.google.com/file/d/'+
+        driveId+'/preview';
 
     }
 
   }
 
-
-  // VIMEO
-
-  if ([
+  if([
     'vimeo.com',
     'www.vimeo.com',
     'player.vimeo.com'
-  ].includes(host)) {
+  ].includes(host)){
 
-    platform = 'Vimeo';
+    platform='Vimeo';
 
-    const match = u.pathname.match(
-      /\/(\d+)(?:\/|$)/
-    );
+    const match=u.pathname.match(/\/(\d+)(?:\/|$)/);
 
-    if (match) {
+    if(match){
 
-      embed =
-        'https://player.vimeo.com/video/' +
-        match[1];
+      embed='https://player.vimeo.com/video/'+match[1];
 
     }
 
   }
 
-
-  // FICHIERS MP4 / WEBM
-
-  if (/\.(mp4|webm|ogg)$/i.test(u.pathname)) {
+  if(/\.(mp4|webm|ogg)$/i.test(u.pathname)){
 
     return `
 
       <video
         class="video-frame"
+        src="${esc(link)}"
         controls
         playsinline
         preload="metadata"
-        src="${esc(link)}"
       ></video>
 
-      <a
-        class="btn btn-secondary"
+      <a class="btn btn-secondary"
         href="${esc(link)}"
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         Ouvrir la vidéo
       </a>
 
@@ -2636,48 +2594,30 @@ function videoHTML(value) {
 
   }
 
-
-  // INSTAGRAM
-
-  if (
-    host === 'instagram.com' ||
+  if(
+    host==='instagram.com'||
     host.endsWith('.instagram.com')
-  ) {
-
-    platform = 'Instagram';
-
+  ){
+    platform='Instagram';
   }
 
-
-  // TIKTOK
-
-  if (
-    host === 'tiktok.com' ||
+  if(
+    host==='tiktok.com'||
     host.endsWith('.tiktok.com')
-  ) {
-
-    platform = 'TikTok';
-
+  ){
+    platform='TikTok';
   }
 
-
-  // FACEBOOK
-
-  if (
-    host === 'facebook.com' ||
+  if(
+    host==='facebook.com'||
     host.endsWith('.facebook.com')
-  ) {
-
-    platform = 'Facebook';
-
+  ){
+    platform='Facebook';
   }
-
-
-  // AFFICHAGE FINAL
 
   return `
 
-    ${embed ? `
+    ${embed?`
 
       <iframe
         class="video-frame"
@@ -2689,7 +2629,7 @@ function videoHTML(value) {
         allowfullscreen
       ></iframe>
 
-    ` : `
+    `:`
 
       <div class="video-preview">
 
@@ -2697,26 +2637,23 @@ function videoHTML(value) {
           ▶
         </div>
 
-        <h3>
-          Tutoriel ${esc(platform)}
-        </h3>
+        <h3>Tutoriel ${esc(platform)}</h3>
 
-        <p class="small muted">
-          Consultez la vidéo directement
-          sur sa plateforme d'origine.
+        <p class="muted small">
+          Consultez la vidéo sur sa plateforme d'origine.
         </p>
 
       </div>
 
     `}
 
-    <a
-      class="btn video-link"
+    <a class="btn"
       href="${esc(link)}"
       target="_blank"
-      rel="noopener noreferrer"
-    >
+      rel="noopener noreferrer">
+
       ▶ Ouvrir ${esc(platform)}
+
     </a>
 
   `;
@@ -2725,20 +2662,598 @@ function videoHTML(value) {
 
 
 /************************************************************
- * 13. TABLEAU DE BORD PERSONNEL
+ * 11. FENETRES INTERACTIVES
  ************************************************************/
 
-function showDashboard() {
+function openModal(html){
 
-  if (
-    !state ||
-    state.status !== 'ACTIF' ||
-    !state.profil
-  ) {
+  previousFocus=document.activeElement;
 
-    showError(
-      'Profil actif introuvable.'
+  modalContent.innerHTML=html;
+
+  modal.classList.add('open');
+
+  document.body.style.overflow='hidden';
+
+  modalContent.querySelectorAll('[data-close-modal]')
+    .forEach(btn=>btn.onclick=closeModal);
+
+  modalContent.querySelector('[data-close-modal]')?.focus();
+
+}
+
+function closeModal(){
+
+  modal.classList.remove('open');
+
+  modalContent.innerHTML='';
+
+  document.body.style.overflow='';
+
+  if(previousFocus&&previousFocus.isConnected){
+
+    previousFocus.focus();
+
+  }
+
+  previousFocus=null;
+
+}
+
+function openExercise(index){
+
+  const e=exercises[index];
+
+  if(!e)return;
+
+  openModal(`
+
+    <div class="modal-top">
+
+      <div>
+
+        <div class="eyebrow">
+          FICHE TECHNIQUE EAH SPORT
+        </div>
+
+        <h2>${esc(e.nom)}</h2>
+
+      </div>
+
+      <button
+        class="close"
+        data-close-modal
+        aria-label="Fermer"
+      >×</button>
+
+    </div>
+
+    ${exerciseImage(e.photo,e.nom)}
+
+    <section style="margin-top:25px">
+
+      <div class="eyebrow">
+        GROUPES MUSCULAIRES SOLLICITÉS
+      </div>
+
+      ${muscleTags(e.groupes)}
+
+    </section>
+
+    <section style="margin-top:25px">
+
+      <div class="eyebrow">
+        DESCRIPTION DE L'EXERCICE
+      </div>
+
+      <p style="margin-top:12px;white-space:pre-wrap">
+        ${esc(e.description||'Description à venir.')}
+      </p>
+
+    </section>
+
+    <section style="margin-top:25px">
+
+      <div class="eyebrow">
+        TUTORIEL VIDÉO
+      </div>
+
+      ${videoHTML(e.video)}
+
+    </section>
+
+    <p class="small muted" style="margin-top:25px">
+      Adaptez les charges et les amplitudes à votre
+      niveau et aux recommandations de votre coach.
+    </p>
+
+    <button
+      class="btn btn-secondary full"
+      data-close-modal
+      style="margin-top:15px"
+    >
+      Fermer la fiche
+    </button>
+
+  `);
+
+}
+
+function showMemberHelp(){
+
+  openModal(`
+
+    <div class="modal-top">
+
+      <h2>Votre espace personnel</h2>
+
+      <button class="close" data-close-modal>×</button>
+
+    </div>
+
+    <div style="text-align:center;padding:20px">
+
+      <div style="width:75px;margin:auto;color:#72bbff">
+        ${ICONS.nfc}
+      </div>
+
+      <h3 style="margin-top:20px">
+        Accès avec votre carte EAH SPORT
+      </h3>
+
+      <p class="muted">
+        Approchez votre carte NFC de votre smartphone
+        pour ouvrir votre profil personnel.
+      </p>
+
+      <p class="small muted">
+        Lors du premier scan, un formulaire vous
+        permettra d'activer votre carte.
+      </p>
+
+      <p class="small muted">
+        Vous pouvez également ouvrir directement
+        le lien personnel fourni par votre coach.
+      </p>
+
+      <button class="btn full" data-close-modal>
+        Continuer la navigation
+      </button>
+
+    </div>
+
+  `);
+
+}
+
+app.addEventListener('click',event=>{
+
+  const btn=event.target.closest('[data-open-exercise]');
+
+  if(btn){
+
+    openExercise(Number(btn.dataset.openExercise));
+
+  }
+
+});
+
+modal.addEventListener('click',event=>{
+
+  if(event.target===modal)closeModal();
+
+});
+
+document.addEventListener('keydown',event=>{
+
+  if(event.key==='Escape'&&modal.classList.contains('open')){
+
+    closeModal();
+
+  }
+
+});
+
+
+/************************************************************
+ * 12. COMPRESSION DE LA PHOTO DE PROFIL
+ ************************************************************/
+
+async function compressImage(file){
+
+  if(!file)return '';
+
+  if(!/^image\/(jpeg|png|webp)$/.test(file.type)){
+
+    throw new Error('Choisissez une photo JPG, PNG ou WEBP.');
+
+  }
+
+  if(file.size>15000000){
+
+    throw new Error('Photo trop volumineuse.');
+
+  }
+
+  const url=URL.createObjectURL(file);
+
+  try{
+
+    const img=await new Promise((resolve,reject)=>{
+
+      const i=new Image();
+
+      i.onload=()=>resolve(i);
+
+      i.onerror=()=>reject(new Error('Photo illisible.'));
+
+      i.src=url;
+
+    });
+
+    const ratio=Math.min(
+      1,
+      CONFIG.PHOTO_DIMENSION/Math.max(img.width,img.height)
     );
+
+    const canvas=document.createElement('canvas');
+
+    canvas.width=Math.max(1,Math.round(img.width*ratio));
+
+    canvas.height=Math.max(1,Math.round(img.height*ratio));
+
+    const ctx=canvas.getContext('2d');
+
+    ctx.fillStyle='#ffffff';
+
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+    let quality=.85;
+
+    let result=canvas.toDataURL('image/jpeg',quality);
+
+    while(
+      result.length*.75>CONFIG.MAX_PHOTO_SIZE&&
+      quality>.3
+    ){
+
+      quality-=.1;
+
+      result=canvas.toDataURL('image/jpeg',quality);
+
+    }
+
+    if(result.length*.75>CONFIG.MAX_PHOTO_SIZE){
+
+      throw new Error('Impossible de compresser la photo.');
+
+    }
+
+    return result;
+
+  }finally{
+
+    URL.revokeObjectURL(url);
+
+  }
+
+}
+
+
+/************************************************************
+ * 13. ACTIVATION DE LA CARTE NFC
+ ************************************************************/
+
+function showActivation(){
+
+  setStatus('Carte disponible','var(--orange)');
+
+  compressedPhoto='';
+
+  photoTask=Promise.resolve('');
+
+  app.innerHTML=`
+
+    <section class="panel form-card">
+
+      <div class="activation-heading">
+
+        <img src="logo.png" alt="EAH"
+          onerror="this.hidden=true">
+
+        <div class="eyebrow">
+          ACTIVATION NFC
+        </div>
+
+        <h2 style="margin-top:12px">
+          Bienvenue chez EAH SPORT
+        </h2>
+
+        <p class="muted">
+          Créez votre espace sportif personnel.
+        </p>
+
+        <span class="muscle">
+          CARTE ${esc(state.id||'EAH SPORT')}
+        </span>
+
+      </div>
+
+      <form id="activationForm">
+
+        <img id="photoPreview"
+          class="photo-preview"
+          alt="Aperçu de votre photo">
+
+        <div class="field">
+
+          <label for="photo">
+            Photo de profil (facultative)
+          </label>
+
+          <input type="file" id="photo"
+            accept="image/jpeg,image/png,image/webp">
+
+          <p class="small muted" id="photoStatus">
+            Compression automatique de la photo.
+          </p>
+
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label for="nom">Nom</label>
+
+            <input id="nom" name="nom"
+              required maxlength="80"
+              autocomplete="family-name"
+              placeholder="Dupont">
+
+          </div>
+
+          <div class="field">
+
+            <label for="prenom">Prénom</label>
+
+            <input id="prenom" name="prenom"
+              required maxlength="80"
+              autocomplete="given-name"
+              placeholder="Alexandre">
+
+          </div>
+
+          <div class="field">
+
+            <label for="poids">Poids (kg)</label>
+
+            <input id="poids" name="poids"
+              type="number" min="1" max="499"
+              step="0.1" required placeholder="75">
+
+          </div>
+
+          <div class="field">
+
+            <label for="age">Âge</label>
+
+            <input id="age" name="age"
+              type="number" min="18" max="120"
+              required placeholder="28">
+
+          </div>
+
+          <div class="field">
+
+            <label for="taille">Taille (cm)</label>
+
+            <input id="taille" name="taille"
+              type="number" min="51" max="259"
+              step="0.1" required placeholder="175">
+
+          </div>
+
+          <div class="field">
+
+            <label for="coach">Votre coach</label>
+
+            <input id="coach" name="coach"
+              required maxlength="100"
+              value="${esc(state.coach)}"
+              placeholder="Nom du coach">
+
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="email">Adresse email</label>
+
+          <input id="email" name="email"
+            type="email" required maxlength="200"
+            autocomplete="email"
+            placeholder="vous@exemple.fr">
+
+        </div>
+
+        <label class="consent">
+
+          <input type="checkbox" name="consent" required>
+
+          <span>
+            J'accepte l'enregistrement de mes informations
+            pour mon suivi sportif. Je comprends que toute
+            personne disposant de mon lien NFC pourra
+            accéder à mon profil.
+          </span>
+
+        </label>
+
+        <button class="btn full"
+          id="activateBtn"
+          type="submit"
+          style="margin-top:20px">
+
+          Activer ma carte EAH SPORT
+
+        </button>
+
+        <p class="error" id="formError"
+          role="alert" style="margin-top:15px"></p>
+
+      </form>
+
+      <a class="btn btn-secondary full" href="${SITE}">
+        Consulter les exercices sans activation
+      </a>
+
+    </section>
+
+  `;
+
+  const photoInput=document.getElementById('photo');
+
+  const preview=document.getElementById('photoPreview');
+
+  const photoStatus=document.getElementById('photoStatus');
+
+  let photoVersion=0;
+
+  photoInput.onchange=()=>{
+
+    const version=++photoVersion;
+
+    compressedPhoto='';
+
+    preview.style.display='none';
+
+    photoStatus.textContent='Préparation de votre photo…';
+
+    photoTask=compressImage(photoInput.files[0])
+
+      .then(result=>{
+
+        if(version!==photoVersion)return '';
+
+        compressedPhoto=result;
+
+        if(result){
+
+          preview.src=result;
+
+          preview.style.display='block';
+
+          photoStatus.textContent='Photo prête.';
+
+        }else{
+
+          photoStatus.textContent='Aucune photo sélectionnée.';
+
+        }
+
+        return result;
+
+      })
+
+      .catch(error=>{
+
+        if(version===photoVersion){
+
+          compressedPhoto='';
+
+          photoInput.value='';
+
+          photoStatus.textContent=error.message;
+
+        }
+
+        return '';
+
+      });
+
+  };
+
+  document.getElementById('activationForm').onsubmit=
+    async event=>{
+
+      event.preventDefault();
+
+      if(requestPending)return;
+
+      requestPending=true;
+
+      const form=event.target;
+
+      const btn=document.getElementById('activateBtn');
+
+      const errorBox=document.getElementById('formError');
+
+      btn.disabled=true;
+
+      photoInput.disabled=true;
+
+      btn.textContent='Activation en cours…';
+
+      errorBox.textContent='';
+
+      try{
+
+        await photoTask;
+
+        const data=Object.fromEntries(new FormData(form));
+
+        data.consent=form.elements.consent.checked;
+
+        data.photo=compressedPhoto;
+
+        await callAPI('activate',data);
+
+        state=await callAPI('read');
+
+        if(state.status!=='ACTIF'){
+
+          throw new Error('Activation non confirmée.');
+
+        }
+
+        currentTab='sessions';
+
+        showDashboard();
+
+      }catch(error){
+
+        errorBox.textContent=error.message;
+
+        btn.disabled=false;
+
+        photoInput.disabled=false;
+
+        btn.textContent='Activer ma carte EAH SPORT';
+
+      }finally{
+
+        requestPending=false;
+
+      }
+
+    };
+
+}
+
+
+/************************************************************
+ * 14. ESPACE PERSONNEL DU SPORTIF
+ ************************************************************/
+
+function showDashboard(){
+
+  if(!state||state.status!=='ACTIF'||!state.profil){
+
+    showError('Profil actif introuvable.');
 
     return;
 
@@ -2746,23 +3261,51 @@ function showDashboard() {
 
   setStatus('Profil actif');
 
-  const p = state.profil;
+  exercises=state.exercises||[];
 
-  const photo =
-    safeAvatar(p.photo) ||
-    imageUrl(p.photo);
+  const p=state.profil;
 
-  const initials = (
+  const photo=safeAvatar(p.photo);
 
-    String(p.prenom || '').charAt(0) +
-
-    String(p.nom || '').charAt(0)
-
+  const initials=(
+    String(p.prenom||'').charAt(0)+
+    String(p.nom||'').charAt(0)
   ).toUpperCase();
 
-  app.innerHTML = `
+  headerNav.innerHTML=`
 
-    <section class="hero">
+    <a href="${SITE}">Accueil public</a>
+
+    <a href="#memberContent" data-header-tab="sessions">
+      Mes séances
+    </a>
+
+    <a href="#memberContent" data-header-tab="exercises">
+      Exercices
+    </a>
+
+    <a href="#memberContent" data-header-tab="profile">
+      Mon profil
+    </a>
+
+  `;
+
+  headerNav.querySelectorAll('[data-header-tab]')
+    .forEach(a=>{
+
+      a.onclick=()=>{
+
+        currentTab=a.dataset.headerTab;
+
+        renderTab();
+
+      };
+
+    });
+
+  app.innerHTML=`
+
+    <section class="profile-hero">
 
       <div class="eyebrow">
         VOTRE ESPACE PERSONNEL
@@ -2770,32 +3313,27 @@ function showDashboard() {
 
       <div class="profile-head">
 
-        ${photo ? `
+        ${photo?`
 
-          <img
-            class="avatar"
+          <img class="avatar"
             src="${esc(photo)}"
-            alt="Photo de profil"
-            referrerpolicy="no-referrer"
-          >
+            alt="Photo de profil">
 
-        ` : `
+        `:`
 
           <div class="avatar-placeholder">
-            ${esc(initials || 'EAH')}
+            ${esc(initials||'EAH')}
           </div>
 
         `}
 
         <div>
 
-          <h1>
-            Bonjour, ${esc(p.prenom)}
-          </h1>
+          <h1>Bonjour, ${esc(p.prenom)}</h1>
 
-          <div class="muted small">
+          <div class="small muted">
 
-            ${esc(p.id || state.id)}
+            ${esc(p.id||state.id)}
 
             · Coach ${esc(p.coach)}
 
@@ -2806,8 +3344,7 @@ function showDashboard() {
       </div>
 
       <div class="coach-message"><div class="eyebrow">MESSAGE DE VOTRE COACH</div>${esc(
-        p.message ||
-        'Bienvenue dans votre espace EAH SPORT.'
+        p.message||'Bienvenue dans votre espace EAH SPORT.'
       )}</div>
 
       <div class="stats">
@@ -2816,9 +3353,7 @@ function showDashboard() {
 
           <span>POIDS</span>
 
-          <strong>
-            ${esc(p.poids || '—')} kg
-          </strong>
+          <strong>${esc(p.poids||'—')} kg</strong>
 
         </div>
 
@@ -2826,9 +3361,7 @@ function showDashboard() {
 
           <span>TAILLE</span>
 
-          <strong>
-            ${esc(p.taille || '—')} cm
-          </strong>
+          <strong>${esc(p.taille||'—')} cm</strong>
 
         </div>
 
@@ -2836,9 +3369,7 @@ function showDashboard() {
 
           <span>ÂGE</span>
 
-          <strong>
-            ${esc(p.age || '—')} ans
-          </strong>
+          <strong>${esc(p.age||'—')} ans</strong>
 
         </div>
 
@@ -2846,78 +3377,65 @@ function showDashboard() {
 
     </section>
 
-    <nav aria-label="Navigation personnelle">
+    <nav class="member-nav">
 
-      <button
-        class="nav-btn"
-        data-tab="sessions"
-      >
+      <button class="nav-btn" data-tab="sessions">
         Mes séances
       </button>
 
-      <button
-        class="nav-btn"
-        data-tab="exercises"
-      >
+      <button class="nav-btn" data-tab="exercises">
         Exercices et vidéos
       </button>
 
-      <button
-        class="nav-btn"
-        data-tab="profile"
-      >
+      <button class="nav-btn" data-tab="profile">
         Mon profil
       </button>
 
     </nav>
 
-    <section id="content"></section>
+    <section id="memberContent"></section>
 
   `;
 
-  app.querySelectorAll('[data-tab]')
-    .forEach(button => {
+  app.querySelectorAll('[data-tab]').forEach(btn=>{
 
-      button.onclick = () => {
+    btn.onclick=()=>{
 
-        currentTab = button.dataset.tab;
+      currentTab=btn.dataset.tab;
 
-        renderTab();
+      renderTab();
 
-      };
+    };
 
-    });
+  });
 
   renderTab();
 
 }
 
+function renderTab(){
 
-/************************************************************
- * 14. NAVIGATION
- ************************************************************/
+  app.querySelectorAll('[data-tab]').forEach(btn=>{
 
-function renderTab() {
+    btn.classList.toggle(
+      'active',
+      btn.dataset.tab===currentTab
+    );
 
-  app.querySelectorAll('[data-tab]')
-    .forEach(button => {
+  });
 
-      button.classList.toggle(
-        'active',
-        button.dataset.tab === currentTab
-      );
-
-    });
-
-  if (currentTab === 'sessions') {
+  if(currentTab==='sessions'){
 
     showSessions();
 
-  } else if (currentTab === 'exercises') {
+  }else if(currentTab==='exercises'){
 
-    showExercises();
+    showLibrary(
+      document.getElementById('memberContent'),
+      false
+    );
 
-  } else {
+  }else{
 
     showProfile();
 
@@ -2927,93 +3445,55 @@ function renderTab() {
 
 
 /************************************************************
- * 15. TABLEAU SERIES ET REPETITIONS
- *
- * Exemple Google Sheets :
- *
- * SERIES : 4
- * REPETITIONS : 12/10/8/6
- * CHARGES : 40/50/60/70
- * REPOS : 90
+ * 15. SERIES, REPETITIONS ET CHARGES
  ************************************************************/
 
-function splitValues(value) {
+function splitValues(value){
 
-  if (Array.isArray(value)) {
+  if(Array.isArray(value))return value.map(String);
 
-    return value.map(v => String(v));
-
-  }
-
-  return String(value ?? '')
+  return String(value??'')
     .split(/[\/;\n]/)
-    .map(v => v.trim());
+    .map(v=>v.trim());
 
 }
 
-function seriesTable(session) {
+function seriesTable(session){
 
-  const count = Math.min(
-
+  const count=Math.min(
     100,
-
-    Math.max(
-
-      0,
-
-      Math.floor(
-        Number(session.series) || 0
-      )
-
-    )
-
+    Math.max(0,Math.floor(Number(session.series)||0))
   );
 
-  const reps = splitValues(session.reps);
+  const reps=splitValues(session.reps);
 
-  const charges = splitValues(session.charges);
+  const charges=splitValues(session.charges);
 
-  const rests = splitValues(session.repos);
+  const rests=splitValues(session.repos);
 
-  function valueAt(values,index) {
+  function at(values,index){
 
-    if (values.length === 1) {
+    return values.length===1
 
-      return values[0] || '—';
+      ? values[0]||'—'
 
-    }
-
-    return values[index] || '—';
+      : values[index]||'—';
 
   }
 
-  function formatLoad(value) {
+  function unit(value,suffix){
 
     return /^\d+(?:[.,]\d+)?$/.test(value)
 
-      ? value + ' kg'
+      ? value+' '+suffix
 
       : value;
 
   }
 
-  function formatRest(value) {
+  if(!count){
 
-    return /^\d+(?:[.,]\d+)?$/.test(value)
-
-      ? value + ' s'
-
-      : value;
-
-  }
-
-  if (!count) {
-
-    return `
-      <p class="muted small">
-        Séries non renseignées.
-      </p>
-    `;
+    return '<p class="muted small">Séries non renseignées.</p>';
 
   }
 
@@ -3041,36 +3521,23 @@ function seriesTable(session) {
 
         <tbody>
 
-          ${Array.from(
-            {length:count},
-            (_,i) => `
+          ${Array.from({length:count},(_,i)=>`
 
-              <tr>
+            <tr>
 
-                <td class="set-number">
-                  ${i + 1}
-                </td>
+              <td style="color:#72bbff;font-weight:bold">
+                ${i+1}
+              </td>
 
-                <td>
-                  ${esc(valueAt(reps,i))}
-                </td>
+              <td>${esc(at(reps,i))}</td>
 
-                <td>
-                  ${esc(formatLoad(
-                    valueAt(charges,i)
-                  ))}
-                </td>
+              <td>${esc(unit(at(charges,i),'kg'))}</td>
 
-                <td>
-                  ${esc(formatRest(
-                    valueAt(rests,i)
-                  ))}
-                </td>
+              <td>${esc(unit(at(rests,i),'s'))}</td>
 
-              </tr>
+            </tr>
 
-            `
-          ).join('')}
+          `).join('')}
 
         </tbody>
 
@@ -3084,62 +3551,51 @@ function seriesTable(session) {
 
 
 /************************************************************
- * 16. SEANCES INDIVIDUELLES
+ * 16. SEANCES PERSONNALISEES
+ *
+ * Le serveur doit transmettre uniquement les seances
+ * autorisees pour le token individuel.
  ************************************************************/
 
-function showSessions() {
+function showSessions(){
 
-  const content =
-    document.getElementById('content');
+  const content=document.getElementById('memberContent');
 
-  // Les séances doivent être filtrées par le serveur
-  // avant leur envoi à ce profil.
+  const grouped=new Map();
 
-  const sessions = state.sessions || [];
+  (state.sessions||[]).forEach(s=>{
 
-  const exercises = state.exercises || [];
-
-  const grouped = new Map();
-
-  sessions.forEach(s => {
-
-    if (!grouped.has(s.nom)) {
-
-      grouped.set(s.nom,[]);
-
-    }
+    if(!grouped.has(s.nom))grouped.set(s.nom,[]);
 
     grouped.get(s.nom).push(s);
 
   });
 
-  content.innerHTML = `
+  content.innerHTML=`
 
     <div class="section-heading">
 
       <div>
 
+        <div class="eyebrow">
+          VOTRE PROGRAMMATION
+        </div>
+
         <h2>Mes séances</h2>
 
-        <div class="muted small">
-
-          ${grouped.size} programme(s)
-          personnalisé(s)
-
-        </div>
+        <p class="small muted">
+          ${grouped.size} programme(s) personnalisé(s)
+        </p>
 
       </div>
 
-      <button
-        class="btn btn-secondary"
-        id="refreshBtn"
-      >
+      <button class="btn btn-secondary" id="refreshBtn">
         ↻ Actualiser
       </button>
 
     </div>
 
-    ${grouped.size === 0 ? `
+    ${!grouped.size?`
 
       <div class="empty">
 
@@ -3150,212 +3606,157 @@ function showSessions() {
           votre programme personnalisé.
         </p>
 
-        <button
-          class="btn"
-          id="libraryBtn"
-        >
+        <button class="btn" id="libraryBtn">
           Découvrir les exercices
         </button>
 
       </div>
 
-    ` : ''}
+    `:''}
 
-    ${[...grouped].map(
-      ([name,items],sessionIndex) => {
+    ${[...grouped].map(([name,items],sessionIndex)=>`
 
-        const sets = items.reduce(
+      <article class="session-card">
 
-          (sum,item) =>
-            sum + (Number(item.series) || 0),
+        <div class="session-header">
 
-          0
+          <div class="eyebrow">
 
-        );
+            PROGRAMME
+            ${String(sessionIndex+1).padStart(2,'0')}
 
-        return `
+          </div>
 
-          <article class="session-card">
+          <h3 style="font-size:27px;margin-top:10px">
+            ${esc(name)}
+          </h3>
 
-            <div class="session-header">
+          <span class="small muted">
 
-              <div class="eyebrow">
+            ${items.length} exercice(s)
 
-                PROGRAMME
-                ${String(sessionIndex + 1)
-                  .padStart(2,'0')}
+            · ${items.reduce(
+              (sum,item)=>sum+(Number(item.series)||0),0
+            )} séries
 
-              </div>
+          </span>
 
-              <h3 style="font-size:25px;margin-top:10px">
-                ${esc(name)}
-              </h3>
+        </div>
 
-              <div class="session-meta">
+        <div class="session-content">
 
-                <span>
-                  ${items.length} exercice(s)
-                </span>
+          ${items.map((s,i)=>{
 
-                <span>
-                  ${sets} série(s)
-                </span>
+            const index=exercises.findIndex(
+              e=>normalize(e.nom)===normalize(s.exercice)
+            );
 
-                <span>
-                  Programme personnalisé
-                </span>
+            const ref=exercises[index]||{};
 
-              </div>
+            const photo=ref.photo||s.photo;
 
-            </div>
+            const video=ref.video||s.video;
 
-            <div class="session-content">
+            const groupes=ref.groupes||s.groupes;
 
-              ${items.map((s,i) => {
+            return `
 
-                const index = exercises.findIndex(
+              <details class="session-exercise">
 
-                  e =>
-                    normalize(e.nom) ===
-                    normalize(s.exercice)
+                <summary>
 
-                );
+                  <div class="exercise-number">
+                    ${String(i+1).padStart(2,'0')}
+                  </div>
 
-                const reference =
-                  exercises[index] || {};
+                  <div class="summary-info">
 
-                const photo =
-                  reference.photo || s.photo;
+                    <strong>${esc(s.exercice)}</strong>
 
-                const video =
-                  reference.video || s.video;
+                    <small>
 
-                const groupes =
-                  reference.groupes || s.groupes;
+                      ${esc(s.series)} séries
 
-                const description =
-                  reference.description ||
-                  s.description;
+                      · ${esc(groupes)}
 
-                return `
+                    </small>
 
-                  <details class="session-exercise">
+                  </div>
 
-                    <summary>
+                  <span style="color:#72bbff">⌄</span>
 
-                      <div class="exercise-number">
+                </summary>
 
-                        ${String(i + 1)
-                          .padStart(2,'0')}
+                <div class="details-body">
 
-                      </div>
+                  ${muscleTags(groupes)}
 
-                      <div class="summary-info">
+                  ${index>=0
 
-                        <strong>
-                          ${esc(s.exercice)}
-                        </strong>
+                    ? clickablePhoto(ref,index)
 
-                        <small>
+                    : exerciseImage(photo,s.exercice)
 
-                          ${esc(s.series)} séries
+                  }
 
-                          · ${esc(groupes)}
+                  <p class="muted" style="margin-top:15px">
 
-                        </small>
+                    ${esc(ref.description||s.description)}
 
-                      </div>
+                  </p>
 
-                      <span class="chevron">
-                        ⌄
-                      </span>
+                  <div class="eyebrow">
+                    VOTRE PROGRAMMATION
+                  </div>
 
-                    </summary>
+                  ${seriesTable(s)}
 
-                    <div class="details-body">
+                  ${s.notes?`
 
-                      ${muscleTags(groupes)}
-
-                      ${index >= 0
-
-                        ? clickableExercisePhoto(
-                            reference,index
-                          )
-
-                        : exerciseImage(
-                            photo,s.exercice
-                          )
-
-                      }
-
-                      <p
-                        class="muted"
-                        style="margin-top:15px"
-                      >
-                        ${esc(description)}
-                      </p>
+                    <div class="coach-message">
 
                       <div class="eyebrow">
-                        VOTRE PROGRAMMATION
+                        CONSIGNES DU COACH
                       </div>
 
-                      ${seriesTable(s)}
-
-                      ${s.notes ? `
-
-                        <div class="coach-message">
-
-                          <div class="eyebrow">
-                            CONSIGNES DU COACH
-                          </div>
-
-                          ${esc(s.notes)}
-
-                        </div>
-
-                      ` : ''}
-
-                      <div
-                        class="eyebrow"
-                        style="margin-top:15px"
-                      >
-                        TUTORIEL VIDÉO
-                      </div>
-
-                      <div class="session-video"
-                        data-video="${esc(video)}"
-                      ></div>
+                      ${esc(s.notes)}
 
                     </div>
 
-                  </details>
+                  `:''}
 
-                `;
+                  <div class="eyebrow">
+                    TUTORIEL VIDÉO
+                  </div>
 
-              }).join('')}
+                  <div class="session-video"
+                    data-video="${esc(video)}"></div>
 
-            </div>
+                </div>
 
-          </article>
+              </details>
 
-        `;
+            `;
 
-      }
-    ).join('')}
+          }).join('')}
+
+        </div>
+
+      </article>
+
+    `).join('')}
 
   `;
 
-  document.getElementById('refreshBtn')
-    .onclick = refreshData;
+  document.getElementById('refreshBtn').onclick=refreshData;
 
-  const libraryBtn =
-    document.getElementById('libraryBtn');
+  const libraryBtn=document.getElementById('libraryBtn');
 
-  if (libraryBtn) {
+  if(libraryBtn){
 
-    libraryBtn.onclick = () => {
+    libraryBtn.onclick=()=>{
 
-      currentTab = 'exercises';
+      currentTab='exercises';
 
       renderTab();
 
@@ -3364,23 +3765,19 @@ function showSessions() {
   }
 
   content.querySelectorAll('.session-exercise')
-    .forEach(details => {
+    .forEach(details=>{
 
-      details.addEventListener('toggle',() => {
+      details.addEventListener('toggle',()=>{
 
-        const container =
-          details.querySelector('.session-video');
+        const container=details.querySelector('.session-video');
 
-        if (!container) return;
+        if(container){
 
-        if (details.open) {
+          container.innerHTML=details.open
 
-          container.innerHTML =
-            videoHTML(container.dataset.video);
+            ? videoHTML(container.dataset.video)
 
-        } else {
-
-          container.innerHTML = '';
+            : '';
 
         }
 
@@ -3392,405 +3789,26 @@ function showSessions() {
 
 
 /************************************************************
- * 17. BIBLIOTHEQUE EXERCICES
+ * 17. MON PROFIL
  ************************************************************/
 
-function showExercises() {
+function showProfile(){
 
-  const content =
-    document.getElementById('content');
+  const p=state.profil;
 
-  const exercises = state.exercises || [];
+  const fields=[
 
-  const muscles = [...new Set(
-
-    exercises.flatMap(
-      e => splitMuscles(e.groupes)
-    )
-
-  )].sort((a,b) => a.localeCompare(b,'fr'));
-
-  content.innerHTML = `
-
-    <div class="section-heading">
-
-      <div>
-
-        <h2>Bibliothèque sportive</h2>
-
-        <span class="muted small">
-
-          ${exercises.length} exercice(s)
-          disponible(s)
-
-        </span>
-
-      </div>
-
-      <button
-        class="btn btn-secondary"
-        id="refreshLibrary"
-      >
-        ↻ Actualiser
-      </button>
-
-    </div>
-
-    <p class="muted">
-
-      Appuyez sur la photo d'un exercice pour
-      découvrir ses consignes et son tutoriel vidéo.
-
-    </p>
-
-    <div class="search-bar">
-
-      <input
-        id="exerciseSearch"
-        placeholder="Rechercher un exercice…"
-        aria-label="Rechercher un exercice"
-      >
-
-      <select
-        id="muscleFilter"
-        aria-label="Filtrer par muscle"
-      >
-
-        <option value="">
-          Tous les groupes musculaires
-        </option>
-
-        ${muscles.map(m => `
-
-          <option value="${esc(m)}">
-            ${esc(m)}
-          </option>
-
-        `).join('')}
-
-      </select>
-
-    </div>
-
-    <div
-      class="grid"
-      id="exerciseList"
-    ></div>
-
-  `;
-
-  const search =
-    document.getElementById('exerciseSearch');
-
-  const filter =
-    document.getElementById('muscleFilter');
-
-  function renderExercises() {
-
-    const q = normalize(search.value);
-
-    const selected = normalize(filter.value);
-
-    const list = exercises
-
-      .map((e,index) => ({...e,index}))
-
-      .filter(e => {
-
-        const searchText = normalize(
-
-          e.nom + ' ' +
-
-          e.groupes + ' ' +
-
-          e.description
-
-        );
-
-        const groups = splitMuscles(
-          e.groupes
-        ).map(normalize);
-
-        return searchText.includes(q) &&
-
-          (!selected ||
-            groups.includes(selected));
-
-      });
-
-    document.getElementById('exerciseList')
-      .innerHTML = list.length ? (
-
-        list.map(e => `
-
-          <article class="exercise-card">
-
-            ${clickableExercisePhoto(
-              e,e.index
-            )}
-
-            <div class="exercise-body">
-
-              <div class="eyebrow">
-                EAH SPORT · EXERCICE
-              </div>
-
-              <h3 style="margin-top:10px">
-                ${esc(e.nom)}
-              </h3>
-
-              ${muscleTags(e.groupes)}
-
-              <p class="exercise-description">
-
-                ${esc(
-                  e.description ||
-                  'Découvrez la fiche de cet exercice.'
-                )}
-
-              </p>
-
-              <button
-                class="btn full"
-                data-open-exercise="${e.index}"
-              >
-                ▶ Voir les détails
-              </button>
-
-            </div>
-
-          </article>
-
-        `).join('')
-
-      ) : `
-
-        <div class="empty">
-
-          <h3>Aucun exercice trouvé</h3>
-
-          <p>
-            Modifiez votre recherche ou votre filtre.
-          </p>
-
-        </div>
-
-      `;
-
-  }
-
-  search.oninput = renderExercises;
-
-  filter.onchange = renderExercises;
-
-  document.getElementById('refreshLibrary')
-    .onclick = refreshData;
-
-  renderExercises();
-
-}
-
-
-/************************************************************
- * 18. OUVERTURE DETAIL EXERCICE
- *
- * Le clic sur la photo ou le bouton ouvre
- * automatiquement la fiche et la vidéo associée.
- ************************************************************/
-
-function openExercise(index) {
-
-  if (!state || !state.exercises) return;
-
-  const e = state.exercises[index];
-
-  if (!e) return;
-
-  previousFocus = document.activeElement;
-
-  modalContent.innerHTML = `
-
-    <div class="modal-top">
-
-      <div>
-
-        <div class="eyebrow">
-          FICHE TECHNIQUE EAH SPORT
-        </div>
-
-        <h2>${esc(e.nom)}</h2>
-
-      </div>
-
-      <button
-        class="close"
-        id="closeModal"
-        aria-label="Fermer"
-      >
-        ×
-      </button>
-
-    </div>
-
-    ${exerciseImage(e.photo,e.nom)}
-
-    <section style="margin-top:20px">
-
-      <div class="eyebrow">
-        GROUPES MUSCULAIRES SOLLICITÉS
-      </div>
-
-      ${muscleTags(e.groupes)}
-
-    </section>
-
-    <section style="margin-top:20px">
-
-      <div class="eyebrow">
-        DESCRIPTION DE L'EXERCICE
-      </div>
-
-      <p
-        class="modal-description"
-        style="margin-top:10px"
-      >
-        ${esc(
-          e.description ||
-          'Votre coach ajoutera prochainement les consignes.'
-        )}
-      </p>
-
-    </section>
-
-    <section style="margin-top:25px">
-
-      <div class="eyebrow">
-        TUTORIEL VIDÉO
-      </div>
-
-      ${videoHTML(e.video)}
-
-    </section>
-
-    <button
-      class="btn btn-secondary full"
-      id="bottomClose"
-      style="margin-top:20px"
-    >
-      Fermer la fiche
-    </button>
-
-  `;
-
-  modal.classList.add('open');
-
-  document.body.style.overflow = 'hidden';
-
-  document.getElementById('closeModal')
-    .onclick = closeModal;
-
-  document.getElementById('bottomClose')
-    .onclick = closeModal;
-
-  document.getElementById('closeModal')
-    .focus();
-
-}
-
-function closeModal() {
-
-  modal.classList.remove('open');
-
-  // Supprime le lecteur pour arrêter la vidéo.
-
-  modalContent.innerHTML = '';
-
-  document.body.style.overflow = '';
-
-  if (
-    previousFocus &&
-    previousFocus.isConnected
-  ) {
-
-    previousFocus.focus();
-
-  }
-
-  previousFocus = null;
-
-}
-
-
-// Gestion du clic sur toutes les photos.
-
-app.addEventListener('click',event => {
-
-  const button = event.target.closest(
-    '[data-open-exercise]'
-  );
-
-  if (button) {
-
-    openExercise(
-      Number(button.dataset.openExercise)
-    );
-
-  }
-
-});
-
-
-// Fermer en cliquant à l'extérieur.
-
-modal.addEventListener('click',event => {
-
-  if (event.target === modal) {
-
-    closeModal();
-
-  }
-
-});
-
-
-// Fermer avec la touche Echap.
-
-document.addEventListener('keydown',event => {
-
-  if (event.key === 'Escape' &&
-      modal.classList.contains('open')) {
-
-    closeModal();
-
-  }
-
-});
-
-
-/************************************************************
- * 19. PAGE MON PROFIL
- ************************************************************/
-
-function showProfile() {
-
-  const content =
-    document.getElementById('content');
-
-  const p = state.profil;
-
-  const fields = [
-
-    ['Identifiant EAH',p.id || state.id],
+    ['Identifiant EAH',p.id||state.id],
 
     ['Nom',p.nom],
 
     ['Prénom',p.prenom],
 
-    ['Poids',(p.poids || '—') + ' kg'],
+    ['Poids',(p.poids||'—')+' kg'],
 
-    ['Âge',(p.age || '—') + ' ans'],
+    ['Âge',(p.age||'—')+' ans'],
 
-    ['Taille',(p.taille || '—') + ' cm'],
+    ['Taille',(p.taille||'—')+' cm'],
 
     ['Coach',p.coach],
 
@@ -3800,7 +3818,7 @@ function showProfile() {
 
   ];
 
-  content.innerHTML = `
+  document.getElementById('memberContent').innerHTML=`
 
     <section class="panel">
 
@@ -3808,11 +3826,9 @@ function showProfile() {
         INFORMATIONS PERSONNELLES
       </div>
 
-      <h2 style="margin-top:12px">
-        Mon profil sportif
-      </h2>
+      <h2 style="margin-top:12px">Mon profil sportif</h2>
 
-      ${fields.map(([label,value]) => `
+      ${fields.map(([label,value])=>`
 
         <div class="profile-line">
 
@@ -3824,19 +3840,17 @@ function showProfile() {
 
       `).join('')}
 
-      <p
-        class="small muted"
-        style="margin-top:20px"
-      >
+      <p class="small muted" style="margin-top:20px">
+
         Pour modifier vos informations,
         contactez votre coach.
+
       </p>
 
-      <button
-        class="btn btn-secondary"
-        id="refreshProfile"
-      >
+      <button class="btn btn-secondary" id="refreshProfile">
+
         ↻ Actualiser mon profil
+
       </button>
 
     </section>
@@ -3852,87 +3866,77 @@ function showProfile() {
       </h3>
 
       <p class="muted">
+
         Votre lien NFC donne accès à votre profil.
-        Ne le communiquez pas à des personnes
+        Ne le partagez pas avec des personnes
         non autorisées.
+
       </p>
+
+      <a class="btn btn-secondary" href="${SITE}">
+        Retour à l'accueil public
+      </a>
 
     </section>
 
   `;
 
-  document.getElementById('refreshProfile')
-    .onclick = refreshData;
+  document.getElementById('refreshProfile').onclick=refreshData;
 
 }
 
 
 /************************************************************
- * 20. ACTUALISATION DONNEES GOOGLE SHEETS
+ * 18. ACTUALISATION ET ETAT DES CARTES
  ************************************************************/
 
-async function refreshData() {
+async function refreshData(){
 
-  if (requestPending) return;
+  if(requestPending)return;
 
-  requestPending = true;
+  requestPending=true;
 
   closeModal();
 
-  loading(
-    'Actualisation de votre programme…'
-  );
+  loading('Actualisation de votre espace sportif…');
 
-  try {
+  try{
 
-    state = await callAPI('read');
+    state=await callAPI('read');
 
     routeState();
 
-  } catch(error) {
+  }catch(error){
 
     showError(error.message);
 
-  } finally {
+  }finally{
 
-    requestPending = false;
+    requestPending=false;
 
   }
 
 }
 
+function routeState(){
 
-/************************************************************
- * 21. GESTION ETAT CARTE NFC
- ************************************************************/
-
-function routeState() {
-
-  if (state.status === 'DISPONIBLE') {
+  if(state.status==='DISPONIBLE'){
 
     showActivation();
 
-  } else if (state.status === 'ACTIF') {
+  }else if(state.status==='ACTIF'){
 
     showDashboard();
 
-  } else if (state.status === 'DESACTIVE') {
+  }else if(state.status==='DESACTIVE'){
 
     showError(
-
-      'Cette carte EAH SPORT a été désactivée. ' +
-
-      'Veuillez contacter votre coach.'
-
+      'Cette carte a été désactivée. Contactez votre coach.'
     );
 
-  } else {
+  }else{
 
-    showError(
-
-      'Carte introuvable ou statut non reconnu.'
-
-    );
+    showError('Carte introuvable ou statut non reconnu.');
 
   }
 
@@ -3940,40 +3944,41 @@ function routeState() {
 
 
 /************************************************************
- * 22. LANCEMENT AUTOMATIQUE DU SITE
+ * 19. LANCEMENT DU SITE
+ *
+ * Sans token : accueil public et exercices.
+ * Avec token : espace NFC personnel.
  ************************************************************/
 
-async function init() {
+async function init(){
 
-  if (requestPending) return;
+  if(requestPending)return;
 
-  if (!token) {
+  if(!token){
 
-    showWelcome();
+    showPublicHome();
 
     return;
 
   }
 
-  requestPending = true;
+  requestPending=true;
 
-  loading(
-    'Connexion à votre espace EAH SPORT…'
-  );
+  loading('Connexion à votre espace EAH SPORT…');
 
-  try {
+  try{
 
-    state = await callAPI('read');
+    state=await callAPI('read');
 
     routeState();
 
-  } catch(error) {
+  }catch(error){
 
     showError(error.message);
 
-  } finally {
+  }finally{
 
-    requestPending = false;
+    requestPending=false;
 
   }
 
