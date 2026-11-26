@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071321">
 <meta name="referrer" content="no-referrer">
-
 <title>EAH SPORT | Personal Coaching Experience</title>
 
 <style>
-
 :root{
   --bg:#07111e;
   --panel:#101f32;
@@ -26,8 +23,7 @@
 }
 
 *{box-sizing:border-box}
-
-html{scroll-behavior:smooth;scroll-padding-top:100px}
+html{scroll-behavior:smooth;scroll-padding-top:115px}
 
 body{
   margin:0;
@@ -37,18 +33,11 @@ body{
   line-height:1.6;
 }
 
-button,input,select{font:inherit}
-
-button,a,input,select{
-  -webkit-tap-highlight-color:transparent;
-}
-
+button,input,select,textarea{font:inherit}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
 button{cursor:pointer}
-
 button:disabled{opacity:.5;cursor:wait}
-
 a{color:var(--light);text-decoration:none}
-
 h1,h2,h3,p{margin-top:0}
 
 h1{
@@ -94,11 +83,7 @@ header{
   flex-shrink:0;
 }
 
-.brand img{
-  width:58px;
-  height:58px;
-  object-fit:contain;
-}
+.brand img{width:58px;height:58px;object-fit:contain}
 
 .brand-title{
   font-size:29px;
@@ -115,25 +100,10 @@ header{
   color:var(--muted);
 }
 
-.header-nav{
-  display:flex;
-  align-items:center;
-  gap:24px;
-}
-
-.header-nav a{
-  color:#d0deec;
-  font-size:13px;
-  font-weight:700;
-}
-
+.header-nav{display:flex;align-items:center;gap:24px}
+.header-nav a{color:#d0deec;font-size:13px;font-weight:700}
 .header-nav a:hover{color:var(--light)}
-
-.status{
-  font-size:11px;
-  color:var(--green);
-  white-space:nowrap;
-}
+.status{font-size:11px;color:var(--green);white-space:nowrap}
 
 main{
   max-width:1450px;
@@ -151,8 +121,9 @@ main{
 }
 
 .muted{color:var(--muted)}
-
 .small{font-size:12px}
+.success{color:var(--green)}
+.error{color:var(--red);overflow-wrap:anywhere}
 
 .hero{
   position:relative;
@@ -175,20 +146,9 @@ main{
     linear-gradient(135deg,#122a45,#15579a);
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:700px;
-}
-
+.hero-content{position:relative;z-index:2;max-width:700px}
 .hero h1 span{color:var(--light)}
-
-.hero p{
-  max-width:570px;
-  font-size:17px;
-  color:#bdcde0;
-}
-
+.hero p{max-width:570px;font-size:17px;color:#bdcde0}
 .hero .eyebrow{margin-bottom:20px}
 
 .hero-buttons{
@@ -214,16 +174,12 @@ main{
   text-decoration:none;
 }
 
-.btn:hover{
+.btn:hover:not(:disabled){
   filter:brightness(1.15);
   transform:translateY(-2px);
 }
 
-.btn-secondary{
-  background:#142a42;
-  border-color:#385470;
-}
-
+.btn-secondary{background:#142a42;border-color:#385470}
 .full{width:100%}
 
 .features{
@@ -254,16 +210,8 @@ main{
   color:var(--light);
 }
 
-.feature-icon svg{
-  width:27px;
-  height:27px;
-}
-
-.feature strong{
-  display:block;
-  font-size:19px;
-}
-
+.feature-icon svg{width:27px;height:27px}
+.feature strong{display:block;font-size:19px}
 .feature small{color:var(--muted)}
 
 .section-heading{
@@ -283,7 +231,7 @@ main{
   margin-bottom:20px;
 }
 
-input,select{
+input,select,textarea{
   width:100%;
   padding:14px;
   border-radius:10px;
@@ -293,12 +241,13 @@ input,select{
   outline:none;
 }
 
-input:focus,select:focus{
+input:focus,select:focus,textarea:focus{
   border-color:var(--blue);
   box-shadow:0 0 0 3px #087ff522;
 }
 
-input::placeholder{color:#829ab3}
+input::placeholder,textarea::placeholder{color:#829ab3}
+textarea{resize:vertical;min-height:110px}
 
 .filters{
   display:flex;
@@ -363,9 +312,7 @@ input::placeholder{color:#829ab3}
   transition:transform .4s;
 }
 
-.exercise-image-button:hover img{
-  transform:scale(1.06);
-}
+.exercise-image-button:hover img{transform:scale(1.06)}
 
 .photo-placeholder{
   width:100%;
@@ -376,10 +323,7 @@ input::placeholder{color:#829ab3}
   color:#72bbff;
 }
 
-.photo-placeholder svg{
-  width:75px;
-  height:75px;
-}
+.photo-placeholder svg{width:75px;height:75px}
 
 .play-overlay{
   position:absolute;
@@ -508,17 +452,8 @@ input::placeholder{color:#829ab3}
 }
 
 .nfc-card-title span{color:var(--light)}
-
-.nfc-symbol{
-  font-size:24px;
-  color:var(--light);
-}
-
-.nfc-card small{
-  font-size:9px;
-  letter-spacing:2px;
-  color:#bed8f1;
-}
+.nfc-symbol{font-size:24px;color:var(--light)}
+.nfc-card small{font-size:9px;letter-spacing:2px;color:#bed8f1}
 
 .profile-hero{
   padding:35px;
@@ -541,26 +476,22 @@ input::placeholder{color:#829ab3}
   margin:0;
 }
 
-.avatar{
+.avatar,.avatar-placeholder{
   width:95px;
   height:95px;
   border-radius:50%;
-  object-fit:cover;
   border:3px solid var(--light);
   background:#1c4269;
+  flex-shrink:0;
 }
 
+.avatar{object-fit:cover}
+
 .avatar-placeholder{
-  width:95px;
-  height:95px;
-  border-radius:50%;
-  flex-shrink:0;
   display:grid;
   place-items:center;
   font-size:30px;
   font-weight:bold;
-  background:#1c4269;
-  border:3px solid var(--light);
 }
 
 .coach-message{
@@ -592,10 +523,7 @@ input::placeholder{color:#829ab3}
   letter-spacing:1px;
 }
 
-.stat strong{
-  display:block;
-  font-size:clamp(20px,4vw,30px);
-}
+.stat strong{display:block;font-size:clamp(20px,4vw,30px)}
 
 .member-nav{
   display:flex;
@@ -644,6 +572,11 @@ input::placeholder{color:#829ab3}
   overflow:hidden;
 }
 
+.session-exercise:last-child{margin-bottom:0}
+
+.session-exercise.is-success{border-color:#39d99a66}
+.session-exercise.is-failed{border-color:#ff777766}
+
 .session-exercise summary{
   padding:16px;
   display:flex;
@@ -653,9 +586,7 @@ input::placeholder{color:#829ab3}
   list-style:none;
 }
 
-.session-exercise summary::-webkit-details-marker{
-  display:none;
-}
+.session-exercise summary::-webkit-details-marker{display:none}
 
 .exercise-number{
   display:grid;
@@ -669,11 +600,17 @@ input::placeholder{color:#829ab3}
   font-weight:bold;
 }
 
-.summary-info{flex:1}
-
-.summary-info strong{display:block}
-
+.summary-info{flex:1;min-width:0}
+.summary-info strong{display:block;overflow-wrap:anywhere}
 .summary-info small{color:var(--muted)}
+
+.summary-arrow{
+  color:var(--light);
+  font-size:20px;
+  transition:transform .2s;
+}
+
+details[open] .summary-arrow{transform:rotate(180deg)}
 
 .details-body{
   padding:20px;
@@ -685,10 +622,12 @@ input::placeholder{color:#829ab3}
   border-radius:12px;
 }
 
-.table-wrap{
-  overflow-x:auto;
-  margin:15px 0;
+.details-body>.exercise-photo{
+  max-width:500px;
+  border-radius:12px;
 }
+
+.table-wrap{overflow-x:auto;margin:15px 0}
 
 table{
   width:100%;
@@ -700,6 +639,8 @@ td,th{
   padding:12px 10px;
   text-align:center;
   border-bottom:1px solid var(--border);
+  overflow-wrap:anywhere;
+  white-space:pre-wrap;
 }
 
 th{
@@ -710,13 +651,9 @@ th{
 }
 
 td{font-size:14px}
-
 tr:nth-child(even) td{background:#132b43}
 
-.form-card{
-  max-width:720px;
-  margin:25px auto;
-}
+.form-card{max-width:720px;margin:25px auto}
 
 .form-grid{
   display:grid;
@@ -734,15 +671,8 @@ label{
   font-weight:bold;
 }
 
-.activation-heading{
-  text-align:center;
-  margin-bottom:25px;
-}
-
-.activation-heading img{
-  width:85px;
-  margin-bottom:15px;
-}
+.activation-heading{text-align:center;margin-bottom:25px}
+.activation-heading img{width:85px;margin-bottom:15px}
 
 .photo-preview{
   display:none;
@@ -774,7 +704,6 @@ label{
 }
 
 .profile-line span{color:var(--muted)}
-
 .profile-line strong{text-align:right}
 
 .empty{
@@ -783,11 +712,6 @@ label{
   border-radius:14px;
   color:var(--muted);
   text-align:center;
-}
-
-.error{
-  color:var(--red);
-  overflow-wrap:anywhere;
 }
 
 .notice{
@@ -800,10 +724,7 @@ label{
   margin-bottom:20px;
 }
 
-.loading{
-  padding:90px 20px;
-  text-align:center;
-}
+.loading{padding:90px 20px;text-align:center}
 
 .spinner{
   width:42px;
@@ -815,9 +736,7 @@ label{
   animation:spin .8s linear infinite;
 }
 
-@keyframes spin{
-  to{transform:rotate(360deg)}
-}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 .modal{
   display:none;
@@ -890,6 +809,211 @@ label{
   margin:15px 0;
 }
 
+/* ========================================================
+   NOUVEAU : APPRECIATIONS ET SUIVI SPORTIF
+   ======================================================== */
+
+.feedback-panel{
+  margin-top:25px;
+  padding:22px;
+  background:linear-gradient(145deg,#132b43,#101f32);
+  border:1px solid #34536f;
+  border-radius:16px;
+}
+
+.feedback-title{
+  font-size:21px;
+  margin:7px 0;
+}
+
+.feedback-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:15px 0 22px;
+}
+
+.feedback-option{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:60px;
+  margin:0;
+  padding:12px;
+  border-radius:11px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:14px;
+  transition:.2s;
+}
+
+.feedback-option input{
+  position:absolute;
+  width:1px;
+  height:1px;
+  opacity:0;
+}
+
+.feedback-option:focus-within{
+  outline:2px solid var(--light);
+  outline-offset:3px;
+}
+
+.feedback-option.good{
+  color:var(--green);
+  background:#39d99a0b;
+  border:1px solid #39d99a55;
+}
+
+.feedback-option.bad{
+  color:var(--red);
+  background:#ff77770b;
+  border:1px solid #ff777755;
+}
+
+.feedback-option.good:has(input:checked){
+  background:#174c38;
+  border-color:var(--green);
+  box-shadow:0 0 0 2px #39d99a22;
+}
+
+.feedback-option.bad:has(input:checked){
+  background:#54262d;
+  border-color:var(--red);
+  box-shadow:0 0 0 2px #ff777722;
+}
+
+.feedback-option:hover{filter:brightness(1.2)}
+
+.feedback-status{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:10px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.feedback-status.pending{
+  background:#ffb45b12;
+  color:var(--orange);
+  border:1px solid #ffb45b33;
+}
+
+.feedback-status.good{
+  background:#39d99a15;
+  color:var(--green);
+  border:1px solid #39d99a44;
+}
+
+.feedback-status.bad{
+  background:#ff777715;
+  color:var(--red);
+  border:1px solid #ff777744;
+}
+
+.feedback-message{
+  font-size:13px;
+  margin:12px 0 0;
+  overflow-wrap:anywhere;
+}
+
+.feedback-date{
+  font-size:11px;
+  color:var(--muted);
+  margin:12px 0;
+}
+
+.feedback-platforms{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin:10px 0;
+}
+
+.platform-tag{
+  font-size:10px;
+  font-weight:bold;
+  padding:5px 9px;
+  border-radius:6px;
+  background:#1a3652;
+  color:#b4d7f8;
+  border:1px solid #34536f;
+}
+
+.progress-track{
+  height:7px;
+  background:#ffffff18;
+  border-radius:20px;
+  overflow:hidden;
+  margin:12px 0;
+}
+
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,#087ff5,#39d99a);
+  border-radius:20px;
+  transition:width .3s;
+}
+
+.progress-info{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  font-size:12px;
+  color:#c2d6e9;
+  margin-top:15px;
+}
+
+.session-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+
+.session-stat{
+  padding:5px 10px;
+  border-radius:7px;
+  background:#ffffff0b;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.custom-tag{
+  display:inline-block;
+  color:var(--light);
+  font-size:10px;
+  padding:4px 8px;
+  background:#1b4067;
+  border-radius:6px;
+  margin:6px 0;
+}
+
+.video-saved{
+  padding:12px;
+  border:1px solid #35516e;
+  background:#0b1a2a;
+  border-radius:10px;
+  margin:10px 0 15px;
+}
+
+.video-saved a{
+  overflow-wrap:anywhere;
+  font-size:12px;
+}
+
+.comment-counter{
+  font-size:10px;
+  text-align:right;
+  color:var(--muted);
+  margin-top:4px;
+}
+
 footer{
   padding:45px 20px;
   text-align:center;
@@ -899,12 +1023,7 @@ footer{
 }
 
 footer img{width:65px;margin-bottom:10px}
-
-footer strong{
-  color:white;
-  font-size:20px;
-  letter-spacing:3px;
-}
+footer strong{color:white;font-size:20px;letter-spacing:3px}
 
 .footer-links{
   display:flex;
@@ -917,29 +1036,18 @@ footer strong{
 [hidden]{display:none!important}
 
 @media(max-width:1000px){
-
   .header-nav{gap:12px}
-
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-
   .hero{padding:45px;min-height:440px}
-
   .feature{padding:18px;gap:12px}
-
   .feature strong{font-size:16px}
-
 }
 
 @media(max-width:700px){
-
   main{padding:14px 12px 40px}
-
   .header-inner{padding:12px;flex-wrap:wrap;gap:10px}
-
   .brand img{width:43px;height:43px}
-
   .brand-title{font-size:22px}
-
   .brand-subtitle{font-size:7px}
 
   .header-nav{
@@ -950,7 +1058,6 @@ footer strong{
   }
 
   .header-nav a{font-size:11px;white-space:nowrap}
-
   .status{font-size:9px}
 
   .hero{
@@ -964,9 +1071,7 @@ footer strong{
   }
 
   .hero p{font-size:14px}
-
   .hero-buttons{flex-direction:column}
-
   .features{gap:7px;margin-bottom:35px}
 
   .feature{
@@ -977,31 +1082,18 @@ footer strong{
   }
 
   .feature-icon{width:38px;height:38px}
-
   .feature-icon svg{width:21px;height:21px}
-
   .feature strong{font-size:13px}
-
   .feature small{font-size:10px}
-
   .grid{gap:12px}
-
   .exercise-body{padding:13px}
-
   .exercise-body h3{font-size:17px}
-
   .exercise-body .eyebrow{font-size:8px}
-
   .exercise-description{font-size:11px}
-
   .exercise-body .btn{padding:10px 5px;font-size:11px}
-
   .muscle{font-size:9px;padding:4px 6px}
-
   .play-circle{width:43px;height:43px;font-size:17px}
-
   .photo-label{font-size:7px;left:7px;bottom:7px}
-
   .search-bar{grid-template-columns:1fr}
 
   .coaching-banner{
@@ -1011,35 +1103,31 @@ footer strong{
   }
 
   .section-heading{align-items:flex-start}
-
   .section-heading .btn{padding:10px;font-size:11px}
-
   .profile-hero{padding:20px}
-
   .avatar,.avatar-placeholder{width:68px;height:68px}
-
   .profile-head{gap:13px}
-
   .stat{padding:12px 8px}
-
   .stats{gap:7px}
-
   .form-grid{grid-template-columns:1fr}
-
   .panel{padding:18px}
-
   .modal{padding:10px}
-
   .modal-inner{padding:17px}
-
   .nav-btn{font-size:12px;padding:12px}
-
   .session-content{padding:10px}
-
+  .session-header{padding:20px}
   .details-body{padding:12px}
-
+  .feedback-panel{padding:15px}
+  .feedback-option{font-size:12px;padding:9px}
+  .feedback-options{gap:8px}
+  .feedback-status{font-size:9px;padding:5px 7px}
+  .session-exercise summary{padding:12px;gap:8px}
+  .exercise-number{width:32px;height:32px;font-size:12px}
+  .summary-info strong{font-size:14px}
+  .summary-info small{font-size:10px}
+  td,th{padding:10px 6px}
+  td{font-size:12px}
 }
-
 </style>
 </head>
 
@@ -1052,18 +1140,14 @@ footer strong{
       <img src="logo.png" alt="EAH Conformité"
         onerror="this.hidden=true">
       <div>
-        <div class="brand-title">
-          EAH <span>SPORT</span>
-        </div>
+        <div class="brand-title">EAH <span>SPORT</span></div>
         <div class="brand-subtitle">
           PERSONAL COACHING EXPERIENCE
         </div>
       </div>
     </a>
 
-    <div class="status" id="connection">
-      ● EAH SPORT
-    </div>
+    <div class="status" id="connection">● EAH SPORT</div>
 
     <nav class="header-nav" id="headerNav">
       <a href="#accueil">Accueil</a>
@@ -1083,12 +1167,8 @@ footer strong{
 </main>
 
 <footer>
-
-  <img src="logo.png" alt="EAH"
-    onerror="this.hidden=true">
-
+  <img src="logo.png" alt="EAH" onerror="this.hidden=true">
   <div><strong>EAH SPORT</strong></div>
-
   <p>Votre progression. Votre programme. Votre coach.</p>
 
   <div class="footer-links">
@@ -1097,9 +1177,7 @@ footer strong{
   </div>
 
   <p>Powered by EAH Conformité</p>
-
   <small>© 2026 EAH SPORT — Tous droits réservés.</small>
-
 </footer>
 
 <div class="modal" id="modal"
@@ -1114,7 +1192,7 @@ footer strong{
 <script>
 
 /************************************************************
- * 1. CONFIGURATION
+ * 1. CONFIGURATION EAH SPORT
  ************************************************************/
 
 const API =
@@ -1123,22 +1201,26 @@ const API =
 const SITE =
 'https://eahconform.github.io/EAH-SPORT/';
 
-const CONFIG = {
+const CONFIG={
+  VERSION:'2.5',
   PHOTO_DIMENSION:600,
-  MAX_PHOTO_SIZE:700000
+  MAX_PHOTO_SIZE:700000,
+  MAX_COMMENT:3000,
+  MAX_VIDEO_URL:2000,
+  RESPONSE_ACTION:'save_response'
 };
 
-const app = document.getElementById('app');
-const modal = document.getElementById('modal');
-const modalContent = document.getElementById('modalContent');
-const connection = document.getElementById('connection');
-const headerNav = document.getElementById('headerNav');
+const app=document.getElementById('app');
+const modal=document.getElementById('modal');
+const modalContent=document.getElementById('modalContent');
+const connection=document.getElementById('connection');
+const headerNav=document.getElementById('headerNav');
 
-const params = new URLSearchParams(location.search);
+const params=new URLSearchParams(location.search);
 
-const token =
-  params.get('token') ||
-  params.get('t') ||
+const token=
+  params.get('token')||
+  params.get('t')||
   '';
 
 if(token){
@@ -1148,27 +1230,26 @@ if(token){
   document.head.appendChild(meta);
 }
 
-let state = null;
-let exercises = [];
-let currentTab = 'sessions';
-let currentFilter = 'Tous';
-let publicSynced = false;
-let publicLoading = false;
-let requestPending = false;
-let compressedPhoto = '';
-let photoTask = Promise.resolve('');
-let previousFocus = null;
+let state=null;
+let exercises=[];
+let currentTab='sessions';
+let currentFilter='Tous';
+let publicSynced=false;
+let publicLoading=false;
+let requestPending=false;
+let feedbackPending=false;
+let compressedPhoto='';
+let photoTask=Promise.resolve('');
+let previousFocus=null;
+
+const feedbackDrafts=new Map();
 
 
 /************************************************************
  * 2. BIBLIOTHEQUE PUBLIQUE DE SECOURS
- *
- * Les photos sont chargees depuis GitHub.
- * Les videos peuvent etre renseignees ici provisoirement.
- * Les donnees Google Sheets sont prioritaires si accessibles.
  ************************************************************/
 
-const DEFAULT_EXERCISES = [
+const DEFAULT_EXERCISES=[
 
   {
     nom:'Squat',
@@ -1299,7 +1380,7 @@ const DEFAULT_EXERCISES = [
 
 function esc(value){
 
-  return String(value ?? '').replace(
+  return String(value??'').replace(
     /[&<>"']/g,
     c=>({
       '&':'&amp;',
@@ -1314,7 +1395,7 @@ function esc(value){
 
 function normalize(value){
 
-  return String(value ?? '')
+  return String(value??'')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g,'')
     .toLowerCase()
@@ -1327,9 +1408,9 @@ function first(object,keys,fallback=''){
   for(const key of keys){
 
     if(
-      object &&
-      object[key]!==undefined &&
-      object[key]!==null &&
+      object&&
+      object[key]!==undefined&&
+      object[key]!==null&&
       object[key]!==''
     ){
       return object[key];
@@ -1345,9 +1426,13 @@ function safeUrl(value){
 
   try{
 
-    const u=new URL(String(value||''));
+    const u=new URL(String(value||'').trim());
 
-    return u.protocol==='https:' ? u.href : '';
+    return (
+      u.protocol==='https:'&&
+      !u.username&&
+      !u.password
+    )?u.href:'';
 
   }catch{
 
@@ -1360,7 +1445,8 @@ function safeUrl(value){
 function isActive(value){
 
   return [
-    'true','1','oui','actif','active','activee'
+    'true','1','oui','actif','active','activee',
+    'activated','vrai','yes'
   ].includes(normalize(value));
 
 }
@@ -1377,11 +1463,9 @@ function imageUrl(value){
 
       const match=u.pathname.match(/\/file\/d\/([\w-]+)/);
 
-      const id=match
-        ? match[1]
-        : u.searchParams.get('id');
+      const id=match?match[1]:u.searchParams.get('id');
 
-      if(id && /^[\w-]+$/.test(id)){
+      if(id&&/^[\w-]+$/.test(id)){
 
         return 'https://drive.google.com/thumbnail?id='+
           encodeURIComponent(id)+'&sz=w1200';
@@ -1436,9 +1520,13 @@ function splitMuscles(value){
 
 function muscleTags(value){
 
+  const muscles=splitMuscles(value);
+
+  if(!muscles.length)return '';
+
   return `
     <div class="muscles">
-      ${splitMuscles(value).map(v=>`
+      ${muscles.map(v=>`
         <span class="muscle">${esc(v)}</span>
       `).join('')}
     </div>
@@ -1474,6 +1562,84 @@ function showError(message){
   `;
 
   document.getElementById('retryBtn').onclick=init;
+
+}
+
+function formatDate(value){
+
+  if(!value)return '';
+
+  const date=new Date(value);
+
+  if(Number.isNaN(date.getTime()))return String(value);
+
+  return date.toLocaleString('fr-FR',{
+    day:'2-digit',
+    month:'2-digit',
+    year:'numeric',
+    hour:'2-digit',
+    minute:'2-digit'
+  });
+
+}
+
+function normalizeResult(value){
+
+  const v=normalize(value)
+    .replace(/[_-]+/g,' ')
+    .replace(/\s+/g,' ');
+
+  if([
+    'reussi','reussie','success','ok',
+    'valide','validee','true','oui'
+  ].includes(v)){
+
+    return 'REUSSI';
+
+  }
+
+  if([
+    'non reussi','non reussie','failed',
+    'echec','non valide','non validee','false','non'
+  ].includes(v)){
+
+    return 'NON REUSSI';
+
+  }
+
+  return '';
+
+}
+
+function sessionKey(s){
+
+  return String(s.idSeance||s.nom);
+
+}
+
+function feedbackKey(s){
+
+  return String(s.idExercice||'');
+
+}
+
+function resultClass(result){
+
+  return result==='REUSSI'
+    ?'good'
+    :result==='NON REUSSI'
+      ?'bad'
+      :'pending';
+
+}
+
+function resultLabel(result){
+
+  return result==='REUSSI'
+    ?'✓ Réussi'
+    :result==='NON REUSSI'
+      ?'✕ Non réussi'
+      :'À renseigner';
 
 }
 
@@ -1532,16 +1698,14 @@ function normalizeExercise(e){
     x=>normalize(x.nom)===normalize(nom)
   )||{};
 
-  const groupes=first(e,[
-    'groupes','GROUPES','muscles',
-    'GROUPES_MUSCULAIRES'
-  ],fallback.groupes||'');
-
   return {
 
     nom,
 
-    groupes,
+    groupes:first(e,[
+      'groupes','GROUPES','muscles',
+      'GROUPES_MUSCULAIRES'
+    ],fallback.groupes||''),
 
     categorie:first(e,[
       'categorie','CATEGORIE','category'
@@ -1553,13 +1717,11 @@ function normalizeExercise(e){
 
     photo:first(e,[
       'photo','PHOTO','image','IMAGE',
-      'photoUrl','URL_PHOTO','PHOTO_URL',
-      'URL_IMAGE'
+      'photoUrl','URL_PHOTO','PHOTO_URL','URL_IMAGE'
     ],fallback.photo||''),
 
     video:first(e,[
-      'video','VIDEO','videoUrl',
-      'URL_VIDEO','VIDEO_URL'
+      'video','VIDEO','videoUrl','URL_VIDEO','VIDEO_URL'
     ])
 
   };
@@ -1598,25 +1760,133 @@ function normalizeProfile(p){
 
 }
 
-function normalizeSession(s){
+
+/************************************************************
+ * NORMALISATION DES APPRECIATIONS
+ ************************************************************/
+
+function normalizeFeedback(source){
+
+  const s=source||{};
+
+  const nested=
+    s.reponse||
+    s.response||
+    s.feedback||
+    s.appreciation||
+    {};
+
+  const r=typeof nested==='object'&&nested!==null
+    ?nested
+    :{resultat:nested};
 
   return {
+
+    resultat:normalizeResult(first(s,[
+      'resultat','RESULTAT',
+      'appreciation','APPRECIATION',
+      'result','statutReponse'
+    ],first(r,[
+      'resultat','RESULTAT','result',
+      'appreciation','status'
+    ]))),
+
+    commentaire:String(first(s,[
+      'commentaire','COMMENTAIRE',
+      'commentaireSportif','comment'
+    ],first(r,[
+      'commentaire','COMMENTAIRE','comment'
+    ]))),
+
+    videoSportif:String(first(s,[
+      'videoSportif','VIDEO SPORTIF',
+      'VIDEO_SPORTIF','videoUtilisateur',
+      'videoReponse','videoFeedback',
+      'videoLien','lienVideoSportif'
+    ],first(r,[
+      'videoSportif','video','VIDEO',
+      'videoUrl','lienVideo'
+    ]))),
+
+    dateReponse:first(s,[
+      'dateReponse','DATE_REPONSE',
+      'dateAppreciation','dateFeedback'
+    ],first(r,[
+      'date','DATE','updatedAt'
+    ]))
+
+  };
+
+}
+
+
+/************************************************************
+ * NORMALISATION DES SEANCES
+ ************************************************************/
+
+function normalizeSession(s){
+
+  const autre=first(s,[
+    'autreExercice','AUTRE EXERCICE',
+    'AUTRE_EXERCICE','autre','customExercise',
+    'exerciceManuel'
+  ]);
+
+  const exercice=autre||first(s,[
+    'exercice','EXERCICE','exercise'
+  ]);
+
+  const idExercice=String(first(s,[
+    'idExercice','ID_EXERCICE','ID EXERCICE',
+    'exerciseId','idLigne','uid','id','ID'
+  ]));
+
+  const idSeance=String(first(s,[
+    'idSeance','ID_SEANCE','ID SEANCE',
+    'sessionId'
+  ]));
+
+  return {
+
+    id:idExercice,
+
+    idExercice,
+
+    idSeance,
 
     nom:first(s,[
       'nom','seance','SEANCE','session','NOM_SEANCE'
     ]),
 
-    exercice:first(s,['exercice','EXERCICE','exercise']),
+    exercice,
 
-    groupes:first(s,['groupes','GROUPES','muscles']),
+    personnalise:Boolean(autre)||isActive(first(s,[
+      'personnalise','PERSONNALISE','custom'
+    ],false)),
 
-    video:first(s,['video','VIDEO','videoUrl','URL_VIDEO']),
+    groupes:first(s,[
+      'groupes','GROUPES','muscles'
+    ]),
 
-    photo:first(s,['photo','PHOTO','image','URL_PHOTO']),
+    categorie:first(s,[
+      'categorie','CATEGORIE'
+    ]),
 
-    description:first(s,['description','DESCRIPTION']),
+    video:first(s,[
+      'video','VIDEO','videoUrl','URL_VIDEO'
+    ]),
 
-    series:first(s,['series','SERIES','sets']),
+    photo:first(s,[
+      'photo','PHOTO','image','URL_PHOTO'
+    ]),
+
+    description:first(s,[
+      'description','DESCRIPTION'
+    ]),
+
+    series:first(s,[
+      'series','SERIES','sets'
+    ]),
 
     reps:first(s,[
       'reps','REPS','repetitions','REPETITIONS'
@@ -1627,12 +1897,15 @@ function normalizeSession(s){
     ]),
 
     repos:first(s,[
-      'repos','REPOS','recuperation','RECUPERATION','rest'
+      'repos','REPOS','REPOS_SEC','reposSec',
+      'recuperation','RECUPERATION','rest'
     ]),
 
     notes:first(s,[
       'notes','NOTES','consignes','CONSIGNES'
-    ])
+    ]),
+
+    ...normalizeFeedback(s)
 
   };
 
@@ -1657,27 +1930,26 @@ function normalizeExerciseList(list){
 function normalizeResponse(result){
 
   const payload=
-    result.data &&
-    typeof result.data==='object' &&
+    result.data&&
+    typeof result.data==='object'&&
     !Array.isArray(result.data)
 
-    ? {...result,...result.data}
-
-    : result;
+    ?{...result,...result.data}
+    :result;
 
   const profile=
-    payload.profil ||
-    payload.profile ||
-    payload.user ||
-    payload.utilisateur ||
+    payload.profil||
+    payload.profile||
+    payload.user||
+    payload.utilisateur||
     null;
 
   const rawStatus=normalize(first(
     payload,
     ['status','statut','STATUS','STATUT'],
     profile
-      ? first(profile,['status','statut','STATUS','STATUT'])
-      : ''
+      ?first(profile,['status','statut','STATUS','STATUT'])
+      :''
   ));
 
   let status=rawStatus.toUpperCase();
@@ -1685,22 +1957,92 @@ function normalizeResponse(result){
   if([
     'active','actif','activee','activated'
   ].includes(rawStatus)){
+
     status='ACTIF';
+
   }
 
   if([
-    'disponible','available','libre','inactive','non active'
+    'disponible','available','libre',
+    'inactive','non active'
   ].includes(rawStatus)){
+
     status='DISPONIBLE';
+
   }
 
   if([
     'desactive','desactivee','disabled','bloque'
   ].includes(rawStatus)){
+
     status='DESACTIVE';
+
   }
 
   const sessionList=payload.sessions||payload.seances||[];
+
+  const sessions=Array.isArray(sessionList)
+
+    ?sessionList.filter(s=>{
+
+      const active=first(s,[
+        'active','ACTIVE','actif','ACTIF'
+      ],null);
+
+      return active===null||isActive(active);
+
+    }).map(normalizeSession)
+      .filter(s=>s.nom&&s.exercice)
+
+    :[];
+
+  /*
+   * Prise en charge des réponses éventuellement
+   * transmises dans un tableau indépendant.
+   */
+
+  const responseList=
+    payload.reponses||
+    payload.responses||
+    [];
+
+  if(Array.isArray(responseList)){
+
+    const responseMap=new Map();
+
+    responseList.forEach(r=>{
+
+      const id=String(first(r,[
+        'idExercice','ID_EXERCICE',
+        'ID EXERCICE','exerciseId'
+      ]));
+
+      if(id)responseMap.set(id,r);
+
+    });
+
+    sessions.forEach(s=>{
+
+      if(s.idExercice&&responseMap.has(s.idExercice)){
+
+        const r=responseMap.get(s.idExercice);
+
+        Object.assign(s,normalizeFeedback({
+          ...r,
+          videoSportif:first(r,[
+            'videoSportif','VIDEO SPORTIF',
+            'VIDEO_SPORTIF','video','VIDEO'
+          ]),
+          dateReponse:first(r,[
+            'dateReponse','date','DATE'
+          ])
+        }));
+
+      }
+
+    });
+
+  }
 
   return {
 
@@ -1716,20 +2058,17 @@ function normalizeResponse(result){
       payload.exercises||payload.exercices||[]
     ),
 
-    sessions:Array.isArray(sessionList)
+    sessions,
 
-      ? sessionList.filter(s=>{
+    savedResponse:
+      payload.savedResponse||
+      payload.savedReponse||
+      payload.savedFeedback||
+      null,
 
-          const active=first(s,[
-            'active','ACTIVE','actif','ACTIF'
-          ],null);
+    message:first(payload,['message','MESSAGE']),
 
-          return active===null||isActive(active);
-
-        }).map(normalizeSession)
-          .filter(s=>s.nom&&s.exercice)
-
-      : []
+    raw:payload
 
   };
 
@@ -1737,7 +2076,7 @@ function normalizeResponse(result){
 
 
 /************************************************************
- * 6. COMMUNICATION APPS SCRIPT
+ * 6. COMMUNICATION AVEC APPS SCRIPT
  ************************************************************/
 
 async function requestJSON(url,options={},timeout=45000){
@@ -1781,25 +2120,39 @@ async function requestJSON(url,options={},timeout=45000){
 
     }catch{
 
-      throw new Error('Réponse Apps Script non valide.');
+      throw new Error(
+        'Réponse Apps Script non valide. Vérifiez le déploiement.'
+      );
 
     }
 
     if(
-      !result ||
-      result.ok===false ||
+      !result||
+      result.ok===false||
       result.success===false
     ){
 
       throw new Error(
-        result?.error ||
-        result?.message ||
+        result?.error||
+        result?.message||
         'Requête refusée.'
       );
 
     }
 
     return result;
+
+  }catch(error){
+
+    if(error.name==='AbortError'){
+
+      throw new Error(
+        'Le serveur met trop de temps à répondre. Réessayez.'
+      );
+
+    }
+
+    throw error;
 
   }finally{
 
@@ -1844,9 +2197,6 @@ async function callAPI(action,data={}){
 
 /************************************************************
  * 7. RECUPERATION PUBLIQUE DES EXERCICES
- *
- * Aucun token individuel n'est utilise.
- * Aucun profil ni aucune seance ne sont demandes.
  ************************************************************/
 
 function extractPublicExercises(result){
@@ -1855,9 +2205,9 @@ function extractPublicExercises(result){
 
   const list=Array.isArray(payload)
 
-    ? payload
+    ?payload
 
-    : payload.exercises||payload.exercices;
+    :payload.exercises||payload.exercices;
 
   if(!Array.isArray(list)){
 
@@ -1874,12 +2224,13 @@ async function loadPublicExercises(){
   if(publicLoading)return;
 
   publicLoading=true;
-
   publicSynced=false;
 
   const syncButton=document.getElementById('publicRefresh');
 
   if(syncButton)syncButton.disabled=true;
+
+  updatePublicNotice();
 
   try{
 
@@ -1932,9 +2283,7 @@ async function loadPublicExercises(){
     if(document.getElementById('exerciseList')){
 
       updateLibraryFilters();
-
       renderExerciseList();
-
       updatePublicNotice();
 
     }
@@ -1969,7 +2318,7 @@ function updatePublicNotice(){
     notice.hidden=false;
 
     notice.textContent=
-      'Bibliothèque de découverte. Les tutoriels du coach seront disponibles lorsque la synchronisation publique sera activée.';
+      'Bibliothèque de découverte. Les tutoriels du coach seront disponibles lorsque la synchronisation publique sera accessible.';
 
   }
 
@@ -1977,7 +2326,7 @@ function updatePublicNotice(){
 
 
 /************************************************************
- * 8. PAGE D'ACCUEIL PUBLIQUE PREMIUM
+ * 8. PAGE D'ACCUEIL PUBLIQUE
  ************************************************************/
 
 function showPublicHome(){
@@ -2036,9 +2385,7 @@ function showPublicHome(){
 
       <div class="feature">
 
-        <div class="feature-icon">
-          ${ICONS.dumbbell}
-        </div>
+        <div class="feature-icon">${ICONS.dumbbell}</div>
 
         <div>
           <strong>
@@ -2052,9 +2399,7 @@ function showPublicHome(){
 
       <div class="feature">
 
-        <div class="feature-icon">
-          ${ICONS.play}
-        </div>
+        <div class="feature-icon">${ICONS.play}</div>
 
         <div>
           <strong>Tutoriels</strong>
@@ -2065,9 +2410,7 @@ function showPublicHome(){
 
       <div class="feature">
 
-        <div class="feature-icon">
-          ${ICONS.nfc}
-        </div>
+        <div class="feature-icon">${ICONS.nfc}</div>
 
         <div>
           <strong>Coaching NFC</strong>
@@ -2079,9 +2422,7 @@ function showPublicHome(){
     </section>
 
     <section id="exercices">
-
       <div id="publicLibrary"></div>
-
     </section>
 
     <section class="coaching-banner" id="coaching">
@@ -2106,15 +2447,21 @@ function showPublicHome(){
 
         </p>
 
+        <p class="muted">
+
+          Partagez vos résultats, vos commentaires
+          et vos vidéos avec votre coach pour
+          bénéficier d'un meilleur suivi sportif.
+
+        </p>
+
         <button class="btn" id="memberHelp">
           Accéder à mon espace personnel
         </button>
 
         <p class="small muted" style="margin-top:15px">
-
           La bibliothèque d'exercices est accessible
           librement, sans carte NFC.
-
         </p>
 
       </div>
@@ -2207,17 +2554,13 @@ function clickablePhoto(e,index){
       ${exerciseImage(e.photo,e.nom)}
 
       <div class="play-overlay">
-
         <span class="play-circle">
           ${e.video?'▶':'+'}
         </span>
-
       </div>
 
       <span class="photo-label">
-
         ${e.video?'TUTORIEL VIDÉO':'FICHE TECHNIQUE'}
-
       </span>
 
     </button>
@@ -2236,17 +2579,12 @@ function showLibrary(container,isPublic){
 
       <div>
 
-        <div class="eyebrow">
-          EAH SPORT TRAINING
-        </div>
+        <div class="eyebrow">EAH SPORT TRAINING</div>
 
         <h2>Bibliothèque d'exercices</h2>
 
         <p class="muted">
-
-          Découvrez les mouvements et leurs
-          tutoriels vidéo.
-
+          Découvrez les mouvements et leurs tutoriels vidéo.
         </p>
 
       </div>
@@ -2269,10 +2607,7 @@ function showLibrary(container,isPublic){
         aria-label="Rechercher un exercice"
       >
 
-      <select
-        id="muscleFilter"
-        aria-label="Groupe musculaire"
-      >
+      <select id="muscleFilter" aria-label="Groupe musculaire">
 
         <option value="">
           Tous les groupes musculaires
@@ -2323,16 +2658,10 @@ function updateLibraryFilters(){
 
   select.innerHTML=`
 
-    <option value="">
-      Tous les groupes musculaires
-    </option>
+    <option value="">Tous les groupes musculaires</option>
 
     ${muscles.map(m=>`
-
-      <option value="${esc(m)}">
-        ${esc(m)}
-      </option>
-
+      <option value="${esc(m)}">${esc(m)}</option>
     `).join('')}
 
   `;
@@ -2404,12 +2733,9 @@ function renderExerciseList(){
 
       const groups=splitMuscles(e.groupes).map(normalize);
 
-      return text.includes(q) &&
-
-        (!muscle||groups.includes(muscle)) &&
-
-        (currentFilter==='Tous'||
-          e.categorie===currentFilter);
+      return text.includes(q)&&
+        (!muscle||groups.includes(muscle))&&
+        (currentFilter==='Tous'||e.categorie===currentFilter);
 
     });
 
@@ -2418,7 +2744,7 @@ function renderExerciseList(){
 
   container.innerHTML=list.length
 
-    ? list.map(e=>`
+    ?list.map(e=>`
 
       <article class="exercise-card">
 
@@ -2451,7 +2777,7 @@ function renderExerciseList(){
 
     `).join('')
 
-    : `
+    :`
       <div class="empty">
         Aucun exercice ne correspond à votre recherche.
       </div>
@@ -2471,22 +2797,17 @@ function videoHTML(value){
   if(!link){
 
     return `
-
       <div class="video-preview">
 
-        <div style="font-size:40px;color:#72bbff">
-          ▶
-        </div>
+        <div style="font-size:40px;color:#72bbff">▶</div>
 
         <h3>Tutoriel bientôt disponible</h3>
 
         <p class="small muted">
-          La vidéo sera affichée lorsque son lien
-          sera disponible.
+          La vidéo sera affichée lorsque son lien sera disponible.
         </p>
 
       </div>
-
     `;
 
   }
@@ -2540,9 +2861,7 @@ function videoHTML(value){
 
     const match=u.pathname.match(/\/file\/d\/([\w-]+)/);
 
-    const driveId=match
-      ? match[1]
-      : u.searchParams.get('id');
+    const driveId=match?match[1]:u.searchParams.get('id');
 
     if(driveId&&/^[\w-]+$/.test(driveId)){
 
@@ -2598,21 +2917,27 @@ function videoHTML(value){
     host==='instagram.com'||
     host.endsWith('.instagram.com')
   ){
+
     platform='Instagram';
+
   }
 
   if(
     host==='tiktok.com'||
     host.endsWith('.tiktok.com')
   ){
+
     platform='TikTok';
+
   }
 
   if(
     host==='facebook.com'||
     host.endsWith('.facebook.com')
   ){
+
     platform='Facebook';
+
   }
 
   return `
@@ -2633,9 +2958,7 @@ function videoHTML(value){
 
       <div class="video-preview">
 
-        <div style="font-size:40px;color:#72bbff">
-          ▶
-        </div>
+        <div style="font-size:40px;color:#72bbff">▶</div>
 
         <h3>Tutoriel ${esc(platform)}</h3>
 
@@ -2657,6 +2980,35 @@ function videoHTML(value){
     </a>
 
   `;
+
+}
+
+function videoPlatform(value){
+
+  const link=safeUrl(value);
+
+  if(!link)return '';
+
+  const host=new URL(link).hostname.toLowerCase();
+
+  if(host==='youtu.be'||host==='youtube.com'||
+    host.endsWith('.youtube.com'))return 'YouTube';
+
+  if(host==='drive.google.com')return 'Google Drive';
+
+  if(host==='instagram.com'||
+    host.endsWith('.instagram.com'))return 'Instagram';
+
+  if(host==='tiktok.com'||
+    host.endsWith('.tiktok.com'))return 'TikTok';
+
+  if(host==='facebook.com'||
+    host.endsWith('.facebook.com'))return 'Facebook';
+
+  if(host==='vimeo.com'||
+    host.endsWith('.vimeo.com'))return 'Vimeo';
+
+  return 'Lien vidéo';
 
 }
 
@@ -2711,20 +3063,12 @@ function openExercise(index){
     <div class="modal-top">
 
       <div>
-
-        <div class="eyebrow">
-          FICHE TECHNIQUE EAH SPORT
-        </div>
-
+        <div class="eyebrow">FICHE TECHNIQUE EAH SPORT</div>
         <h2>${esc(e.nom)}</h2>
-
       </div>
 
-      <button
-        class="close"
-        data-close-modal
-        aria-label="Fermer"
-      >×</button>
+      <button class="close" data-close-modal
+        aria-label="Fermer">×</button>
 
     </div>
 
@@ -2742,9 +3086,7 @@ function openExercise(index){
 
     <section style="margin-top:25px">
 
-      <div class="eyebrow">
-        DESCRIPTION DE L'EXERCICE
-      </div>
+      <div class="eyebrow">DESCRIPTION DE L'EXERCICE</div>
 
       <p style="margin-top:12px;white-space:pre-wrap">
         ${esc(e.description||'Description à venir.')}
@@ -2754,9 +3096,7 @@ function openExercise(index){
 
     <section style="margin-top:25px">
 
-      <div class="eyebrow">
-        TUTORIEL VIDÉO
-      </div>
+      <div class="eyebrow">TUTORIEL VIDÉO</div>
 
       ${videoHTML(e.video)}
 
@@ -2787,7 +3127,8 @@ function showMemberHelp(){
 
       <h2>Votre espace personnel</h2>
 
-      <button class="close" data-close-modal>×</button>
+      <button class="close" data-close-modal
+        aria-label="Fermer">×</button>
 
     </div>
 
@@ -2904,6 +3245,8 @@ async function compressImage(file){
 
     const ctx=canvas.getContext('2d');
 
+    if(!ctx)throw new Error('Compression indisponible.');
+
     ctx.fillStyle='#ffffff';
 
     ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -2960,12 +3303,9 @@ function showActivation(){
 
       <div class="activation-heading">
 
-        <img src="logo.png" alt="EAH"
-          onerror="this.hidden=true">
+        <img src="logo.png" alt="EAH" onerror="this.hidden=true">
 
-        <div class="eyebrow">
-          ACTIVATION NFC
-        </div>
+        <div class="eyebrow">ACTIVATION NFC</div>
 
         <h2 style="margin-top:12px">
           Bienvenue chez EAH SPORT
@@ -3088,7 +3428,7 @@ function showActivation(){
             J'accepte l'enregistrement de mes informations
             pour mon suivi sportif. Je comprends que toute
             personne disposant de mon lien NFC pourra
-            accéder à mon profil.
+            accéder à mon profil, mes séances et mes réponses.
           </span>
 
         </label>
@@ -3249,6 +3589,16 @@ function showActivation(){
  * 14. ESPACE PERSONNEL DU SPORTIF
  ************************************************************/
 
+function changeTab(tab){
+
+  if(feedbackPending)return;
+
+  currentTab=tab;
+
+  renderTab();
+
+}
+
 function showDashboard(){
 
   if(!state||state.status!=='ACTIF'||!state.profil){
@@ -3293,11 +3643,17 @@ function showDashboard(){
   headerNav.querySelectorAll('[data-header-tab]')
     .forEach(a=>{
 
-      a.onclick=()=>{
+      a.onclick=event=>{
 
-        currentTab=a.dataset.headerTab;
+        if(feedbackPending){
 
-        renderTab();
+          event.preventDefault();
+
+          return;
+
+        }
+
+        changeTab(a.dataset.headerTab);
 
       };
 
@@ -3305,11 +3661,9 @@ function showDashboard(){
 
   app.innerHTML=`
 
-    <section class="profile-hero">
+    <section class="profile-hero" id="accueil">
 
-      <div class="eyebrow">
-        VOTRE ESPACE PERSONNEL
-      </div>
+      <div class="eyebrow">VOTRE ESPACE PERSONNEL</div>
 
       <div class="profile-head">
 
@@ -3317,7 +3671,12 @@ function showDashboard(){
 
           <img class="avatar"
             src="${esc(photo)}"
-            alt="Photo de profil">
+            alt="Photo de profil"
+            onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+
+          <div class="avatar-placeholder" hidden>
+            ${esc(initials||'EAH')}
+          </div>
 
         `:`
 
@@ -3332,11 +3691,8 @@ function showDashboard(){
           <h1>Bonjour, ${esc(p.prenom)}</h1>
 
           <div class="small muted">
-
             ${esc(p.id||state.id)}
-
             · Coach ${esc(p.coach)}
-
           </div>
 
         </div>
@@ -3350,27 +3706,18 @@ function showDashboard(){
       <div class="stats">
 
         <div class="stat">
-
           <span>POIDS</span>
-
           <strong>${esc(p.poids||'—')} kg</strong>
-
         </div>
 
         <div class="stat">
-
           <span>TAILLE</span>
-
           <strong>${esc(p.taille||'—')} cm</strong>
-
         </div>
 
         <div class="stat">
-
           <span>ÂGE</span>
-
           <strong>${esc(p.age||'—')} ans</strong>
-
         </div>
 
       </div>
@@ -3399,13 +3746,7 @@ function showDashboard(){
 
   app.querySelectorAll('[data-tab]').forEach(btn=>{
 
-    btn.onclick=()=>{
-
-      currentTab=btn.dataset.tab;
-
-      renderTab();
-
-    };
+    btn.onclick=()=>changeTab(btn.dataset.tab);
 
   });
 
@@ -3445,7 +3786,9 @@ function renderTab(){
 
 
 /************************************************************
- * 15. SERIES, REPETITIONS ET CHARGES
+ * 15. SERIES, REPETITIONS, CHARGES ET REPOS
+ *
+ * Compatible avec les nombres et le texte libre.
  ************************************************************/
 
 function splitValues(value){
@@ -3458,12 +3801,31 @@ function splitValues(value){
 
 }
 
+function numericSeries(value){
+
+  const text=String(value??'').trim();
+
+  if(!/^\d+$/.test(text))return 0;
+
+  const n=Number(text);
+
+  return n>=1&&n<=100?n:0;
+
+}
+
+function seriesLabel(value){
+
+  const text=String(value??'').trim();
+
+  if(!text)return 'Séries non renseignées';
+
+  return numericSeries(text)?text+' séries':text;
+
+}
+
 function seriesTable(session){
 
-  const count=Math.min(
-    100,
-    Math.max(0,Math.floor(Number(session.series)||0))
-  );
+  const count=numericSeries(session.series);
 
   const reps=splitValues(session.reps);
 
@@ -3475,9 +3837,9 @@ function seriesTable(session){
 
     return values.length===1
 
-      ? values[0]||'—'
+      ?values[0]||'—'
 
-      : values[index]||'—';
+      :values[index]||'—';
 
   }
 
@@ -3485,15 +3847,54 @@ function seriesTable(session){
 
     return /^\d+(?:[.,]\d+)?$/.test(value)
 
-      ? value+' '+suffix
+      ?value+' '+suffix
 
-      : value;
+      :value;
 
   }
 
-  if(!count){
+  /*
+   * Si le nombre de séries est un texte libre,
+   * ou si les valeurs ne correspondent pas au nombre
+   * de séries, affichage intégral sans perte de données.
+   */
 
-    return '<p class="muted small">Séries non renseignées.</p>';
+  const compatible=count&&
+    [reps,charges,rests].every(
+      values=>values.length===1||values.length===count
+    );
+
+  if(!compatible){
+
+    return `
+
+      <div class="table-wrap">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Séries</th>
+              <th>Répétitions</th>
+              <th>Charges</th>
+              <th>Repos</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>${esc(session.series||'—')}</td>
+              <td>${esc(session.reps||'—')}</td>
+              <td>${esc(unit(String(session.charges||'—'),'kg'))}</td>
+              <td>${esc(unit(String(session.repos||'—'),'s'))}</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    `;
 
   }
 
@@ -3506,15 +3907,10 @@ function seriesTable(session){
         <thead>
 
           <tr>
-
             <th>Série</th>
-
             <th>Répétitions</th>
-
             <th>Charge</th>
-
             <th>Repos</th>
-
           </tr>
 
         </thead>
@@ -3551,25 +3947,801 @@ function seriesTable(session){
 
 
 /************************************************************
- * 16. SEANCES PERSONNALISEES
- *
- * Le serveur doit transmettre uniquement les seances
- * autorisees pour le token individuel.
+ * 16. APPRECIATIONS DES SPORTIFS
+ ************************************************************/
+
+function feedbackHTML(s,index){
+
+  const key=feedbackKey(s);
+
+  if(!key){
+
+    return `
+
+      <section class="feedback-panel">
+
+        <div class="eyebrow">MON APPRÉCIATION</div>
+
+        <p class="small muted" style="margin-top:12px">
+          Cet exercice ne possède pas encore
+          d'identifiant de suivi. Contactez votre coach.
+        </p>
+
+      </section>
+
+    `;
+
+  }
+
+  const draft=feedbackDrafts.get(key);
+
+  const result=draft?.resultat??s.resultat??'';
+
+  const comment=draft?.commentaire??s.commentaire??'';
+
+  const video=draft?.videoSportif??s.videoSportif??'';
+
+  const savedLink=safeUrl(s.videoSportif);
+
+  const saved=Boolean(s.resultat);
+
+  return `
+
+    <section class="feedback-panel">
+
+      <div class="eyebrow">
+        SUIVI PERSONNEL EAH SPORT
+      </div>
+
+      <h3 class="feedback-title">Mon appréciation</h3>
+
+      <p class="small muted">
+        Indiquez votre résultat et partagez
+        vos sensations avec votre coach.
+      </p>
+
+      <form class="feedback-form"
+        data-feedback-index="${index}"
+        data-feedback-id="${esc(key)}">
+
+        <div class="feedback-options"
+          role="group"
+          aria-label="Résultat de l'exercice">
+
+          <label class="feedback-option good">
+
+            <input
+              type="radio"
+              name="resultat"
+              value="REUSSI"
+              ${result==='REUSSI'?'checked':''}
+              required
+            >
+
+            <span>✓ Réussi</span>
+
+          </label>
+
+          <label class="feedback-option bad">
+
+            <input
+              type="radio"
+              name="resultat"
+              value="NON REUSSI"
+              ${result==='NON REUSSI'?'checked':''}
+              required
+            >
+
+            <span>✕ Non réussi</span>
+
+          </label>
+
+        </div>
+
+        <div class="field">
+
+          <label for="comment-${index}">
+            Mon commentaire
+          </label>
+
+          <textarea
+            id="comment-${index}"
+            name="commentaire"
+            rows="4"
+            maxlength="${CONFIG.MAX_COMMENT}"
+            placeholder="Mes sensations, mes difficultés, les charges réalisées, mes remarques…"
+          >${esc(comment)}</textarea>
+
+          <div class="comment-counter">
+            <span class="comment-length">${comment.length}</span>
+            / ${CONFIG.MAX_COMMENT}
+          </div>
+
+        </div>
+
+        <div class="field">
+
+          <label for="video-${index}">
+            Ma vidéo (facultative)
+          </label>
+
+          <input
+            id="video-${index}"
+            name="videoSportif"
+            type="url"
+            inputmode="url"
+            maxlength="${CONFIG.MAX_VIDEO_URL}"
+            placeholder="https://..."
+            value="${esc(video)}"
+            autocomplete="off"
+          >
+
+          <div class="feedback-platforms">
+
+            <span class="platform-tag">Google Drive</span>
+
+            <span class="platform-tag">YouTube</span>
+
+            <span class="platform-tag">Instagram</span>
+
+            <span class="platform-tag">TikTok</span>
+
+            <span class="platform-tag">Autre lien</span>
+
+          </div>
+
+          <p class="small muted">
+
+            Ajoutez le lien de votre vidéo pour permettre
+            à votre coach d'analyser votre mouvement.
+            Vérifiez qu'il dispose des droits de consultation.
+
+          </p>
+
+        </div>
+
+        <div class="video-saved"
+          ${savedLink?'':'hidden'}>
+
+          <div class="eyebrow">VIDÉO TRANSMISE</div>
+
+          <a class="saved-video-link"
+            href="${esc(savedLink||'#')}"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            ▶ Consulter ma vidéo
+
+          </a>
+
+        </div>
+
+        <button class="btn full feedback-submit" type="submit">
+
+          ${saved
+            ?'Mettre à jour mon appréciation'
+            :'Enregistrer mon appréciation'}
+
+        </button>
+
+        <p class="feedback-message"
+          role="status"
+          aria-live="polite"></p>
+
+        <div class="feedback-date"
+          ${s.dateReponse?'':'hidden'}>
+
+          ${s.dateReponse
+            ?'Dernier enregistrement : '+esc(formatDate(s.dateReponse))
+            :''}
+
+        </div>
+
+      </form>
+
+    </section>
+
+  `;
+
+}
+
+function collectFeedback(form){
+
+  const data=new FormData(form);
+
+  return {
+
+    resultat:String(data.get('resultat')||''),
+
+    commentaire:String(data.get('commentaire')||''),
+
+    videoSportif:String(data.get('videoSportif')||'')
+
+  };
+
+}
+
+function saveDraft(form){
+
+  const id=form.dataset.feedbackId;
+
+  if(!id)return;
+
+  feedbackDrafts.set(id,collectFeedback(form));
+
+  const counter=form.querySelector('.comment-length');
+
+  if(counter){
+
+    counter.textContent=form.elements.commentaire.value.length;
+
+  }
+
+}
+
+function setFeedbackMessage(form,message,type){
+
+  const box=form.querySelector('.feedback-message');
+
+  if(!box)return;
+
+  box.textContent=message;
+
+  box.className='feedback-message '+(type||'muted');
+
+}
+
+function setFeedbackBusy(busy){
+
+  feedbackPending=busy;
+
+  app.querySelectorAll(
+    '.feedback-form button, .feedback-form input, '+
+    '.feedback-form textarea, [data-tab], #refreshBtn'
+  ).forEach(element=>{
+
+    element.disabled=busy;
+
+  });
+
+}
+
+function sameFeedback(a,b){
+
+  return (
+    normalizeResult(a.resultat)===normalizeResult(b.resultat)&&
+    String(a.commentaire||'').trim()===String(b.commentaire||'').trim()&&
+    String(a.videoSportif||'').trim()===String(b.videoSportif||'').trim()
+  );
+
+}
+
+
+/************************************************************
+ * ENREGISTREMENT DANS LA FEUILLE REPONSES
+ ************************************************************/
+
+async function submitFeedback(event){
+
+  event.preventDefault();
+
+  if(feedbackPending||requestPending)return;
+
+  const form=event.currentTarget;
+
+  const id=String(form.dataset.feedbackId||'');
+
+  const session=state.sessions.find(
+    s=>String(s.idExercice)===id
+  );
+
+  if(!session||!id){
+
+    setFeedbackMessage(
+      form,
+      'Identifiant exercice introuvable. Actualisez vos séances.',
+      'error'
+    );
+
+    return;
+
+  }
+
+  const values=collectFeedback(form);
+
+  const resultat=normalizeResult(values.resultat);
+
+  const commentaire=values.commentaire.trim();
+
+  const videoSportif=values.videoSportif.trim();
+
+  if(!['REUSSI','NON REUSSI'].includes(resultat)){
+
+    setFeedbackMessage(
+      form,
+      'Sélectionnez Réussi ou Non réussi.',
+      'error'
+    );
+
+    return;
+
+  }
+
+  if(commentaire.length>CONFIG.MAX_COMMENT){
+
+    setFeedbackMessage(form,'Commentaire trop long.','error');
+
+    return;
+
+  }
+
+  if(videoSportif&&(
+    !safeUrl(videoSportif)||
+    videoSportif.length>CONFIG.MAX_VIDEO_URL
+  )){
+
+    setFeedbackMessage(
+      form,
+      'Saisissez un lien vidéo valide commençant par https://.',
+      'error'
+    );
+
+    return;
+
+  }
+
+  const btn=form.querySelector('.feedback-submit');
+
+  const originalText=btn.textContent;
+
+  const submitted={
+
+    resultat,
+
+    commentaire,
+
+    videoSportif
+
+  };
+
+  feedbackDrafts.set(id,submitted);
+
+  setFeedbackBusy(true);
+
+  btn.textContent='Enregistrement en cours…';
+
+  setFeedbackMessage(
+    form,
+    'Transmission de votre appréciation au coach…',
+    'muted'
+  );
+
+  try{
+
+    /*
+     * L'identifiant de l'exercice permet au serveur
+     * de retrouver la séance et le sportif associé au token.
+     *
+     * Aucun identifiant sportif modifiable n'est utilisé
+     * comme autorisation côté navigateur.
+     */
+
+    const payload={
+
+      idExercice:session.idExercice,
+
+      idSeance:session.idSeance,
+
+      resultat,
+
+      commentaire,
+
+      videoSportif
+
+    };
+
+    const response=await callAPI(
+      CONFIG.RESPONSE_ACTION,
+      payload
+    );
+
+    /*
+     * Recherche de la réponse réellement enregistrée.
+     */
+
+    let confirmed=response.sessions.find(
+      s=>String(s.idExercice)===id
+    );
+
+    const saved=response.savedResponse;
+
+    if(saved&&saved.ok===false){
+
+      throw new Error(
+        saved.message||'Enregistrement refusé.'
+      );
+
+    }
+
+    if(!confirmed&&saved){
+
+      const savedId=String(first(saved,[
+        'idExercice','ID_EXERCICE','ID EXERCICE','exerciseId'
+      ]));
+
+      if(savedId===id){
+
+        confirmed={
+
+          ...session,
+
+          ...normalizeFeedback({
+
+            ...saved,
+
+            videoSportif:first(saved,[
+              'videoSportif','video','VIDEO SPORTIF'
+            ]),
+
+            dateReponse:first(saved,[
+              'dateReponse','date','DATE'
+            ])
+
+          })
+
+        };
+
+      }
+
+    }
+
+    /*
+     * Si le serveur ne renvoie pas directement la réponse,
+     * lecture de contrôle pour vérifier l'enregistrement.
+     */
+
+    if(!confirmed||!sameFeedback(confirmed,submitted)){
+
+      const verification=await callAPI('read');
+
+      if(verification.status!=='ACTIF'){
+
+        throw new Error(
+          'Votre carte ne permet plus cet enregistrement.'
+        );
+
+      }
+
+      confirmed=verification.sessions.find(
+        s=>String(s.idExercice)===id
+      );
+
+    }
+
+    if(!confirmed||!sameFeedback(confirmed,submitted)){
+
+      throw new Error(
+        'Le serveur n’a pas confirmé toutes les données. '+
+        'Vérifiez la feuille REPONSES avant de réessayer.'
+      );
+
+    }
+
+    /*
+     * Mise à jour locale uniquement après confirmation.
+     * Pas de rechargement complet de la page.
+     */
+
+    Object.assign(session,{
+
+      resultat:confirmed.resultat,
+
+      commentaire:confirmed.commentaire,
+
+      videoSportif:confirmed.videoSportif,
+
+      dateReponse:confirmed.dateReponse
+
+    });
+
+    feedbackDrafts.delete(id);
+
+    updateExerciseFeedback(form,session);
+
+    updateAllProgress();
+
+    setFeedbackMessage(
+      form,
+      '✓ Votre appréciation a bien été enregistrée.',
+      'success'
+    );
+
+    btn.textContent='Mettre à jour mon appréciation';
+
+  }catch(error){
+
+    setFeedbackMessage(
+      form,
+      error.message||'Impossible d’enregistrer votre réponse.',
+      'error'
+    );
+
+    btn.textContent=originalText;
+
+  }finally{
+
+    setFeedbackBusy(false);
+
+  }
+
+}
+
+
+/************************************************************
+ * ACTUALISATION VISUELLE D'UN EXERCICE
+ ************************************************************/
+
+function updateExerciseFeedback(form,session){
+
+  const details=form.closest('.session-exercise');
+
+  if(details){
+
+    details.classList.toggle(
+      'is-success',
+      session.resultat==='REUSSI'
+    );
+
+    details.classList.toggle(
+      'is-failed',
+      session.resultat==='NON REUSSI'
+    );
+
+    const badge=details.querySelector('.feedback-status');
+
+    if(badge){
+
+      badge.className=
+        'feedback-status '+resultClass(session.resultat);
+
+      badge.textContent=resultLabel(session.resultat);
+
+    }
+
+  }
+
+  form.querySelectorAll('[name="resultat"]').forEach(input=>{
+
+    input.checked=input.value===session.resultat;
+
+  });
+
+  form.elements.commentaire.value=session.commentaire||'';
+
+  form.elements.videoSportif.value=session.videoSportif||'';
+
+  const counter=form.querySelector('.comment-length');
+
+  if(counter){
+
+    counter.textContent=
+      form.elements.commentaire.value.length;
+
+  }
+
+  const dateBox=form.querySelector('.feedback-date');
+
+  if(dateBox){
+
+    dateBox.hidden=!session.dateReponse;
+
+    dateBox.textContent=session.dateReponse
+
+      ?'Dernier enregistrement : '+formatDate(session.dateReponse)
+
+      :'';
+
+  }
+
+  const videoBox=form.querySelector('.video-saved');
+
+  const link=form.querySelector('.saved-video-link');
+
+  const url=safeUrl(session.videoSportif);
+
+  if(videoBox&&link){
+
+    videoBox.hidden=!url;
+
+    if(url){
+
+      link.href=url;
+
+      link.textContent=
+        '▶ Consulter ma vidéo — '+videoPlatform(url);
+
+    }else{
+
+      link.removeAttribute('href');
+
+    }
+
+  }
+
+}
+
+
+/************************************************************
+ * 17. PROGRESSION DES SEANCES
+ ************************************************************/
+
+function getProgress(items){
+
+  const total=items.length;
+
+  const success=items.filter(
+    s=>s.resultat==='REUSSI'
+  ).length;
+
+  const failed=items.filter(
+    s=>s.resultat==='NON REUSSI'
+  ).length;
+
+  const completed=success+failed;
+
+  const pending=total-completed;
+
+  const percent=total
+
+    ?Math.round(completed/total*100)
+
+    :0;
+
+  return {
+
+    total,
+
+    success,
+
+    failed,
+
+    completed,
+
+    pending,
+
+    percent
+
+  };
+
+}
+
+function progressHTML(items){
+
+  const p=getProgress(items);
+
+  return `
+
+    <div class="progress-info">
+
+      <span>Suivi de la séance</span>
+
+      <strong class="progress-count">
+        ${p.completed}/${p.total} renseignés
+      </strong>
+
+    </div>
+
+    <div class="progress-track"
+      role="progressbar"
+      aria-label="Exercices renseignés"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="${p.percent}">
+
+      <div class="progress-fill"
+        style="width:${p.percent}%"></div>
+
+    </div>
+
+    <div class="session-stats">
+
+      <span class="session-stat success">
+        ✓ <span class="count-success">${p.success}</span> réussi(s)
+      </span>
+
+      <span class="session-stat error">
+        ✕ <span class="count-failed">${p.failed}</span> non réussi(s)
+      </span>
+
+      <span class="session-stat muted">
+        <span class="count-pending">${p.pending}</span> à renseigner
+      </span>
+
+    </div>
+
+  `;
+
+}
+
+function updateAllProgress(){
+
+  app.querySelectorAll('.session-card').forEach(card=>{
+
+    const key=card.dataset.sessionKey;
+
+    const items=state.sessions.filter(
+      s=>sessionKey(s)===key
+    );
+
+    const p=getProgress(items);
+
+    const count=card.querySelector('.progress-count');
+
+    const fill=card.querySelector('.progress-fill');
+
+    const track=card.querySelector('.progress-track');
+
+    const success=card.querySelector('.count-success');
+
+    const failed=card.querySelector('.count-failed');
+
+    const pending=card.querySelector('.count-pending');
+
+    if(count){
+
+      count.textContent=
+        p.completed+'/'+p.total+' renseignés';
+
+    }
+
+    if(fill)fill.style.width=p.percent+'%';
+
+    if(track)track.setAttribute('aria-valuenow',p.percent);
+
+    if(success)success.textContent=p.success;
+
+    if(failed)failed.textContent=p.failed;
+
+    if(pending)pending.textContent=p.pending;
+
+  });
+
+}
+
+
+/************************************************************
+ * 18. SEANCES PERSONNALISEES
  ************************************************************/
 
 function showSessions(){
 
   const content=document.getElementById('memberContent');
 
+  if(!content)return;
+
   const grouped=new Map();
 
   (state.sessions||[]).forEach(s=>{
 
-    if(!grouped.has(s.nom))grouped.set(s.nom,[]);
+    const key=sessionKey(s);
 
-    grouped.get(s.nom).push(s);
+    if(!grouped.has(key)){
+
+      grouped.set(key,{
+
+        name:s.nom,
+
+        items:[]
+
+      });
+
+    }
+
+    grouped.get(key).items.push(s);
 
   });
+
+  let formIndex=0;
 
   content.innerHTML=`
 
@@ -3577,9 +4749,7 @@ function showSessions(){
 
       <div>
 
-        <div class="eyebrow">
-          VOTRE PROGRAMMATION
-        </div>
+        <div class="eyebrow">VOTRE PROGRAMMATION</div>
 
         <h2>Mes séances</h2>
 
@@ -3614,137 +4784,204 @@ function showSessions(){
 
     `:''}
 
-    ${[...grouped].map(([name,items],sessionIndex)=>`
+    ${[...grouped].map(([key,group],sessionIndex)=>{
 
-      <article class="session-card">
+      const items=group.items;
 
-        <div class="session-header">
+      const allNumeric=items.every(
+        s=>numericSeries(s.series)>0
+      );
 
-          <div class="eyebrow">
+      const totalSeries=items.reduce(
+        (sum,s)=>sum+numericSeries(s.series),0
+      );
 
-            PROGRAMME
-            ${String(sessionIndex+1).padStart(2,'0')}
+      return `
+
+        <article class="session-card"
+          data-session-key="${esc(key)}">
+
+          <div class="session-header">
+
+            <div class="eyebrow">
+
+              PROGRAMME
+              ${String(sessionIndex+1).padStart(2,'0')}
+
+            </div>
+
+            <h3 style="font-size:27px;margin-top:10px">
+              ${esc(group.name)}
+            </h3>
+
+            <span class="small muted">
+
+              ${items.length} exercice(s)
+
+              ${allNumeric?' · '+totalSeries+' séries':''}
+
+            </span>
+
+            ${progressHTML(items)}
 
           </div>
 
-          <h3 style="font-size:27px;margin-top:10px">
-            ${esc(name)}
-          </h3>
+          <div class="session-content">
 
-          <span class="small muted">
+            ${items.map((s,i)=>{
 
-            ${items.length} exercice(s)
+              const uniqueIndex=formIndex++;
 
-            · ${items.reduce(
-              (sum,item)=>sum+(Number(item.series)||0),0
-            )} séries
+              const index=exercises.findIndex(
+                e=>normalize(e.nom)===normalize(s.exercice)
+              );
 
-          </span>
+              const ref=exercises[index]||{};
 
-        </div>
+              /*
+               * Les données spécifiques de la séance
+               * sont prioritaires sur la bibliothèque.
+               */
 
-        <div class="session-content">
+              const photo=s.photo||ref.photo;
 
-          ${items.map((s,i)=>{
+              const video=s.video||ref.video;
 
-            const index=exercises.findIndex(
-              e=>normalize(e.nom)===normalize(s.exercice)
-            );
+              const groupes=s.groupes||ref.groupes;
 
-            const ref=exercises[index]||{};
+              const description=s.description||ref.description;
 
-            const photo=ref.photo||s.photo;
+              const statusClass=
 
-            const video=ref.video||s.video;
+                s.resultat==='REUSSI'
 
-            const groupes=ref.groupes||s.groupes;
+                  ?'is-success'
 
-            return `
+                  :s.resultat==='NON REUSSI'
 
-              <details class="session-exercise">
+                    ?'is-failed'
 
-                <summary>
+                    :'';
 
-                  <div class="exercise-number">
-                    ${String(i+1).padStart(2,'0')}
-                  </div>
+              return `
 
-                  <div class="summary-info">
+                <details class="session-exercise ${statusClass}">
 
-                    <strong>${esc(s.exercice)}</strong>
+                  <summary>
 
-                    <small>
+                    <div class="exercise-number">
+                      ${String(i+1).padStart(2,'0')}
+                    </div>
 
-                      ${esc(s.series)} séries
+                    <div class="summary-info">
 
-                      · ${esc(groupes)}
+                      <strong>${esc(s.exercice)}</strong>
 
-                    </small>
+                      <small>
 
-                  </div>
+                        ${esc(seriesLabel(s.series))}
 
-                  <span style="color:#72bbff">⌄</span>
+                        ${groupes?' · '+esc(groupes):''}
 
-                </summary>
-
-                <div class="details-body">
-
-                  ${muscleTags(groupes)}
-
-                  ${index>=0
-
-                    ? clickablePhoto(ref,index)
-
-                    : exerciseImage(photo,s.exercice)
-
-                  }
-
-                  <p class="muted" style="margin-top:15px">
-
-                    ${esc(ref.description||s.description)}
-
-                  </p>
-
-                  <div class="eyebrow">
-                    VOTRE PROGRAMMATION
-                  </div>
-
-                  ${seriesTable(s)}
-
-                  ${s.notes?`
-
-                    <div class="coach-message">
-
-                      <div class="eyebrow">
-                        CONSIGNES DU COACH
-                      </div>
-
-                      ${esc(s.notes)}
+                      </small>
 
                     </div>
 
-                  `:''}
+                    <span class="feedback-status ${resultClass(s.resultat)}">
 
-                  <div class="eyebrow">
-                    TUTORIEL VIDÉO
+                      ${resultLabel(s.resultat)}
+
+                    </span>
+
+                    <span class="summary-arrow">⌄</span>
+
+                  </summary>
+
+                  <div class="details-body">
+
+                    ${s.personnalise?`
+
+                      <span class="custom-tag">
+                        EXERCICE PERSONNALISÉ
+                      </span>
+
+                    `:''}
+
+                    ${muscleTags(groupes)}
+
+                    ${index>=0
+
+                      ?clickablePhoto({
+                        ...ref,
+                        photo,
+                        video
+                      },index)
+
+                      :photo
+                        ?exerciseImage(photo,s.exercice)
+                        :''
+
+                    }
+
+                    ${description?`
+
+                      <p class="muted"
+                        style="margin-top:15px;white-space:pre-wrap">
+
+                        ${esc(description)}
+
+                      </p>
+
+                    `:''}
+
+                    <div class="eyebrow" style="margin-top:18px">
+                      VOTRE PROGRAMMATION
+                    </div>
+
+                    ${seriesTable(s)}
+
+                    ${s.notes?`
+
+                      <div class="coach-message">
+
+                        <div class="eyebrow">
+                          CONSIGNES DU COACH
+                        </div>
+
+                        ${esc(s.notes)}
+
+                      </div>
+
+                    `:''}
+
+                    ${video?`
+
+                      <div class="eyebrow" style="margin-top:20px">
+                        TUTORIEL VIDÉO DU COACH
+                      </div>
+
+                      <div class="session-video"
+                        data-video="${esc(video)}"></div>
+
+                    `:''}
+
+                    ${feedbackHTML(s,uniqueIndex)}
+
                   </div>
 
-                  <div class="session-video"
-                    data-video="${esc(video)}"></div>
+                </details>
 
-                </div>
+              `;
 
-              </details>
+            }).join('')}
 
-            `;
+          </div>
 
-          }).join('')}
+        </article>
 
-        </div>
+      `;
 
-      </article>
-
-    `).join('')}
+    }).join('')}
 
   `;
 
@@ -3754,15 +4991,14 @@ function showSessions(){
 
   if(libraryBtn){
 
-    libraryBtn.onclick=()=>{
-
-      currentTab='exercises';
-
-      renderTab();
-
-    };
+    libraryBtn.onclick=()=>changeTab('exercises');
 
   }
+
+  /*
+   * Les vidéos du coach sont chargées uniquement
+   * lorsque le sportif ouvre l'exercice.
+   */
 
   content.querySelectorAll('.session-exercise')
     .forEach(details=>{
@@ -3775,9 +5011,9 @@ function showSessions(){
 
           container.innerHTML=details.open
 
-            ? videoHTML(container.dataset.video)
+            ?videoHTML(container.dataset.video)
 
-            : '';
+            :'';
 
         }
 
@@ -3785,11 +5021,27 @@ function showSessions(){
 
     });
 
+  /*
+   * Conservation des brouillons pendant la navigation.
+   * Enregistrement uniquement lors de la validation.
+   */
+
+  content.querySelectorAll('.feedback-form')
+    .forEach(form=>{
+
+      form.addEventListener('input',()=>saveDraft(form));
+
+      form.addEventListener('change',()=>saveDraft(form));
+
+      form.addEventListener('submit',submitFeedback);
+
+    });
+
 }
 
 
 /************************************************************
- * 17. MON PROFIL
+ * 19. MON PROFIL
  ************************************************************/
 
 function showProfile(){
@@ -3822,9 +5074,7 @@ function showProfile(){
 
     <section class="panel">
 
-      <div class="eyebrow">
-        INFORMATIONS PERSONNELLES
-      </div>
+      <div class="eyebrow">INFORMATIONS PERSONNELLES</div>
 
       <h2 style="margin-top:12px">Mon profil sportif</h2>
 
@@ -3857,9 +5107,7 @@ function showProfile(){
 
     <section class="panel">
 
-      <div class="eyebrow">
-        CONFIDENTIALITÉ
-      </div>
+      <div class="eyebrow">CONFIDENTIALITÉ</div>
 
       <h3 style="margin-top:10px">
         Votre carte personnelle
@@ -3867,9 +5115,9 @@ function showProfile(){
 
       <p class="muted">
 
-        Votre lien NFC donne accès à votre profil.
-        Ne le partagez pas avec des personnes
-        non autorisées.
+        Votre lien NFC donne accès à votre profil,
+        vos séances, vos appréciations et vos vidéos.
+        Ne le partagez pas avec des personnes non autorisées.
 
       </p>
 
@@ -3887,12 +5135,12 @@ function showProfile(){
 
 
 /************************************************************
- * 18. ACTUALISATION ET ETAT DES CARTES
+ * 20. ACTUALISATION ET ETAT DES CARTES
  ************************************************************/
 
 async function refreshData(){
 
-  if(requestPending)return;
+  if(requestPending||feedbackPending)return;
 
   requestPending=true;
 
@@ -3903,6 +5151,25 @@ async function refreshData(){
   try{
 
     state=await callAPI('read');
+
+    /*
+     * Suppression des brouillons concernant
+     * les exercices qui ne sont plus attribués.
+     */
+
+    const validIds=new Set(
+      state.sessions.map(s=>feedbackKey(s))
+    );
+
+    for(const key of feedbackDrafts.keys()){
+
+      if(!validIds.has(key)){
+
+        feedbackDrafts.delete(key);
+
+      }
+
+    }
 
     routeState();
 
@@ -3922,6 +5189,8 @@ function routeState(){
 
   if(state.status==='DISPONIBLE'){
 
+    feedbackDrafts.clear();
+
     showActivation();
 
   }else if(state.status==='ACTIF'){
@@ -3929,6 +5198,8 @@ function routeState(){
     showDashboard();
 
   }else if(state.status==='DESACTIVE'){
+
+    feedbackDrafts.clear();
 
     showError(
       'Cette carte a été désactivée. Contactez votre coach.'
@@ -3944,15 +5215,32 @@ function routeState(){
 
 
 /************************************************************
- * 19. LANCEMENT DU SITE
+ * 21. PROTECTION DES COMMENTAIRES NON ENREGISTRES
+ ************************************************************/
+
+window.addEventListener('beforeunload',event=>{
+
+  if(feedbackPending||feedbackDrafts.size>0){
+
+    event.preventDefault();
+
+    event.returnValue='';
+
+  }
+
+});
+
+
+/************************************************************
+ * 22. LANCEMENT DU SITE
  *
- * Sans token : accueil public et exercices.
+ * Sans token : accueil public.
  * Avec token : espace NFC personnel.
  ************************************************************/
 
 async function init(){
 
-  if(requestPending)return;
+  if(requestPending||feedbackPending)return;
 
   if(!token){
 
